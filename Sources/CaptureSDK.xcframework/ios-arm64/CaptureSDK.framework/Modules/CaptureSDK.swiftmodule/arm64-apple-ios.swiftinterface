@@ -1,0 +1,1078 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CaptureSDK
+import AVFoundation
+import AudioToolbox
+@_exported import CaptureSDK
+import CoreBluetooth
+import CoreFoundation
+import Darwin
+import Foundation
+import Foundation/*.Bundle*/
+import Swift
+import UIKit
+import _Concurrency
+import os.log
+import os
+@objc @_inheritsConvenienceInitializers public class SCardReaderList_PUCK_BLE_Bonded : CaptureSDK.SCardReaderList {
+  @objc override public init(device: CoreBluetooth.CBPeripheral, centralManager: CoreBluetooth.CBCentralManager, delegate: CaptureSDK.SCardReaderListDelegate?, secureConnectionParameters: CaptureSDK.SecureConnectionParameters?)
+  @objc deinit
+}
+public struct PCBC : CaptureSDK.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: CaptureSDK.PCBC.Error, b: CaptureSDK.PCBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+@objc @objcMembers open class SCardReaderList : ObjectiveC.NSObject, CoreBluetooth.CBCentralManagerDelegate, CoreBluetooth.CBPeripheralDelegate {
+  @objc public var vendorName: Swift.String
+  @objc public var productName: Swift.String
+  @objc public var serialNumber: Swift.String
+  @objc public var serialNumberRaw: [Swift.UInt8]?
+  @objc public var firmwareVersion: Swift.String
+  @objc public var hardwareVersion: Swift.String
+  @objc public var softwareVersion: Swift.String
+  @objc public var pnpId: Swift.String
+  @objc public var batteryLevel: Swift.Int
+  @objc public var slotCount: Swift.Int
+  @objc public var slots: [Swift.String]
+  @objc public var powerLevel: Swift.Int
+  @objc public var powerState: Swift.Int
+  @objc public var isInLowPowerMode: Swift.Bool
+  @objc public var slotStatus: Swift.UInt8 {
+    @objc get
+  }
+  @objc public var slotError: Swift.UInt8 {
+    @objc get
+  }
+  @objc public static let libraryName: Swift.String
+  @objc public static let LibrarySpecial: Swift.String
+  @objc public static let libraryDebug: Swift.Bool
+  @objc public static let libraryVersion: Swift.String
+  @objc public static let libraryVersionMajor: Swift.String
+  @objc public static let libraryVersionMinor: Swift.String
+  @objc public static let LibraryVersionBuild: Swift.String
+  @objc public static var LibraryBuildDate: Foundation.Date {
+    @objc get
+  }
+  @objc public static var LibrarycompileDate: Foundation.Date {
+    @objc get
+  }
+  @objc public init(device: CoreBluetooth.CBPeripheral, centralManager: CoreBluetooth.CBCentralManager, delegate: CaptureSDK.SCardReaderListDelegate?, secureConnectionParameters: CaptureSDK.SecureConnectionParameters?)
+  @objc public subscript(slot: Swift.Int) -> CaptureSDK.SCardReader? {
+    @objc get
+  }
+  @objc public subscript(slot: Swift.String) -> CaptureSDK.SCardReader? {
+    @objc get
+  }
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc public func control(command: [Swift.UInt8])
+  @objc public func close(keepBleActive: Swift.Bool = false)
+  @objc public static func create(peripheral: CoreBluetooth.CBPeripheral, centralManager: CoreBluetooth.CBCentralManager, delegate: CaptureSDK.SCardReaderListDelegate, secureConnectionParameters: CaptureSDK.SecureConnectionParameters? = nil)
+  @objc public static func getAllAdvertisingServices() -> [CoreBluetooth.CBUUID]
+  @objc public func lastError() -> Swift.Int
+  @objc public func lastErrorMessage() -> Swift.String
+  @objc public func connected() -> Swift.Bool
+  @objc public func valid() -> Swift.Bool
+  @objc public func getReaderFromString(slot: Swift.String) -> CaptureSDK.SCardReader?
+  @objc public func getReaderFromIndex(slot: Swift.Int) -> CaptureSDK.SCardReader?
+  @objc public func wakeUp()
+  @objc public func shutdown()
+  @objc public func getPowerInfo()
+  @objc deinit
+}
+extension Swift.String {
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func md5() -> Swift.String
+  public func sha1() -> Swift.String
+  public func sha224() -> Swift.String
+  public func sha256() -> Swift.String
+  public func sha384() -> Swift.String
+  public func sha512() -> Swift.String
+  public func sha3(_ variant: CaptureSDK.SHA3.Variant) -> Swift.String
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.String
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.String
+  public func encrypt(cipher: CaptureSDK.Cipher) throws -> Swift.String
+  public func encryptToBase64(cipher: CaptureSDK.Cipher) throws -> Swift.String?
+  public func authenticate<A>(with authenticator: A) throws -> Swift.String where A : CaptureSDK.Authenticator
+}
+public class CMAC : CaptureSDK.Authenticator {
+  public enum Error : Swift.Error {
+    case wrongKeyLength
+    public static func == (a: CaptureSDK.CMAC.Error, b: CaptureSDK.CMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>) throws
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func authenticate(_ bytes: Swift.Array<Swift.UInt8>, cipher: CaptureSDK.Cipher) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public struct CBC : CaptureSDK.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: CaptureSDK.CBC.Error, b: CaptureSDK.CBC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+public protocol Authenticator {
+  func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public func toBase64() -> Swift.String?
+  public init(base64: Swift.String)
+}
+@objc public class SecureConnectionParameters : ObjectiveC.NSObject {
+  public var authMode: CaptureSDK.AuthenticationMode
+  public var keyIndex: CaptureSDK.KeyIndex
+  public var keyValue: [Swift.UInt8]
+  public var commMode: CaptureSDK.CommMode
+  public var debugSecureCommunication: Swift.Bool
+  @objc public init(authMode: CaptureSDK.AuthenticationMode, keyIndex: CaptureSDK.KeyIndex, keyValue: [Swift.UInt8], commMode: CaptureSDK.CommMode, debugSecureCommunication: Swift.Bool)
+  @objc deinit
+}
+extension CaptureSDK.AES {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: CaptureSDK.Padding = .pkcs7) throws
+}
+final public class ChaCha20 {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    case notSupported
+    public static func == (a: CaptureSDK.ChaCha20.Error, b: CaptureSDK.ChaCha20.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, iv nonce: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+extension CaptureSDK.ChaCha20 : CaptureSDK.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension CaptureSDK.ChaCha20 {
+  public struct ChaChaEncryptor : CaptureSDK.Cryptor, CaptureSDK.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension CaptureSDK.ChaCha20 {
+  public struct ChaChaDecryptor : CaptureSDK.Cryptor, CaptureSDK.Updatable {
+    public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = true) throws -> Swift.Array<Swift.UInt8>
+    public func seek(to: Swift.Int) throws
+  }
+}
+extension CaptureSDK.ChaCha20 : CaptureSDK.Cryptors {
+  final public func makeEncryptor() -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+  final public func makeDecryptor() -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+}
+public protocol Cryptors : AnyObject {
+  func makeEncryptor() throws -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+  func makeDecryptor() throws -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+  static func randomIV(_ blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+extension CaptureSDK.Cryptors {
+  public static func randomIV(_ count: Swift.Int) -> Swift.Array<Swift.UInt8>
+}
+final public class Poly1305 : CaptureSDK.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    public static func == (a: CaptureSDK.Poly1305.Error, b: CaptureSDK.Poly1305.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+public protocol CaptureHelperDelegate {
+}
+public protocol CaptureHelperErrorDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didReceiveError(_ error: CaptureSDK.SKTResult)
+}
+public protocol CaptureHelperDevicePresenceDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didNotifyArrivalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
+  func didNotifyRemovalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
+}
+public protocol CaptureHelperDeviceManagerPresenceDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didNotifyArrivalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
+  func didNotifyRemovalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
+}
+public protocol CaptureHelperDeviceManagerDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didDiscoverDevice(_ device: Swift.String, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
+  func didEndDiscoveryWithResult(_ result: CaptureSDK.SKTResult, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
+}
+public protocol CaptureHelperDeviceDecodedDataDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didReceiveDecodedData(_ decodedData: CaptureSDK.SKTCaptureDecodedData?, fromDevice device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
+}
+public protocol CaptureHelperDevicePowerDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didChangePowerState(_ powerState: CaptureSDK.SKTCapturePowerState, forDevice device: CaptureSDK.CaptureHelperDevice)
+  func didChangeBatteryLevel(_ batteryLevel: Swift.Int, forDevice device: CaptureSDK.CaptureHelperDevice)
+}
+public protocol CaptureHelperDeviceButtonsDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didChangeButtonsState(_ buttonsState: CaptureSDK.SKTCaptureButtonsState, forDevice device: CaptureSDK.CaptureHelperDevice)
+}
+public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperErrorDelegate {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDevice : ObjectiveC.NSObject {
+  public var extensionProperties: Swift.Dictionary<Swift.String, Any>
+  public var deviceInfo: CaptureSDK.SKTCaptureDeviceInfo
+  public var dispatchQueue: Dispatch.DispatchQueue?
+  open func getFriendlyNameWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ name: Swift.String?) -> Swift.Void)
+  open func setFriendlyName(_ name: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getBluetoothAddressWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ bluetoothAddress: Foundation.Data?) -> Swift.Void)
+  open func getTypeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceType: Swift.UInt?) -> Swift.Void)
+  open func getFirmwareVersionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ version: CaptureSDK.SKTCaptureVersion?) -> Swift.Void)
+  open func getBatteryLevelWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ batteryLevel: Swift.UInt?) -> Swift.Void)
+  open func getPowerStateWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ powerState: Swift.UInt?) -> Swift.Void)
+  open func getButtonsStateWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ buttonsState: CaptureSDK.SKTCaptureButtonsState?) -> Swift.Void)
+  open func getStandConfigWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ config: CaptureSDK.SKTCaptureStandConfig?) -> Swift.Void)
+  open func setStandConfig(_ config: CaptureSDK.SKTCaptureStandConfig, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getDecodeActionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction?) -> Swift.Void)
+  open func setDecodeAction(_ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getDataAcknowledgmentWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataAcknownledgement: CaptureSDK.SKTCaptureDeviceDataAcknowledgment?) -> Swift.Void)
+  open func setDataAcknowledgment(_ dataAcknowledgment: CaptureSDK.SKTCaptureDeviceDataAcknowledgment, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getPostambleWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ postamble: Swift.String?) -> Swift.Void)
+  open func setPostamble(_ postamble: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getDataSourceInfoFromId(_ dataSourceId: CaptureSDK.SKTCaptureDataSourceID, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataSourceInfo: CaptureSDK.SKTCaptureDataSource?) -> Swift.Void)
+  open func setDataSourceInfo(_ dataSource: CaptureSDK.SKTCaptureDataSource, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setTrigger(_ trigger: CaptureSDK.SKTCaptureTrigger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setDataConfirmationWithLed(_ led: CaptureSDK.SKTCaptureDataConfirmationLed, withBeep beep: CaptureSDK.SKTCaptureDataConfirmationBeep, withRumble rumble: CaptureSDK.SKTCaptureDataConfirmationRumble, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setNotifications(_ notifications: CaptureSDK.SKTCaptureNotifications, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getNotificationsWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ notifications: CaptureSDK.SKTCaptureNotifications?) -> Swift.Void)
+  open func setSocketCamOverlayViewParameter(_ parameters: Swift.Dictionary<Swift.String, Any>, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getSocketCamOverlayViewParameterWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ parameter: Swift.Dictionary<Swift.String, Any>?) -> Swift.Void)
+  open func getDeviceSpecificCommand(_ command: Foundation.Data, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
+  open func setDataFormat(dataFormat: CaptureSDK.SKTCaptureDataFormat, completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getDataFormatWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataFormat: CaptureSDK.SKTCaptureDataFormat?) -> Swift.Void)
+  open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
+  open func startDiscoveryWithTimeout(_ timeout: ObjectiveC.NSInteger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setFavoriteDevices(_ favorites: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getFavoriteDevicesWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ favorites: Swift.String?) -> Swift.Void)
+  open func getDeviceUniqueIdentifierFromDeviceGuid(_ deviceGuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceUniqueIdentifier: Swift.String?) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelper : ObjectiveC.NSObject {
+  public var extensionProperties: Swift.Dictionary<Swift.String, Any>
+  public var dispatchQueue: Dispatch.DispatchQueue?
+  public static let sharedInstance: CaptureSDK.CaptureHelper
+  public var captureApi: CaptureSDK.SKTCapture? {
+    get
+  }
+  @discardableResult
+  open func pushDelegate(_ delegate: CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
+  @discardableResult
+  open func popDelegate(_ delegate: CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
+  open func getDevices() -> Swift.Array<CaptureSDK.CaptureHelperDevice>
+  open func getDeviceManagers() -> Swift.Array<CaptureSDK.CaptureHelperDeviceManager>
+  open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func closeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  public func didReceive(_ event: CaptureSDK.SKTCaptureEvent, for capture: CaptureSDK.SKTCapture, withResult result: CaptureSDK.SKTResult)
+  open func getVersionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ version: CaptureSDK.SKTCaptureVersion?) -> Swift.Void)
+  open func getConfirmationModeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ confirmationMode: CaptureSDK.SKTCaptureDataConfirmation?) -> Swift.Void)
+  open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmation, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
+  open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  @objc deinit
+}
+public enum PKCS7 {
+}
+public struct CFB : CaptureSDK.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: CaptureSDK.CFB.Error, b: CaptureSDK.CFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+@_hasMissingDesignatedInitializers public class BlockDecryptor : CaptureSDK.Cryptor, CaptureSDK.Updatable {
+  public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public func seek(to position: Swift.Int) throws
+  @objc deinit
+}
+final public class OCB : CaptureSDK.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: CaptureSDK.OCB.Mode, b: CaptureSDK.OCB.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: CaptureSDK.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidNonce
+    case fail
+    public static func == (a: CaptureSDK.OCB.Error, b: CaptureSDK.OCB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(nonce N: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: CaptureSDK.OCB.Mode = .detached)
+  convenience public init(nonce N: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: CaptureSDK.OCB.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+  @objc deinit
+}
+extension CaptureSDK.PKCS5 {
+  public struct PBKDF2 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: CaptureSDK.PKCS5.PBKDF2.Error, b: CaptureSDK.PKCS5.PBKDF2.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil, variant: CaptureSDK.HMAC.Variant = .sha256) throws
+    public func calculate() throws -> Swift.Array<Swift.UInt8>
+  }
+}
+public enum SCardErrorCode : Swift.Int {
+  case noError, invalidParameter, missingCharacteristic, invalidCharacteristicSetting, missingService, busy, unsupportedPrimaryService, dummyDevice, otherError, cardAbsent, cardCommunicationError, cardPoweredDown, cardRemoved, authenticationError, secureCommunicationError, secureCommunicationAborted, noSuchSlot, deviceNotConnected
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension CaptureSDK.PKCS5 {
+  public struct PBKDF1 {
+    public enum Error : Swift.Error {
+      case invalidInput
+      case derivedKeyTooLong
+      public static func == (a: CaptureSDK.PKCS5.PBKDF1.Error, b: CaptureSDK.PKCS5.PBKDF1.Error) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public enum Variant {
+      case md5, sha1
+      public static func == (a: CaptureSDK.PKCS5.PBKDF1.Variant, b: CaptureSDK.PKCS5.PBKDF1.Variant) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, variant: CaptureSDK.PKCS5.PBKDF1.Variant = .sha1, iterations: Swift.Int = 4096, keyLength: Swift.Int? = nil) throws
+    public func calculate() -> Swift.Array<Swift.UInt8>
+  }
+}
+public struct BlockModeOption : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = CaptureSDK.BlockModeOption
+  public typealias Element = CaptureSDK.BlockModeOption
+  public typealias RawValue = Swift.Int
+}
+extension CaptureSDK.Blowfish {
+  convenience public init(key: Swift.String, iv: Swift.String, padding: CaptureSDK.Padding = .pkcs7) throws
+}
+final public class Scrypt {
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>, dkLen: Swift.Int, N: Swift.Int, r: Swift.Int, p: Swift.Int) throws
+  final public func calculate() throws -> [Swift.UInt8]
+  @objc deinit
+}
+public protocol _UInt8Type {
+}
+extension Swift.UInt8 : CaptureSDK._UInt8Type {
+}
+extension Swift.UInt8 {
+  public func bits() -> [CaptureSDK.Bit]
+  public func bits() -> Swift.String
+}
+public enum PKCS5 {
+}
+@objc public protocol SocketCamDelegate {
+  @objc func didRead(_ barcode: Swift.String, ofType type: Swift.String)
+  @objc func didNotRead()
+  @objc func buildDataSourceEnabledList() -> Foundation.NSArray
+}
+public enum CipherError : Swift.Error {
+  case encrypt
+  case decrypt
+  public static func == (a: CaptureSDK.CipherError, b: CaptureSDK.CipherError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Cipher : AnyObject {
+  var keySize: Swift.Int { get }
+  func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+extension CaptureSDK.Cipher {
+  public func encrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public func decrypt(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+final public class HMAC : CaptureSDK.Authenticator {
+  public enum Error : Swift.Error {
+    case authenticateError
+    case invalidInput
+    public static func == (a: CaptureSDK.HMAC.Error, b: CaptureSDK.HMAC.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant {
+    case sha1, sha256, sha384, sha512, md5
+    public static func == (a: CaptureSDK.HMAC.Variant, b: CaptureSDK.HMAC.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(key: Swift.Array<Swift.UInt8>, variant: CaptureSDK.HMAC.Variant = .md5)
+  final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+final public class MD5 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension CaptureSDK.MD5 : CaptureSDK.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+public struct CCM {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case invalidParameter
+    case fail
+    public static func == (a: CaptureSDK.CCM.Error, b: CaptureSDK.CCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public init(iv: Swift.Array<Swift.UInt8>, tagLength: Swift.Int, messageLength: Swift.Int, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+final public class AES {
+  public enum Error : Swift.Error {
+    case invalidKeySize
+    case dataPaddingRequired
+    case invalidData
+    public static func == (a: CaptureSDK.AES.Error, b: CaptureSDK.AES.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Variant : Swift.Int {
+    case aes128, aes192, aes256
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  final public let variant: CaptureSDK.AES.Variant
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: CaptureSDK.BlockMode, padding: CaptureSDK.Padding = .pkcs7) throws
+  @objc deinit
+}
+extension CaptureSDK.AES : CaptureSDK.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+final public class Blowfish {
+  public enum Error : Swift.Error {
+    case dataPaddingRequired
+    case invalidKeyOrInitializationVector
+    case invalidInitializationVector
+    case invalidBlockMode
+    public static func == (a: CaptureSDK.Blowfish.Error, b: CaptureSDK.Blowfish.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let blockSize: Swift.Int
+  final public let keySize: Swift.Int
+  public init(key: Swift.Array<Swift.UInt8>, blockMode: CaptureSDK.BlockMode = CBC(iv: Array<UInt8>(repeating: 0, count: Blowfish.blockSize)), padding: CaptureSDK.Padding) throws
+  @objc deinit
+}
+extension CaptureSDK.Blowfish : CaptureSDK.Cipher {
+  final public func encrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+  final public func decrypt<C>(_ bytes: C) throws -> Swift.Array<Swift.UInt8> where C : Swift.Collection, C.Element == Swift.UInt8, C.Index == Swift.Int
+}
+extension CaptureSDK.AES : CaptureSDK.Cryptors {
+  final public func makeEncryptor() throws -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+  final public func makeDecryptor() throws -> CaptureSDK.Cryptor & CaptureSDK.Updatable
+}
+@objc @_inheritsConvenienceInitializers public class SCardReaderList_D600_BLE : CaptureSDK.SCardReaderList {
+  @objc override public init(device: CoreBluetooth.CBPeripheral, centralManager: CoreBluetooth.CBCentralManager, delegate: CaptureSDK.SCardReaderListDelegate?, secureConnectionParameters: CaptureSDK.SecureConnectionParameters?)
+  @objc deinit
+}
+final public class Rabbit {
+  public enum Error : Swift.Error {
+    case invalidKeyOrInitializationVector
+    public static func == (a: CaptureSDK.Rabbit.Error, b: CaptureSDK.Rabbit.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static let ivSize: Swift.Int
+  public static let keySize: Swift.Int
+  public static let blockSize: Swift.Int
+  final public var keySize: Swift.Int {
+    get
+  }
+  convenience public init(key: Swift.Array<Swift.UInt8>) throws
+  public init(key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>?) throws
+  @objc deinit
+}
+extension CaptureSDK.Rabbit : CaptureSDK.Cipher {
+  final public func encrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  final public func decrypt(_ bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+}
+public struct OFB : CaptureSDK.BlockMode {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: CaptureSDK.OFB.Error, b: CaptureSDK.OFB.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+@_hasMissingDesignatedInitializers @objc public class SCardReader : ObjectiveC.NSObject {
+  @objc public var index: Swift.Int {
+    @objc get
+  }
+  @objc public var name: Swift.String {
+    @objc get
+  }
+  @objc public var parent: CaptureSDK.SCardReaderList! {
+    @objc get
+  }
+  @objc public var cardPowered: Swift.Bool {
+    @objc get
+  }
+  @objc public var cardPresent: Swift.Bool {
+    @objc get
+  }
+  public static func == (lhs: CaptureSDK.SCardReader, rhs: CaptureSDK.SCardReader) -> Swift.Bool
+  @objc public func control(command: [Swift.UInt8])
+  @objc public func cardConnect()
+  @objc deinit
+}
+@objc public class SktLogger : ObjectiveC.NSObject {
+  public static let `default`: CaptureSDK.SktLogger
+  public init(_ prefix: Swift.String = "")
+  public func debug(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  public func log(_ message: @autoclosure () -> Swift.String, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.UInt = #line)
+  @objc deinit
+}
+public struct CTR {
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    public static func == (a: CaptureSDK.CTR.Error, b: CaptureSDK.CTR.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let options: CaptureSDK.BlockModeOption
+  public init(iv: Swift.Array<Swift.UInt8>, counter: Swift.Int = 0)
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+public enum Bit : Swift.Int {
+  case zero
+  case one
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+final public class SHA2 {
+  public enum Variant : Swift.RawRepresentable {
+    case sha224, sha256, sha384, sha512
+    public var digestLength: Swift.Int {
+      get
+    }
+    public var blockSize: Swift.Int {
+      get
+    }
+    public typealias RawValue = Swift.Int
+    public var rawValue: CaptureSDK.SHA2.Variant.RawValue {
+      get
+    }
+    public init?(rawValue: CaptureSDK.SHA2.Variant.RawValue)
+  }
+  public init(variant: CaptureSDK.SHA2.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension CaptureSDK.SHA2 : CaptureSDK.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+public typealias Byte = Swift.UInt8
+extension Swift.Collection where Self.Element == CaptureSDK.Byte {
+  public var data: Foundation.Data {
+    get
+  }
+  public var hexa: Swift.String {
+    get
+  }
+  public func hexa(length: Swift.Int) -> Swift.String
+}
+@objc public enum KeyIndex : Swift.UInt8 {
+  case user = 0x00
+  case admin = 0x01
+  case none = 0x02
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@objc public enum CommMode : Swift.UInt8 {
+  case plain = 0x00
+  case MACed = 0x01
+  case secure = 0x03
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+@objc public enum AuthenticationMode : Swift.UInt8 {
+  case none = 0x00
+  case Aes128 = 0x01
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+extension Swift.String {
+  public func decryptBase64ToString(cipher: CaptureSDK.Cipher) throws -> Swift.String
+  public func decryptBase64(cipher: CaptureSDK.Cipher) throws -> Swift.Array<Swift.UInt8>
+}
+@_inheritsConvenienceInitializers final public class CBCMAC : CaptureSDK.CMAC {
+  override final public func authenticate(_ bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  override public init(key: Swift.Array<Swift.UInt8>) throws
+  @objc deinit
+}
+extension CaptureSDK.HMAC {
+  convenience public init(key: Swift.String, variant: CaptureSDK.HMAC.Variant = .md5) throws
+}
+@_hasMissingDesignatedInitializers final public class Checksum {
+  @objc deinit
+}
+extension CaptureSDK.Checksum {
+  public static func crc32(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public static func crc32c(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public static func crc16(_ message: Swift.Array<Swift.UInt8>, seed: Swift.UInt16? = nil) -> Swift.UInt16
+}
+final public class GCM : CaptureSDK.BlockMode {
+  public enum Mode {
+    case combined
+    case detached
+    public static func == (a: CaptureSDK.GCM.Mode, b: CaptureSDK.GCM.Mode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public let options: CaptureSDK.BlockModeOption
+  public enum Error : Swift.Error {
+    case invalidInitializationVector
+    case fail
+    public static func == (a: CaptureSDK.GCM.Error, b: CaptureSDK.GCM.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public var authenticationTag: Swift.Array<Swift.UInt8>?
+  public init(iv: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, tagLength: Swift.Int = 16, mode: CaptureSDK.GCM.Mode = .detached)
+  convenience public init(iv: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>, additionalAuthenticatedData: Swift.Array<Swift.UInt8>? = nil, mode: CaptureSDK.GCM.Mode = .detached)
+  final public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+  @objc deinit
+}
+extension CaptureSDK.ChaCha20 {
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+public protocol Cryptor {
+  mutating func seek(to: Swift.Int) throws
+}
+public struct ECB : CaptureSDK.BlockMode {
+  public let options: CaptureSDK.BlockModeOption
+  public init()
+  public func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+@objc @_inheritsConvenienceInitializers final public class SocketCamControllerSwift : ObjectiveC.NSObject {
+  @objc final public var isBeepFilePresent: Swift.Bool {
+    @objc get
+  }
+  @objc final public var parent: UIKit.UIViewController?
+  @objc override dynamic public init()
+  @objc deinit
+  @objc final public func startScan(with continousScan: Swift.Bool) -> Swift.Bool
+  @objc final public func stopScan() -> Swift.Bool
+  @objc final public func turnFlash(with turnOn: Swift.Bool)
+  @objc final public func setBeep(with beepOn: Swift.Bool)
+  @objc final public func setVibrate(with vibrateOn: Swift.Bool)
+  @objc final public func updateDataSourceStatus(with status: ObjectiveC.NSInteger, with dataSourceIndex: Swift.Int)
+  @objc final public func getDataSourcesCount() -> Swift.Int
+  @objc final public func getDataSourceType(from index: Swift.Int) -> Foundation.NSString?
+  @objc final public func getDataSourceIndex(from index: Swift.Int) -> Swift.Int
+  @objc final public func getDataSourceName(from index: Swift.Int) -> Swift.String?
+  @objc final public func getDataSourceDescription(from index: Swift.Int) -> Swift.String?
+  @objc final public func retrieveDataSourceId(from type: Swift.String) -> Swift.Int
+}
+extension CaptureSDK.SocketCamControllerSwift : CaptureSDK.SocketCamDelegate {
+  @objc final public func didRead(_ barcode: Swift.String, ofType type: Swift.String)
+  @objc final public func didNotRead()
+  @objc final public func buildDataSourceEnabledList() -> Foundation.NSArray
+}
+extension Foundation.Data {
+  public func checksum() -> Swift.UInt16
+  public func md5() -> Foundation.Data
+  public func sha1() -> Foundation.Data
+  public func sha224() -> Foundation.Data
+  public func sha256() -> Foundation.Data
+  public func sha384() -> Foundation.Data
+  public func sha512() -> Foundation.Data
+  public func sha3(_ variant: CaptureSDK.SHA3.Variant) -> Foundation.Data
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Foundation.Data
+  public func crc16(seed: Swift.UInt16? = nil) -> Foundation.Data
+  public func encrypt(cipher: CaptureSDK.Cipher) throws -> Foundation.Data
+  public func decrypt(cipher: CaptureSDK.Cipher) throws -> Foundation.Data
+  public func authenticate(with authenticator: CaptureSDK.Authenticator) throws -> Foundation.Data
+}
+extension Foundation.Data {
+  public init(hex: Swift.String)
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+  public func toHexString() -> Swift.String
+}
+public typealias CipherOperationOnBlock = (_ block: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>?
+public protocol BlockMode {
+  var options: CaptureSDK.BlockModeOption { get }
+  func worker(blockSize: Swift.Int, cipherOperation: @escaping CaptureSDK.CipherOperationOnBlock, encryptionOperation: @escaping CaptureSDK.CipherOperationOnBlock) throws -> CaptureSDK.CipherModeWorker
+}
+public protocol Updatable {
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool) throws -> Swift.Array<Swift.UInt8>
+  mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+extension CaptureSDK.Updatable {
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+  public mutating func update(withBytes bytes: Swift.Array<Swift.UInt8>, isLast: Swift.Bool = false, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>) throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish() throws -> Swift.Array<Swift.UInt8>
+  public mutating func finish(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(withBytes bytes: Swift.Array<Swift.UInt8>, output: (_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+  public mutating func finish(output: (Swift.Array<Swift.UInt8>) -> Swift.Void) throws
+}
+final public class SHA3 {
+  final public let blockSize: Swift.Int
+  final public let digestLength: Swift.Int
+  final public let markByte: Swift.UInt8
+  public enum Variant {
+    case sha224, sha256, sha384, sha512, keccak224, keccak256, keccak384, keccak512
+    public var outputLength: Swift.Int {
+      get
+    }
+    public static func == (a: CaptureSDK.SHA3.Variant, b: CaptureSDK.SHA3.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(variant: CaptureSDK.SHA3.Variant)
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension CaptureSDK.SHA3 : CaptureSDK.Updatable {
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+@available(*, renamed: "Digest")
+public typealias Hash = CaptureSDK.Digest
+public struct Digest {
+  public static func md5(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha1(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha224(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha256(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha384(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha512(_ bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  public static func sha2(_ bytes: Swift.Array<Swift.UInt8>, variant: CaptureSDK.SHA2.Variant) -> Swift.Array<Swift.UInt8>
+  public static func sha3(_ bytes: Swift.Array<Swift.UInt8>, variant: CaptureSDK.SHA3.Variant) -> Swift.Array<Swift.UInt8>
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  @available(*, deprecated)
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+  public func md5() -> [Element]
+  public func sha1() -> [Element]
+  public func sha224() -> [Element]
+  public func sha256() -> [Element]
+  public func sha384() -> [Element]
+  public func sha512() -> [Element]
+  public func sha2(_ variant: CaptureSDK.SHA2.Variant) -> [Element]
+  public func sha3(_ variant: CaptureSDK.SHA3.Variant) -> [Element]
+  public func crc32(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc32c(seed: Swift.UInt32? = nil, reflect: Swift.Bool = true) -> Swift.UInt32
+  public func crc16(seed: Swift.UInt16? = nil) -> Swift.UInt16
+  public func encrypt(cipher: CaptureSDK.Cipher) throws -> [Element]
+  public func decrypt(cipher: CaptureSDK.Cipher) throws -> [Element]
+  public func authenticate<A>(with authenticator: A) throws -> [Element] where A : CaptureSDK.Authenticator
+}
+extension CaptureSDK.Rabbit {
+  convenience public init(key: Swift.String) throws
+  convenience public init(key: Swift.String, iv: Swift.String) throws
+}
+@objc public protocol SCardReaderListDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func onReaderListDidCreate(readers: CaptureSDK.SCardReaderList?, error: Swift.Error?)
+  @objc func onReaderListDidClose(readers: CaptureSDK.SCardReaderList?, error: Swift.Error?)
+  @objc func onControlDidResponse(readers: CaptureSDK.SCardReaderList?, response: [Swift.UInt8]?, error: Swift.Error?)
+  @objc func onReaderStatus(reader: CaptureSDK.SCardReader?, present: Swift.Bool, powered: Swift.Bool, error: Swift.Error?)
+  @objc func onReaderListState(readers: CaptureSDK.SCardReaderList, isInLowPowerMode: Swift.Bool)
+  @objc func onTransmitDidResponse(channel: CaptureSDK.SCardChannel?, response: [Swift.UInt8]?, error: Swift.Error?)
+  @objc func onCardDidConnect(channel: CaptureSDK.SCardChannel?, error: Swift.Error?)
+  @objc func onCardDidDisconnect(channel: CaptureSDK.SCardChannel?, error: Swift.Error?)
+  @objc func onPowerInfo(powerState: Swift.Int, batteryLevel: Swift.Int, error: Swift.Error?)
+}
+final public class SHA1 {
+  public init()
+  final public func calculate(for bytes: Swift.Array<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  @objc deinit
+}
+extension CaptureSDK.SHA1 : CaptureSDK.Updatable {
+  @discardableResult
+  final public func update(withBytes bytes: Swift.ArraySlice<Swift.UInt8>, isLast: Swift.Bool = false) throws -> Swift.Array<Swift.UInt8>
+}
+public protocol PaddingProtocol {
+  func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+}
+public enum Padding : CaptureSDK.PaddingProtocol {
+  case noPadding, zeroPadding, pkcs7, pkcs5, iso78164
+  public func add(to: Swift.Array<Swift.UInt8>, blockSize: Swift.Int) -> Swift.Array<Swift.UInt8>
+  public func remove(from: Swift.Array<Swift.UInt8>, blockSize: Swift.Int?) -> Swift.Array<Swift.UInt8>
+  public static func == (a: CaptureSDK.Padding, b: CaptureSDK.Padding) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol AEAD {
+  static var kLen: Swift.Int { get }
+  static var ivRange: Swift.Range<Swift.Int> { get }
+}
+@_hasMissingDesignatedInitializers @objc public class SCardChannel : ObjectiveC.NSObject {
+  @objc public var atrHexa: Swift.String {
+    @objc get
+  }
+  @objc public var parent: CaptureSDK.SCardReader {
+    @objc get
+  }
+  @objc public var isUnpowered: Swift.Bool {
+    @objc get
+  }
+  @objc public var atr: [Swift.UInt8] {
+    @objc get
+  }
+  @objc public var friendlyName: Swift.String {
+    @objc get
+  }
+  public static func == (lhs: CaptureSDK.SCardChannel, rhs: CaptureSDK.SCardChannel) -> Swift.Bool
+  @objc public func transmit(command: [Swift.UInt8])
+  @objc public func cardDisconnect()
+  @objc public func cardReconnect()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SCardReaderList_PUCK_BLE_Unbonded : CaptureSDK.SCardReaderList {
+  @objc public func isBoundedDevice() -> Swift.Bool
+  @objc public func setSpecificDeviceServices()
+  @objc override public init(device: CoreBluetooth.CBPeripheral, centralManager: CoreBluetooth.CBCentralManager, delegate: CaptureSDK.SCardReaderListDelegate?, secureConnectionParameters: CaptureSDK.SecureConnectionParameters?)
+  @objc deinit
+}
+public struct HKDF {
+  public enum Error : Swift.Error {
+    case invalidInput
+    case derivedKeyTooLong
+    public static func == (a: CaptureSDK.HKDF.Error, b: CaptureSDK.HKDF.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(password: Swift.Array<Swift.UInt8>, salt: Swift.Array<Swift.UInt8>? = nil, info: Swift.Array<Swift.UInt8>? = nil, keyLength: Swift.Int? = nil, variant: CaptureSDK.HMAC.Variant = .sha256) throws
+  public func calculate() throws -> Swift.Array<Swift.UInt8>
+}
+@_hasMissingDesignatedInitializers final public class AEADChaCha20Poly1305 : CaptureSDK.AEAD {
+  public static let kLen: Swift.Int
+  public static var ivRange: Swift.Range<Swift.Int>
+  public static func encrypt(_ plainText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>) throws -> (cipherText: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>)
+  public static func decrypt(_ cipherText: Swift.Array<Swift.UInt8>, key: Swift.Array<Swift.UInt8>, iv: Swift.Array<Swift.UInt8>, authenticationHeader: Swift.Array<Swift.UInt8>, authenticationTag: Swift.Array<Swift.UInt8>) throws -> (plainText: Swift.Array<Swift.UInt8>, success: Swift.Bool)
+  @objc deinit
+}
+public protocol CipherModeWorker {
+  var cipherOperation: CaptureSDK.CipherOperationOnBlock { get }
+  var additionalBufferSize: Swift.Int { get }
+  mutating func encrypt(block plaintext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+  mutating func decrypt(block ciphertext: Swift.ArraySlice<Swift.UInt8>) -> Swift.Array<Swift.UInt8>
+}
+public protocol BlockModeWorker : CaptureSDK.CipherModeWorker {
+  var blockSize: Swift.Int { get }
+}
+public protocol CounterModeWorker : CaptureSDK.CipherModeWorker {
+  associatedtype Counter
+  var counter: Self.Counter { get set }
+}
+public protocol SeekableModeWorker : CaptureSDK.CipherModeWorker {
+  mutating func seek(to position: Swift.Int) throws
+}
+public protocol StreamModeWorker : CaptureSDK.CipherModeWorker {
+}
+public protocol FinalizingEncryptModeWorker : CaptureSDK.CipherModeWorker {
+  mutating func finalize(encrypt ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public protocol FinalizingDecryptModeWorker : CaptureSDK.CipherModeWorker {
+  @discardableResult
+  mutating func willDecryptLast(bytes ciphertext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func didDecryptLast(bytes plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+  mutating func finalize(decrypt plaintext: Swift.ArraySlice<Swift.UInt8>) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+extension CaptureSDK.PCBC.Error : Swift.Equatable {}
+extension CaptureSDK.PCBC.Error : Swift.Hashable {}
+extension CaptureSDK.CMAC.Error : Swift.Equatable {}
+extension CaptureSDK.CMAC.Error : Swift.Hashable {}
+extension CaptureSDK.CBC.Error : Swift.Equatable {}
+extension CaptureSDK.CBC.Error : Swift.Hashable {}
+extension CaptureSDK.ChaCha20.Error : Swift.Equatable {}
+extension CaptureSDK.ChaCha20.Error : Swift.Hashable {}
+extension CaptureSDK.Poly1305.Error : Swift.Equatable {}
+extension CaptureSDK.Poly1305.Error : Swift.Hashable {}
+extension CaptureSDK.CFB.Error : Swift.Equatable {}
+extension CaptureSDK.CFB.Error : Swift.Hashable {}
+extension CaptureSDK.OCB.Mode : Swift.Equatable {}
+extension CaptureSDK.OCB.Mode : Swift.Hashable {}
+extension CaptureSDK.OCB.Error : Swift.Equatable {}
+extension CaptureSDK.OCB.Error : Swift.Hashable {}
+extension CaptureSDK.PKCS5.PBKDF2.Error : Swift.Equatable {}
+extension CaptureSDK.PKCS5.PBKDF2.Error : Swift.Hashable {}
+extension CaptureSDK.SCardErrorCode : Swift.Equatable {}
+extension CaptureSDK.SCardErrorCode : Swift.Hashable {}
+extension CaptureSDK.SCardErrorCode : Swift.RawRepresentable {}
+extension CaptureSDK.PKCS5.PBKDF1.Error : Swift.Equatable {}
+extension CaptureSDK.PKCS5.PBKDF1.Error : Swift.Hashable {}
+extension CaptureSDK.PKCS5.PBKDF1.Variant : Swift.Equatable {}
+extension CaptureSDK.PKCS5.PBKDF1.Variant : Swift.Hashable {}
+extension CaptureSDK.CipherError : Swift.Equatable {}
+extension CaptureSDK.CipherError : Swift.Hashable {}
+extension CaptureSDK.HMAC.Error : Swift.Equatable {}
+extension CaptureSDK.HMAC.Error : Swift.Hashable {}
+extension CaptureSDK.HMAC.Variant : Swift.Equatable {}
+extension CaptureSDK.HMAC.Variant : Swift.Hashable {}
+extension CaptureSDK.CCM : CaptureSDK.BlockMode {}
+extension CaptureSDK.CCM.Error : Swift.Equatable {}
+extension CaptureSDK.CCM.Error : Swift.Hashable {}
+extension CaptureSDK.AES.Error : Swift.Equatable {}
+extension CaptureSDK.AES.Error : Swift.Hashable {}
+extension CaptureSDK.AES.Variant : Swift.Equatable {}
+extension CaptureSDK.AES.Variant : Swift.Hashable {}
+extension CaptureSDK.AES.Variant : Swift.RawRepresentable {}
+extension CaptureSDK.Blowfish.Error : Swift.Equatable {}
+extension CaptureSDK.Blowfish.Error : Swift.Hashable {}
+extension CaptureSDK.Rabbit.Error : Swift.Equatable {}
+extension CaptureSDK.Rabbit.Error : Swift.Hashable {}
+extension CaptureSDK.OFB.Error : Swift.Equatable {}
+extension CaptureSDK.OFB.Error : Swift.Hashable {}
+extension CaptureSDK.CTR : CaptureSDK.BlockMode {}
+extension CaptureSDK.CTR.Error : Swift.Equatable {}
+extension CaptureSDK.CTR.Error : Swift.Hashable {}
+extension CaptureSDK.Bit : Swift.Equatable {}
+extension CaptureSDK.Bit : Swift.Hashable {}
+extension CaptureSDK.Bit : Swift.RawRepresentable {}
+extension CaptureSDK.SHA2.Variant : Swift.Equatable {}
+extension CaptureSDK.SHA2.Variant : Swift.Hashable {}
+extension CaptureSDK.KeyIndex : Swift.Equatable {}
+extension CaptureSDK.KeyIndex : Swift.Hashable {}
+extension CaptureSDK.KeyIndex : Swift.RawRepresentable {}
+extension CaptureSDK.CommMode : Swift.Equatable {}
+extension CaptureSDK.CommMode : Swift.Hashable {}
+extension CaptureSDK.CommMode : Swift.RawRepresentable {}
+extension CaptureSDK.AuthenticationMode : Swift.Equatable {}
+extension CaptureSDK.AuthenticationMode : Swift.Hashable {}
+extension CaptureSDK.AuthenticationMode : Swift.RawRepresentable {}
+extension CaptureSDK.GCM.Mode : Swift.Equatable {}
+extension CaptureSDK.GCM.Mode : Swift.Hashable {}
+extension CaptureSDK.GCM.Error : Swift.Equatable {}
+extension CaptureSDK.GCM.Error : Swift.Hashable {}
+extension CaptureSDK.SHA3.Variant : Swift.Equatable {}
+extension CaptureSDK.SHA3.Variant : Swift.Hashable {}
+extension CaptureSDK.Padding : Swift.Equatable {}
+extension CaptureSDK.Padding : Swift.Hashable {}
+extension CaptureSDK.HKDF.Error : Swift.Equatable {}
+extension CaptureSDK.HKDF.Error : Swift.Hashable {}

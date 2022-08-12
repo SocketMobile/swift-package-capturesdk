@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.4.00
+# CaptureSDK Version 1.4.57 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
