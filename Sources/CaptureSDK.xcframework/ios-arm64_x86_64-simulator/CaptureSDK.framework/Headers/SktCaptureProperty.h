@@ -635,6 +635,8 @@ typedef NS_ENUM(NSInteger, SKTCaptureDisconnect)
     SKTCaptureDisconnectStartProfile=0,
     /** disconnect and disable the radio (low power) */
     SKTCaptureDisconnectDisableRadio=1,
+    /** disconnect a device and make it available for a new connection (for Bluetooth Low Energy device) */
+    SKTCaptureDisconnectMakeAvailable=2,
 };
 
 /**
