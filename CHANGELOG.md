@@ -1,6 +1,17 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.5.2](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.2)
+### New
+  * Compatibility with the new devices S720/D720/S820
+  * Battery level notification added for the S550
+
+### Improvements
+  * n/a
+
+### Bug fixes
+  * n/a
+
 ## [Version 1.4.61](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.4.61)
 ### New
   * You can close the connection to a Bluetooth Low Energy device with a new property ID: SKTCapturePropertyIDDisconnectDevice and value: SKTCaptureDisconnectMakeAvailable

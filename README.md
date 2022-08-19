@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.4.61 - Swift Package Manager
+# CaptureSDK Version 1.5.2 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -14,6 +14,12 @@ The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to t
 
 More documentation can be found [here](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
+# Devices compatibility and CaptureSDK versions
+|       Devices                                          |          < 1.4         |          1.4           |          1.5          |
+| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: |
+|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |
+|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |
+|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |
 
 # Table of Contents
 * [Breaking changes](#breaking-changes)
@@ -32,10 +38,10 @@ We have improved and changed some things in our architecture to prepare the futu
 
 - The SDK is now a framework, not a static library anymore
 - The name is now `CaptureSDK`
-- [cocoapods-capture](https://github.com/SocketMobile/cocoapods-capture) and [cocoapods-capture-obj-c](https://github.com/SocketMobile/cocoapods-capture-obj-c) are now deprecated. However, this new framework can be included in both Objective-C and/or Swift projects
+- [cocoapods-capture](https://github.com/SocketMobile/cocoapods-capture) and [cocoapods-capture-obj-c](https://github.com/SocketMobile/cocoapods-capture-obj-c) are now deprecated. However, this new framework is more to be used in Swift projects
 - The minimum target is now iOS 11.0
 - SocketCam C820, formerly known as SoftScan has been improved and allows you to scan with your device and not with a scanner
-- Capture Helper is now included into the framework - [CaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelper.html) for Swift, [SKTCaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelperObjectiveC.html) for Objective-C
+- Capture Helper is now included into the framework - [CaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelper.html)
 
 
 # Quick install notes
@@ -74,7 +80,7 @@ Go to the `CaptureHelperDelegate` source and copy paste the delegates you want t
 # CaptureSDK usage
 `CaptureSDK` is described in greater details in the [documentation](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
-The recommended way of using `CaptureSDK` is by using `CaptureHelper`. `CaptureHelper` is now included into the framework and not as a separate file. [CaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelper.html) for Swift, [SKTCaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelperObjectiveC.html) for Objective-C
+The recommended way of using `CaptureSDK` is by using `CaptureHelper`. `CaptureHelper` is now included into the framework and not as a separate file: [CaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelper.html)
 
 ## 1. Getting a `CaptureHelper` instance
 `CaptureHelper` can be instantiated in one of your application controllers using its `CaptureHelper.sharedInstance` static member.
