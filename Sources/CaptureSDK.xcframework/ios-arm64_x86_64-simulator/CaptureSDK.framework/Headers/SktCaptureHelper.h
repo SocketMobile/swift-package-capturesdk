@@ -19,7 +19,7 @@
  * A reference of a CaptureHelperDevice is kept in a devices
  * list in CaptureHelper.
  *
- * The main entry point of the Capture SDK is CaptureHelper.
+ * The main entry point of the CaptureSDK is CaptureHelper.
  * To use CaptureHelper, open it with the method openWithAppInfo.
  *
  * CaptureHelper shares its instance across the application and
