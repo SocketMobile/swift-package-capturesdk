@@ -1,6 +1,16 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.5.7](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.7)
+### New
+  * CaptureSDK is now build with Xcode 14, supporting iOS16
+
+### Improvements
+  * Bitcode has been disabled. If you need a version of CaptureSDK with Bitcode enabled, [please take the previous version 1.5.5](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.5)
+
+### Bug fixes
+  * n/a
+
 ## [Version 1.5.5](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.5)
 ### New
   * n/a
