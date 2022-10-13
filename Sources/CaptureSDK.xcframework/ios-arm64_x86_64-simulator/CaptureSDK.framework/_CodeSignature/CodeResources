@@ -50,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		b1/HzPoznjuJ6f3OoAsp6ijmAb0=
+		K9Ac5uXjz4wLp/H6c/+yxrssiBI=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Rd8cuGsRpAXbTK3p57OYOHlkKPw=
+		JubzxiJEBxlCk+5NN+qzpprHcYo=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Puz6eIjrL0kKDa2Tc05828pH3ok=
+		APFiTp7c5DCjVtHNnjn2NS2JzmU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -272,7 +272,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+BPM8hlWErmBgPuAtyEgAyfAGtd2FaO42AwwlCqMZss=
+			Gv3V+0UDosuIUnjHM9SYror8Tl/jxgsRSW8plp6sB2w=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -307,7 +307,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			03042cgT0iOw8iQ7eDTHBjO1w41FRdvsZz4ORwW/G6k=
+			8RaqtXyvhLezeJ+KhWpTCe3hGlORcMEkxzw9cVS82nM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

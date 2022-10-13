@@ -1,6 +1,16 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.5.9](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.9)
+### New
+  * n/a
+
+### Improvements
+  * n/a
+
+### Bug fixes
+  * The Bluetooth Low Energy manager had a small issue discovering and connecting several devices after a reconnection/restart of those devices. It is now fixed and you should be able to restart devices and being reconnected again
+
 ## [Version 1.5.7](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.7)
 ### New
   * CaptureSDK is now build with Xcode 14, supporting iOS16
