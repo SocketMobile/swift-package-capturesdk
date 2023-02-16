@@ -20,7 +20,7 @@ typedef void* SKTHandle;
 
 #import "SktCaptureDataSource.h"
 #import "SktCaptureVersion.h"
-#import "SktCaptureProperty.h"
+#import "SktCapturePropertyIds.h"
 #import "SktCaptureDeviceTypes.h"
 #import "SktCaptureEventIds.h"
 
@@ -181,6 +181,34 @@ typedef void* SKTHandle;
  *  Helper for the values received from Capture in the properties or events
  */
 @interface SKTHelper : NSObject
+
+/**
+ * Tells if a given device support the given functions
+ *
+ * @param deviceType device type
+ * @param functions functions (barcode scanner, nfc reader, nfc writer, or combination of several)
+ * @return a bool value telling if the device supports the functions
+ */
++(BOOL)device:(SKTCaptureDeviceType)deviceType supportsFunctions:(SKTCaptureDeviceFunction)functions;
+
+/**
+ * Tells if a device is a barcode scanner
+ * or not compared to a NFC scanner
+ *
+ * @param deviceType device type
+ * @return a bool value telling it's a barcode scanner
+ */
++(BOOL)isBarcodeScanner:(SKTCaptureDeviceType)deviceType;
+
+/**
+ * Tells if a device is a NFC scanner
+ * or not compared to a barcode scanner
+ *
+ * @param deviceType device type
+ * @return a bool value telling it's a NFC scanner
+ */
++(BOOL)isNFCScanner:(SKTCaptureDeviceType)deviceType;
+
 /**
  * retrieves the ID from a property ID
  *

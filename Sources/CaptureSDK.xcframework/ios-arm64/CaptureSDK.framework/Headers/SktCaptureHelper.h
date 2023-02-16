@@ -51,7 +51,7 @@
 #pragma mark - Convenience properties for Device Information
 
 /** device battery level expressed as a percentage: 84% */
-@property NSString *batteryLevel;
+@property (strong, readonly) NSString *batteryLevel;
 
 
 #pragma mark - Initialization
@@ -654,7 +654,7 @@
  * @param block called upon completion of getting the confirmation mode
  * with the result and the confirmation mode as argument.
  */
--(void)getConfirmationModeWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDataConfirmation confirmationMode))block;
+-(void)getConfirmationModeWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDataConfirmationMode confirmationMode))block;
 
 /**
  * set the confirmation mode to define how the decoded data should be confirmed.
@@ -663,7 +663,7 @@
  * @param block called upon completion of setting the confirmation mode
  * with the result of setting the confirmation mode.
  */
--(void)setConfirmationMode:(SKTCaptureDataConfirmation)confirmationMode completionHandler:(void(^)(SKTResult result))block;
+-(void)setConfirmationMode:(SKTCaptureDataConfirmationMode)confirmationMode completionHandler:(void(^)(SKTResult result))block;
 
 
 #pragma mark - SocketCam (Scanner using the Camera)

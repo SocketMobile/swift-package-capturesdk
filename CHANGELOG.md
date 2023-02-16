@@ -1,6 +1,19 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.6.30](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.6.30)
+### New
+  * Compatibility with the new combo device S370 that contains a NFC reader/writer and a Barcode scanner
+  * Add trigger and themes selection properties to S550 and S370
+  * Add the Power State characteristic to the D600
+
+### Improvements
+  * Some string and methods of CryptoSwift conflicting with developers's projects are now solved [#7](https://github.com/SocketMobile/swift-package-capturesdk/issues/7)
+
+### Bug fixes
+  * Some developers reported that the Bluetooth Low Energy manager crashes. It is now fixed
+  * Fix crash when connecting to D600
+
 ## [Version 1.5.9](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.5.9)
 ### New
   * n/a

@@ -56,6 +56,11 @@ typedef NS_ENUM(NSInteger, SKTCaptureErrors) {
 	SKTCaptureE_CREATED = 5,
 
 	/**
+	No data present
+	*/
+	SKTCaptureE_NODATA = 6,
+
+	/**
 	There is no error
 	*/
 	SKTCaptureE_NOERROR = 0,

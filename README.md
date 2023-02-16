@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.5.9 - Swift Package Manager
+# CaptureSDK Version 1.6.30 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -15,11 +15,12 @@ The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to t
 More documentation can be found [here](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
 # Devices compatibility and CaptureSDK versions
-|       Devices                                          |          < 1.4         |          1.4           |          1.5          |
-| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: |
-|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |
-|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |
-|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |
+|       Devices                                          |          < 1.4         |          1.4           |          1.5          |          1.6          |
+| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: | :-------------------: |
+|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |           ✅          |
+|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |           ✅          |
+|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |           ✅          |
+|   **S370**                                             |          ❌            |           ❌           |           ❌           |           ✅          |
 
 # Table of Contents
 * [Breaking changes](#breaking-changes)
@@ -42,7 +43,7 @@ We have improved and changed some things in our architecture to prepare the futu
 - The minimum target is now iOS 11.0
 - SocketCam C820, formerly known as SoftScan has been improved and allows you to scan with your device and not with a scanner
 - Capture Helper is now included into the framework - [CaptureHelper](https://docs.socketmobile.com/capture/ios/en/latest/captureHelper.html)
-- Bitcode has been enabled in the version 1.5.5 but disabled in the version 1.5.9 build with Xcode 14. If you need a version with Bitcode enabled, please use the 1.5.5
+- Bitcode has been enabled in the version 1.5.5 but disabled in the version 1.5.7 build with Xcode 14. If you need a version with Bitcode enabled, please use the 1.5.5
 
 
 # Quick install notes
@@ -179,6 +180,21 @@ func didNotifyRemovalForDevice(_ device: CaptureHelperDevice, withResult result:
     print("Main view device removal:\(device.deviceInfo.name!)")
 }
 ```
+
+For a combo device like the S370 which has 2 devices, there will be two ``didNotifyArrivalForDevice`` and two ``didNotifyRemovalForDevice`` notifications.
+
+The following code shows how you can distinghuish and handle them:
+```swift
+func didNotifyArrivalForDevice(_ device: CaptureHelperDevice, withResult result: SKTResult) {
+    print("didNotifyArrivalForDevice: \(String(describing: device.deviceInfo.name))")
+    if device.deviceInfo.deviceType == .NFCS370 {
+    // handle the NFC reader of the S370
+    } else if device.deviceInfo.deviceType == .scannerS370 {
+    // handle the Barcode scanner of the S370
+    }
+}
+```
+
 If the scanner triggers a scan, the decoded data can be retrieve in the protocol function `onDecodedData`.
 
 Example of retrieving the decoded data received by a scanner:
@@ -248,8 +264,10 @@ You can also refer to the [documentation](https://docs.socketmobile.com/capture/
 
 **BLE DEVICES**
 
-For D600 and S550, the BLE Device manager must have a favorite set to `*` and for more information please check the [documentation](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
+For D600, S550 and S370, the BLE Device manager must have a favorite set to `*` and for more information please check the [documentation](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
+# Themes selection
+The Themes Selection allows to choose LEDs sequences that are played on S550 or S370 devices. Please check the [documentation](https://docs.socketmobile.com/capture/ios/en/latest/topicsThemesSelection.html "CaptureSDK Documentation - Themes Selection").
 
 # Device Notifications (Battery Level)
 The Device Notifications can be configured in order to receive a notification each time one or more of those events occur:

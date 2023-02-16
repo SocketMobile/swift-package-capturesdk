@@ -8,6 +8,8 @@
 #ifndef SktCapturePropertyIds_h
 #define SktCapturePropertyIds_h
 
+#import "SktCaptureDataSource.h"
+#import "SktCaptureVersion.h"
 
 
 typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
@@ -419,7 +421,690 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	*/
 	SKTCapturePropertyIDPcScCouplerControl = 4456732,
 
+	/**
+	property to define the theme that is used for the different events: Ready, Read, Read Success, Read Failure UI
+
+	Device: True	Get Type: None 	Set Type: Array
+	*/
+	SKTCapturePropertyIDThemeSelectionDevice = 262430,
+
 
 };
 
-#endif
+typedef NS_ENUM(NSInteger, SKTCapturePropertyType) {
+	/** for capture properties that don't have any value */
+	SKTCapturePropertyTypeNone,
+	/** for capture properties that don't have a value for either a get operation or a set operation or neither of them. */
+	SKTCapturePropertyTypeNotApplicable,
+	/** the property has a byte value */
+	SKTCapturePropertyTypeByte,
+	/** the property has a unsigned long value */
+	SKTCapturePropertyTypeUlong,
+	/** the property has a byte array value */
+	SKTCapturePropertyTypeArray,
+	/** the property has a string value */
+	SKTCapturePropertyTypeString,
+	/** the property has a version structure as value (read only) */
+	SKTCapturePropertyTypeVersion,
+	/** the property has a data source structure as value */
+	SKTCapturePropertyTypeDataSource,
+	/** the property has an enum value */
+	SKTCapturePropertyTypeEnum,
+	/** the property has an object as value */
+	SKTCapturePropertyTypeObject,
+	/** the property type should not be equal or higher that kLast otherwise it means the SDK is not in sync with the actual version of Socket Mobile Companion running on the host */
+	SKTCapturePropertyTypeLastType,
+
+};
+
+/**
+ @brief identify the device button for which the button event is received
+ */
+typedef NS_OPTIONS(NSInteger, SKTCaptureButtonsState)
+{
+    /** when there is no button pressed */
+    SKTCaptureButtonsStateNone=0x00,
+    /** the left button is pressed */
+    SKTCaptureButtonsStateLeft=0x01,
+    /** the right button is pressed */
+    SKTCaptureButtonsStateRight=0x02,
+    /** the middle button is pressed */
+    SKTCaptureButtonsStateMiddle=0x04,
+    /** the power button is pressed */
+    SKTCaptureButtonsStatePower=0x08,
+    /** the ring is a in detached state (Series 9 only) */
+    SKTCaptureButtonsStateRingDetach=0x10
+};
+
+/**
+ @brief Mask for the Theme selection property. It applies the theme selection on the given device(s) set with the mask
+ */
+typedef NS_OPTIONS(UInt8, SKTCaptureThemeSelectionMask)
+{
+    /** mask applied on the Default device */
+    SKTCaptureThemeSelectionMaskDefault=0x01,
+    /** mask applied on the Nfc device */
+    SKTCaptureThemeSelectionMaskNfc=0x02,
+    /** mask applied on the Default and Nfc devices */
+    SKTCaptureThemeSelectionMaskDefaultNfc=0x03,
+    /** mask applied on the BArcode device */
+    SKTCaptureThemeSelectionMaskBarcode=0x04,
+    /** mask applied on the Default and Barcode devices */
+    SKTCaptureThemeSelectionMaskDefaultBarcode=0x05,
+    /** mask applied on the Nfc and Barcode devices */
+    SKTCaptureThemeSelectionMaskNfcBarcode=0x06,
+    /** mask applied on the Default, Nfc and Barcode devices */
+    SKTCaptureThemeSelectionMaskAll=0x07
+};
+
+/**
+ @brief Data Confirmation Mode indicates what is  expected to the send the Data ACK back to the scanner 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDataConfirmationMode) 
+{
+	/** use the device configuration (Local Confirmation or App) */
+	SKTCaptureDataConfirmationModeModeOff=0,
+	/** the device confirms the decoded data locally */
+	SKTCaptureDataConfirmationModeModeDevice=1,
+	/** Capture confirms the decoded data as it receives them and there is one app */
+	SKTCaptureDataConfirmationModeModeCapture=2,
+	/** the Application confirms the decoded data as it receives them */
+	SKTCaptureDataConfirmationModeModeApp=3,
+};
+
+/**
+ @brief Device Data Acknowledgment mode 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDeviceDataAcknowledgment) 
+{
+	/** the device won't locally acknowledge decoded data */
+	SKTCaptureDeviceDataAcknowledgmentOff=0,
+	/** the device will locally acknowledge decoded data */
+	SKTCaptureDeviceDataAcknowledgmentOn=1,
+};
+
+/**
+ @brief Security Mode 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureSecurityMode) 
+{
+	/** No security */
+	SKTCaptureSecurityModeNone=0,
+	/** communication protected by authentication */
+	SKTCaptureSecurityModeAuthentication=1,
+	/** communication protected by authentication and encrytion */
+	SKTCaptureSecurityModeAuthenticationEncryption=2,
+};
+
+/**
+ @brief trigger parameter 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureTrigger) 
+{
+	/** start a read */
+	SKTCaptureTriggerStart=1,
+	/** stop a read */
+	SKTCaptureTriggerStop=2,
+	/** enable the trigger */
+	SKTCaptureTriggerEnable=3,
+	/** disable the trigger */
+	SKTCaptureTriggerDisable=4,
+	/** start a read in continuous */
+	SKTCaptureTriggerContinuousScan=5,
+	/** start a read in continuous until a code is read */
+	SKTCaptureTriggerContinuousScanUntilRead=6,
+};
+
+/**
+ @brief Delete the pairing of the device 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDeletePairing) 
+{
+	/** delete the current pairing */
+	SKTCaptureDeletePairingCurrent=0,
+	/** delete all the pairing of the device */
+	SKTCaptureDeletePairingAll=1,
+};
+
+/**
+ @brief sound configuration for the a type of action 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureSoundActionType) 
+{
+	/** sound configuration for a good read action */
+	SKTCaptureSoundActionTypeGoodRead=0,
+	/** sound configuration for a good read local action */
+	SKTCaptureSoundActionTypeGoodReadLocal=1,
+	/** sound configuration for a bad read action */
+	SKTCaptureSoundActionTypeBadRead=2,
+	/** sound configuration for a bad read local action */
+	SKTCaptureSoundActionTypeBadReadLocal=3,
+};
+
+/**
+ @brief Sound frequency configuration 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureSoundFrequency) 
+{
+	/** no frequency */
+	SKTCaptureSoundFrequencyNone=0,
+	/** Low pitch frequency */
+	SKTCaptureSoundFrequencyLow=1,
+	/** Medium pitch frequency */
+	SKTCaptureSoundFrequencyMedium=2,
+	/** High pitch frequency */
+	SKTCaptureSoundFrequencyHigh=3,
+};
+
+/**
+ @brief Rumble configuration for the a type of action 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureRumbleActionType) 
+{
+	/** Rumble configuration for a good read action */
+	SKTCaptureRumbleActionTypeGoodRead=0,
+	/** Rumble configuration for a good read local action */
+	SKTCaptureRumbleActionTypeGoodReadLocal=1,
+	/** Rumble configuration for a bad read action */
+	SKTCaptureRumbleActionTypeBadRead=2,
+	/** Rumble configuration for a bad read local action */
+	SKTCaptureRumbleActionTypeBadReadLocal=3,
+};
+
+/**
+ @brief Define the action for a local decode 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureLocalDecodeAction) 
+{
+	/** no action */
+	SKTCaptureLocalDecodeActionNone=0,
+	/** Beep when a local decode occurs */
+	SKTCaptureLocalDecodeActionBeep=1,
+	/** Flash the LED when a local decode occurs */
+	SKTCaptureLocalDecodeActionFlash=2,
+	/** Rumble when a local decode occurs */
+	SKTCaptureLocalDecodeActionRumble=4,
+};
+
+/**
+ @brief Define the LED for data confirmation 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDataConfirmationLed) 
+{
+	/** no LED */
+	SKTCaptureDataConfirmationLedNone=0,
+	/** make the LED flash in green */
+	SKTCaptureDataConfirmationLedGreen=1,
+	/** make the LED flash in red */
+	SKTCaptureDataConfirmationLedRed=2,
+};
+
+/**
+ @brief Define the sound for data confirmation 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDataConfirmationBeep) 
+{
+	/** no sound */
+	SKTCaptureDataConfirmationBeepNone=0,
+	/** short beep for success */
+	SKTCaptureDataConfirmationBeepGood=1,
+	/** long beep for failure */
+	SKTCaptureDataConfirmationBeepBad=2,
+};
+
+/**
+ @brief Define the rumble for data confirmation 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDataConfirmationRumble) 
+{
+	/** no sound */
+	SKTCaptureDataConfirmationRumbleNone=0,
+	/** short rumble for success */
+	SKTCaptureDataConfirmationRumbleGood=1,
+	/** long rumble for failure */
+	SKTCaptureDataConfirmationRumbleBad=2,
+};
+
+/**
+ @brief Define the flash setting 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureFlash) 
+{
+	/** turn off the flash */
+	SKTCaptureFlashOff=0,
+	/** turn on the flash */
+	SKTCaptureFlashOn=1,
+};
+
+/**
+ @brief Define the SocketCam experience (iOS-iPadOS only) 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureSocketCam) 
+{
+	/** Enable SocketCam */
+	SKTCaptureSocketCamEnable=0,
+	/** Disable SocketCam */
+	SKTCaptureSocketCamDisable=1,
+	/** SocketCam is not supported, and cannot be enabled */
+	SKTCaptureSocketCamNotSupported=2,
+};
+
+/**
+ @brief Define the possible power states 
+*/
+typedef NS_ENUM(NSInteger, SKTCapturePowerState) 
+{
+	/** The power state is unknown */
+	SKTCapturePowerStateUnknown=0,
+	/** The power state is on battery */
+	SKTCapturePowerStateOnBattery=1,
+	/** The power state is on cradle */
+	SKTCapturePowerStateOnCradle=2,
+	/** The power state in on AC */
+	SKTCapturePowerStateOnAc=4,
+};
+
+/**
+ @brief Define the monitor feature (DEBUG build only) 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureMonitorDbg) 
+{
+	/** define the level for the debug traces */
+	SKTCaptureMonitorDbgLevel=1,
+	/** define the output channel for the debug traces */
+	SKTCaptureMonitorDbgChannel=2,
+	/** define the number of lines in the file */
+	SKTCaptureMonitorDbgFileLineLevel=3,
+};
+
+/**
+ @brief identifiers for the statistic counters 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureCounter) 
+{
+	/** use for convenience only to skip a counter */
+	SKTCaptureCounterSkip=-1,
+	/** unknow counter */
+	SKTCaptureCounterUnknown=0,
+	/** number of connections */
+	SKTCaptureCounterConnect=1,
+	/** number of disconnections */
+	SKTCaptureCounterDisconnect=2,
+	/** number of unbound operation */
+	SKTCaptureCounterUnbound=3,
+	/** number of reset to factory default */
+	SKTCaptureCounterFactoryReset=4,
+	/** number of reads (scans) */
+	SKTCaptureCounterReads=5,
+	/** number of trigger button released */
+	SKTCaptureCounterTriggerButtonUp=6,
+	/** number of trigger button pressed */
+	SKTCaptureCounterTriggerButtonDown=7,
+	/** number of power button released */
+	SKTCaptureCounterPowerButtonUp=8,
+	/** number of power button pressed */
+	SKTCaptureCounterPowerButtonDown=9,
+	/** number of minutes in AC power */
+	SKTCaptureCounterOnAcTimeInMinutes=10,
+	/** number of minutes on battery */
+	SKTCaptureCounterOnBatTimeInMinutes=11,
+	/** number of RFCOMM sent (SSI only) */
+	SKTCaptureCounterRfcommSend=12,
+	/** number of RFCOMM received (SSI only) */
+	SKTCaptureCounterRfcommReceive=13,
+	/** number of RFCOMM discarded (SSI only) */
+	SKTCaptureCounterRfcommReceiveDiscarded=14,
+	/** number of UART sent (SSI only) */
+	SKTCaptureCounterUartSend=15,
+	/** number of UART received (SSI only) */
+	SKTCaptureCounterUartReceive=16,
+	/** number of UART discarded (SSI only) */
+	SKTCaptureCounterUartReceiveDiscarded=17,
+	/** number of left button press (CRS only) */
+	SKTCaptureCounterButtonLeftPress=18,
+	/** number of left button release (CRS only) */
+	SKTCaptureCounterButtonLeftRelease=19,
+	/** number of right button press (CRS only) */
+	SKTCaptureCounterButtonRightPress=20,
+	/** number of right button release (CRS only) */
+	SKTCaptureCounterButtonRightRelease=21,
+	/** number of ring unit detach (CRS only) */
+	SKTCaptureCounterRingUnitDetach=22,
+	/** number of ring unit attach (CRS only) */
+	SKTCaptureCounterRingUnitAttach=23,
+	/** number of decoded bytes (7x only ISCI) */
+	SKTCaptureCounterDecodedBytes=24,
+	/** number of abnormal shutdowns (7x only ISCI) */
+	SKTCaptureCounterAbnormalShutdowns=25,
+	/** number of battery charge cycles (7x only ISCI) */
+	SKTCaptureCounterBatteryChargeCycles=26,
+	/** number of battery charge count (7x only ISCI) */
+	SKTCaptureCounterBatteryChargeCount=27,
+	/** number of power on (only 8Ci) */
+	SKTCaptureCounterPowerOn=28,
+	/** number of power off (only 8Ci) */
+	SKTCaptureCounterPowerOff=29,
+	/** number of stand mode change (only 7X/Q 7630 and higher) */
+	SKTCaptureCounterStandModeChange=30,
+};
+
+/**
+ @brief Disconnect parameters to instruct the device what to do after disconnection 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDisconnect) 
+{
+	/** disconnect and then start the current profile */
+	SKTCaptureDisconnectStartProfile=0,
+	/** Disconnect and disable radio (low power) */
+	SKTCaptureDisconnectDisableRadio=1,
+	/** Disconnect a device and make it available for a new connection (for Bluetooth Low Energy device) */
+	SKTCaptureDisconnectMakeAvailable=2,
+};
+
+/**
+ @brief Select a profile for the device (None, SPP, HID, Reader, Coupler) 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureProfileSelect) 
+{
+	/** The device is in acceptor mode, not trying to connect to any host */
+	SKTCaptureProfileSelectNone=0,
+	/** The device is in App mode */
+	SKTCaptureProfileSelectSpp=1,
+	/** The device is in Basic mode, sometimes referred as Keyboard emulation */
+	SKTCaptureProfileSelectHid=2,
+	/** The device is in Reader mode, for NFC devices */
+	SKTCaptureProfileSelectReader=3,
+	/** The device is in Coupler mode, for NFC devices */
+	SKTCaptureProfileSelectCoupler=4,
+};
+
+/**
+ @brief Configure a profile for the device (None, Acceptor, Initiator) 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureProfileConfig) 
+{
+	/** The device is in either acceptor or initiator mode, meaning not even discoverable */
+	SKTCaptureProfileConfigNone=0,
+	/** The device is discoverable and will accept any connection */
+	SKTCaptureProfileConfigAcceptor=1,
+	/** The device initiates a connection to the Bluetooth address specified in the Profile Configuration */
+	SKTCaptureProfileConfigInitiator=2,
+};
+
+/**
+ @brief Configuration masks for selecting the notifications the device should send to the host 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureNotifications) 
+{
+	/** The device sends a notification when the trigger button is pressed */
+	SKTCaptureNotificationsTriggerButtonPress=1,
+	/** The device sends a notification when the trigger button is released */
+	SKTCaptureNotificationsTriggerButtonRelease=2,
+	/** The device sends a notification when the power button is pressed */
+	SKTCaptureNotificationsPowerButtonPress=4,
+	/** The device sends a notification when the power button is released */
+	SKTCaptureNotificationsPowerButtonRelease=8,
+	/** The device sends a notification when the power state changes (battery to AC or vice-versa) (not supported on all device) */
+	SKTCaptureNotificationsPowerState=16,
+	/** The device sends a notification when the battery level changed (not supported on all device) */
+	SKTCaptureNotificationsBatteryLevelChange=32,
+};
+
+/**
+ @brief Identifies the timers used in the device, (trigger lock, disconnected, connected) 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureTimer) 
+{
+	/** The trigger button stays ineffective for the specified amount of time  or until the device receives a data confirmation command. */
+	SKTCaptureTimerAutoLock=1,
+	/** This timer specifies the amount of time the device stays on while it is not connected to any host. */
+	SKTCaptureTimerPowerOffDisconnected=2,
+	/** This timer specifies the amount of time the device stays on while it is connected to a host. */
+	SKTCaptureTimerPowerOffConnected=4,
+};
+
+/**
+ @brief Identifies the data format the device should send the data to the host 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureDataFormat) 
+{
+	/** The device sends the data without any protocol overhead */
+	SKTCaptureDataFormatRaw=0,
+	/** The device sends the data embedded in a protocol packet (default) */
+	SKTCaptureDataFormatPacket=1,
+	/** The device sends only the RFID tag ID, (valid only for D600 NFC devices) */
+	SKTCaptureDataFormatIdOnly=2,
+	/** The device sends the tag type and RFID tag ID, (valid only for D600 NFC devices) */
+	SKTCaptureDataFormatTagTypeAndId=10,
+	/** The device sends only the tag data, (valid only for D600 NFC devices) */
+	SKTCaptureDataFormatDataOnly=4,
+	/** The device sends the tag type and the tag data, (valid only for D600 NFC devices) */
+	SKTCaptureDataFormatTagTypeAndData=12,
+};
+
+/**
+ @brief defines the operational mode of the device 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureTriggerMode) 
+{
+	/** The device triggers a read only by pressing the trigger button */
+	SKTCaptureTriggerModeLocalOnly=1,
+	/** The device triggers a read by pressing the trigger button or by receiving the trigger command */
+	SKTCaptureTriggerModeRemoteAndLocal=2,
+	/** the device waits for the host to unlock the trigger */
+	SKTCaptureTriggerModeAutoLock=3,
+	/** the device locks and unlocks the trigger locally (default) */
+	SKTCaptureTriggerModeNormalLock=4,
+	/** The device triggers a read automatically without user intervention */
+	SKTCaptureTriggerModePresentation=5,
+};
+
+/**
+ @brief defines the reason as of how the device connects to the host 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureConnectReason) 
+{
+	/** The device connects to the host from unknown reason */
+	SKTCaptureConnectReasonUnknown=0,
+	/** The device connects to the host just after power on */
+	SKTCaptureConnectReasonPowerOn=1,
+	/** The device connects to the host by reading the host address from a barcode */
+	SKTCaptureConnectReasonBarcode=2,
+	/** The device connects to the host by user action (usually a press on the trigger button) */
+	SKTCaptureConnectReasonUserAction=3,
+	/** The device connects to the host from a change of the host address in the profile configuration */
+	SKTCaptureConnectReasonHostChange=4,
+	/** The device connects to the host after a retry (device coming back to the radio range) */
+	SKTCaptureConnectReasonRetry=5,
+};
+
+/**
+ @brief The start up role SPP defines the start up role when using the SPP profile. 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureStartUpRoleSpp) 
+{
+	/** The device returns to acceptor mode, not initiating a connection to a host. */
+	SKTCaptureStartUpRoleSppAcceptor=0,
+	/** The device uses the last role configuration upon startup. */
+	SKTCaptureStartUpRoleSppLastRole=1,
+};
+
+/**
+ @brief The connect beep configuration allows to turn off or on the connection beep when the scanner connects 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureConnectBeepConfig) 
+{
+	/** The device won't beep upon connection to a host. */
+	SKTCaptureConnectBeepConfigNoBeep=0,
+	/** The device beeps when connecting to the host. */
+	SKTCaptureConnectBeepConfigBeep=1,
+};
+
+/**
+ @brief The stand configuration defines the operational mode of the device when used with a stand. 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureStandConfig) 
+{
+	/** Mobile mode Works like today existing firmware Engine is always in   trigger mode Engine hibernate enabled */
+	SKTCaptureStandConfigMobileMode=0,
+	/** Stand mode Engine always in presentation mode Engine hibernate  disabled Scanner turns on immediately Power timers disabled Connection  retries forever */
+	SKTCaptureStandConfigStandMode=1,
+	/** Detect mode On stand engine in presentation mode On stand engine  hibernate disabled On stand charging led state not show On stand  scanner turns on immediately On stand power timers disabled On stand  connection retries forever Off stand engine in level mode Off stand  battery led state reported Off stand engine hibernate enabled Off stand  power off timers running Off stand connection retries halt after max  count */
+	SKTCaptureStandConfigDetectMode=2,
+	/** Auto mode On stand engine in presentation mode On stand engine hibernate  disabled On stand charging led state not show On stand scanner turns on  immediately On stand power timers disabled On stand connection retries  forever Off stand does nothing, engine remains in presentation mode Off  stand trigger press causes engine to enter level mode Engine in level  mode battery led state reported Engine in level mode hibernate enabled  Engine in level mode power off timers running Engine in level mode  connection retries halt after max count */
+	SKTCaptureStandConfigAutoMode=3,
+};
+
+/**
+ @brief The mask to apply for each button that is pressed 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureButtonPressMask) 
+{
+	/** The left button is pressed. */
+	SKTCaptureButtonPressMaskLeft=1,
+	/** The right button is pressed. */
+	SKTCaptureButtonPressMaskRight=2,
+	/** The middle button is pressed. */
+	SKTCaptureButtonPressMaskMiddle=4,
+	/** The power button is pressed. */
+	SKTCaptureButtonPressMaskPower=8,
+	/** The Ring is detached from the wrist unit. */
+	SKTCaptureButtonPressMaskRingDetach=16,
+};
+
+/**
+ @brief The mask to apply for each theme 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureThemeSelection) 
+{
+	/** No theme. */
+	SKTCaptureThemeSelectionNone=0,
+	/** The Health theme. */
+	SKTCaptureThemeSelectionHealth=1,
+	/** The Access theme. */
+	SKTCaptureThemeSelectionAccess=2,
+	/** The Value theme. */
+	SKTCaptureThemeSelectionValue=3,
+	/** The Membership theme. */
+	SKTCaptureThemeSelectionMembership=4,
+};
+
+
+
+/**
+    KVC key for the SocketCam Overlay definition. The context should be
+ the application UIViewController from which the SocketCam viewfinder should be
+ attached.
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamContext;
+
+/**
+ KVC key for the Layout ID. This is not used in iOS, it is ignored if set.
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamLayoutId;
+
+/**
+ KVC key for the viewfinder ID. This is not used in iOS, it is ignored if set.
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamViewFinderId;
+/**
+ KVC key for the SocketCam Flash Button ID. This is not used in iOS, it is ignored if set.
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamFlashButtonId;
+
+/**
+ KVC text to display on the Cancel button in the SocketCam overlay
+ if this key value is missing the English version is displayed by default
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamCancelButton;
+/**
+ KVC for if the dictionary for SocketCam overlay doesn't have this
+ key, the flash button won't be displayed in the overlay
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamFlashButton;// coma-separated text: Flash,ON,OFF
+/**
+ KVC key for the text that gives some direction to the user on how to scan with SocketCam.
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamDirectionText;
+/**
+ KVC key for the Background Color
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamBackgroundColor;//"rgb() or rgba()
+/**
+ KVC key  for the SocketCam viewfinder text color
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamTextColor;//"rgb() or rgba()
+/**
+ KVC key for selecting which camera (front or back) SocketCam should use
+ */
+extern NSString* _Nonnull SKTCaptureSocketCamCamera; // "front" "back"
+
+
+/**
+ @class SKTCaptureProperty
+
+ @brief define a Capture Property composed by a Property ID, a Property Type and
+ an eventual property parameter of the specified type.
+
+ */
+@interface SKTCaptureProperty : NSObject
+
+/**
+ @brief get or set the property ID
+ */
+@property SKTCapturePropertyID ID;
+
+/**
+ @brief get or set the type of the property parameter
+ */
+@property SKTCapturePropertyType Type;
+
+/**
+ @brief property array of byte parameter
+ */
+@property (nullable, nonatomic, strong) NSData* ArrayValue;
+
+/**
+ @brief property string parameter
+ */
+@property (nullable, nonatomic, strong) NSString* StringValue;
+
+/**
+ @brief property byte value parameter
+ */
+@property int8_t ByteValue;
+
+/**
+ @brief property unsigned long integer parameter
+ */
+@property unsigned long ULongValue;
+
+/**
+ @brief property version parameter
+ */
+@property (nullable, nonatomic, strong) SKTCaptureVersion* Version;
+
+/**
+ @brief property data source parameter
+ */
+@property (nullable, nonatomic, strong) SKTCaptureDataSource* DataSource;
+
+/**
+ @brief property user context
+ */
+@property (nullable) void *Context;
+
+/**
+ @brief property pointer to object parameter
+ */
+@property (nullable, retain) NSObject *Object;
+
+/**
+ @brief initialize the property object
+ */
+-(instancetype _Nonnull ) init;
+
+@end
+
+#endif /* SktCapturePropertyIds_h */
+

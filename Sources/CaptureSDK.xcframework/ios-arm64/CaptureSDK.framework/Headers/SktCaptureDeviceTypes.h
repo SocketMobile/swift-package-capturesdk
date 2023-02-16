@@ -19,14 +19,15 @@ Definition of a Socket Device Type
 ---------------------------------------------------------------------------------------------------------------------------------
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 ---------------------------------------------------------------------------------------------------------------------------------
-  |	                  |   |    |   |                           |  |                            |   |                              |
-  \==================/     \==/   \===========================/  \============================/   \==============================/
-            |               |                   |                                       |                       |
-            |               |                   |                                       |                       |
-            |               |                   |                                       | Reserved              \------------------->Product ID
-            |               |                   | Interface Type                        \------------------------------------------->Reserved must be 0
-			|               | Class Type        \----------------------------------------------------------------------------------->Interface Type
-			| Reserved      \------------------------------------------------------------------------------------------------------->Class Type(Device = 0, Device Manager = 1)
+  |                   |   |    |   |                           |  |   |   |                    |  |                           |
+  \===================/   \====/   \===========================/  \===/   \====================/  \===========================/
+            |               |                   |                   |                   |                       |
+            |               |                   |                   |                   |                       |
+            |               |                   |                   |                   | Functions             \------------------->Product ID
+            |               |                   |                   | Reserved          \------------------------------------------->Functions
+            |               |                   | Interface Type    \--------------------------------------------------------------->Reserved must be 0
+            |               | Class Type        \----------------------------------------------------------------------------------->Interface Type
+            | Reserved      \------------------------------------------------------------------------------------------------------->Class Type(Device = 0, Device Manager = 1)
             \----------------------------------------------------------------------------------------------------------------------->Reserved must be 0
 
 
@@ -36,13 +37,16 @@ Definition of a Socket Device Type
 #ifndef _SktCaptureDeviceTypes_h
 #define _SktCaptureDeviceTypes_h
 
-#define SKTCLASSTYPE(classType)					(classType<<24)
-#define SKTINTERFACETYPE(interfaceType)			(interfaceType<<16)
-#define SKTRETRIEVE_INTERFACETYPE(deviceType)	((deviceType>>16)&0x000000ff)
+#define SKTPRODUCTID(productId)                   (productId)
+#define SKTFUNCTIONS(functions)                   (functions0x3F<<8)
+#define SKTINTERFACETYPE(interfaceType)           (interfaceType<<16)
+#define SKTCLASSTYPE(classType)                   (classType<<24)
 
-#define SKTPRODUCTID(productId)					(productId)
-#define SKTRETRIEVE_PRODUCTID(deviceType)		(deviceType&0x000000ff)
-#define SKTRETRIEVE_CLASS(deviceType)			(deviceType>>24)&0x00000003
+#define SKTRETRIEVE_PRODUCTID(deviceType)         (deviceType&0x000000ff)
+#define SKTRETRIEVE_DEVICE_FUNCTION(deviceType)   ((deviceType>>8)&0x0000003f)
+#define SKTRETRIEVE_INTERFACETYPE(deviceType)     ((deviceType>>16)&0x000000ff)
+#define SKTRETRIEVE_CLASS(deviceType)             ((deviceType>>24)&0x00000003)
+
 
 typedef NS_ENUM(NSInteger, SKTCaptureDeviceTypeClasses){
 	///<summary>
@@ -146,6 +150,13 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	value: 5 (0x00005)
 	*/
 	SKTCaptureDeviceTypeSocketCamC820 = 5,
+
+	/**
+	SocketCam C860 (only used in iOS and Android)
+
+	value: 29 (0x0001D)
+	*/
+	SKTCaptureDeviceTypeSocketCamC860 = 29,
 
 	/**
 	Model S800
@@ -288,18 +299,25 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeScannerS550 = 327702,
 
 	/**
-	Model S370
+	Model S370 - Barcode scanner
 
-	value: 327707 (0x5001B)
+	value: 327963 (0x5011B)
 	*/
-	SKTCaptureDeviceTypeScannerS370 = 327707,
+	SKTCaptureDeviceTypeScannerS370 = 327963,
+
+	/**
+	Model S370 - NFC ReaderWriter
+
+	value: 329243 (0x5061B)
+	*/
+	SKTCaptureDeviceTypeNFCS370 = 329243,
 
 	/**
 	Model S320
 
-	value: 327708 (0x5001C)
+	value: 327964 (0x5011C)
 	*/
-	SKTCaptureDeviceTypeScannerS320 = 327708,
+	SKTCaptureDeviceTypeScannerS320 = 327964,
 
 	/**
 	NFC Tag
@@ -311,9 +329,9 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	/**
 	device type unknown by this version of Capture
 
-	value: 196637 (0x3001D)
+	value: 196638 (0x3001E)
 	*/
-	SKTCaptureDeviceTypeBtUnknown = 196637,
+	SKTCaptureDeviceTypeBtUnknown = 196638,
 
 	/**
 	device manager for controlling BLE
@@ -323,6 +341,34 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeDeviceManagerBle = 17104897,
 
 };
+
+typedef NS_ENUM(NSInteger, SKTCaptureDeviceFunction){
+	///<summary>
+	/// legacy device
+	/// value: 0 (0x00000)
+	///</summary>
+	SKTCaptureDeviceFunctionLegacy = 0,
+
+	///<summary>
+	/// Barcode scanner function for this device
+	/// value: 1 (0x00001)
+	///</summary>
+	SKTCaptureDeviceFunctionScanner = 1,
+
+	///<summary>
+	/// NFC reader function for this device
+	/// value: 2 (0x00002)
+	///</summary>
+	SKTCaptureDeviceFunctionNFCReader = 2,
+
+	///<summary>
+	/// NFC writer function for this device
+	/// value: 4 (0x00004)
+	///</summary>
+	SKTCaptureDeviceFunctionNFCWriter = 4,
+
+};
+
 
 
 #endif //_SktCaptureDeviceTypes_h
