@@ -1,6 +1,16 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.6.33](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.6.33)
+### New
+  * n/a
+
+### Improvements
+  * n/a
+
+### Bug fixes
+  * Fix crash when the S370 is disconnecting
+
 ## [Version 1.6.30](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.6.30)
 ### New
   * Compatibility with the new combo device S370 that contains a NFC reader/writer and a Barcode scanner
