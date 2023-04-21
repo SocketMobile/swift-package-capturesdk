@@ -469,6 +469,11 @@ typedef NS_ENUM(NSInteger, SKTCaptureErrors) {
 	*/
 	SKTCaptureE_LOCATIONSERVICEDISABLED = -98,
 
+	/**
+	Bluetooth permission is not granted
+	*/
+	SKTCaptureE_BLUETOOTHPERMISSIONMISSING = -99,
+
 };
 
 #endif

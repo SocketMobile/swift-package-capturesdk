@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.6.33 - Swift Package Manager
+# CaptureSDK Version 1.6.34 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -67,6 +67,8 @@ In order to be able to use the Socket Mobile barcode scanners, the scanners exte
 The protocol string is `com.socketmobile.chs`.
 
 If the application does use a Socket Mobile barcode scanner it will need to be MFi whitelisted before submitting the application in the App Store. Socket Mobile will handle the whitelist (MFi) application process for you, when you submit your app for MFi in your Socket Mobile developer account. This has to be done once for the first version supporting the barcode scanner.
+
+You also need to add the following key to your `Info.plist`: **CFBundleAllowMixedLocalizations** (*Localized resources can be mixed*) to **`YES`**. That allows or SDK to display localized strings.
 
 An AppKey is required in order to use CaptureSDK.
 
