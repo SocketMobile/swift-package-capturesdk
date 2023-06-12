@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CaptureSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -94,9 +94,9 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
     get
   }
   @discardableResult
-  open func pushDelegate(_ delegate: CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
+  open func pushDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
   @discardableResult
-  open func popDelegate(_ delegate: CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
+  open func popDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
   open func getDevices() -> Swift.Array<CaptureSDK.CaptureHelperDevice>
   open func getDeviceManagers() -> Swift.Array<CaptureSDK.CaptureHelperDeviceManager>
   open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)

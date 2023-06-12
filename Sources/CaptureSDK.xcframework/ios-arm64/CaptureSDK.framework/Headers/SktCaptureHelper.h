@@ -633,6 +633,15 @@
  */
 -(NSArray *)getDevicesList;
 
+#pragma mark - Capture Devices managers list
+
+/**
+ * Return the actual list of connected device managers. This is mostly useful
+ * when displaying somewhere the device managers that are actually connected to
+ * the host.
+ * @returns the list of device managers
+ */
+-(NSArray *)getDeviceManagersList;
 
 #pragma  mark - Capture information
 
