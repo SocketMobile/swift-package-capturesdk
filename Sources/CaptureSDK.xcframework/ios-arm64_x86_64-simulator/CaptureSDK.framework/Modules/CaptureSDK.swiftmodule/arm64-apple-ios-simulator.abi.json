@@ -4881,154 +4881,154 @@
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 21629,
+      "offset": 21631,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 28537,
+      "offset": 28539,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 28578,
+      "offset": 28580,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 28615,
+      "offset": 28617,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 28656,
+      "offset": 28658,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 28897,
+      "offset": 28899,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 34410,
+      "offset": 34412,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 36206,
+      "offset": 36208,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 36518,
+      "offset": 36520,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 38107,
+      "offset": 38109,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 38147,
+      "offset": 38149,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 38298,
+      "offset": 38300,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 40246,
+      "offset": 40248,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 40463,
+      "offset": 40465,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "StringLiteral",
-      "offset": 40500,
+      "offset": 40502,
       "length": 260,
       "value": "\"\nIf your application uses a Socket Mobile barcode scanner, you need to add a \"UISupportedExternalAccessoryProtocols\" Array to your Info.plist with \"com.socketmobile.chs\" as an Item in that Array. Otherwise the scanner won't connect to the application.\n\""
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 40962,
+      "offset": 40964,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 41485,
+      "offset": 41487,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 41520,
+      "offset": 41522,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "StringLiteral",
-      "offset": 46790,
+      "offset": 46792,
       "length": 47,
       "value": "\"closing the device returns \""
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "StringLiteral",
-      "offset": 46836,
+      "offset": 46838,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "StringLiteral",
-      "offset": 49170,
+      "offset": 49172,
       "length": 55,
       "value": "\"closing the device manager returns \""
     },
     {
       "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "StringLiteral",
-      "offset": 49224,
+      "offset": 49226,
       "length": 2,
       "value": "\"\""
     },

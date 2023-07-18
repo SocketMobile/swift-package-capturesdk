@@ -213,7 +213,7 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 
 	Device: True	Get Type: None 	Set Type: NotApplicable
 	*/
-	SKTCapturePropertyIDButtonsStatusDevice = 65798,
+	SKTCapturePropertyIDButtonsStatusDevice = 65792,
 
 	/**
 	Gets or sets the sound configuration of the device. There are
@@ -426,7 +426,14 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 
 	Device: True	Get Type: None 	Set Type: Array
 	*/
-	SKTCapturePropertyIDThemeSelectionDevice = 262430,
+	SKTCapturePropertyIDThemeSelectionDevice = 262429,
+
+	/**
+	property to define the theme selection mask. It applies the theme selection on the given device(s) set with the mask
+
+	Device: True	Get Type: None 	Set Type: Array
+	*/
+	SKTCapturePropertyIDThemeSelectionMaskDevice = 262430,
 
 
 };
@@ -455,46 +462,6 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyType) {
 	/** the property type should not be equal or higher that kLast otherwise it means the SDK is not in sync with the actual version of Socket Mobile Companion running on the host */
 	SKTCapturePropertyTypeLastType,
 
-};
-
-/**
- @brief identify the device button for which the button event is received
- */
-typedef NS_OPTIONS(NSInteger, SKTCaptureButtonsState)
-{
-    /** when there is no button pressed */
-    SKTCaptureButtonsStateNone=0x00,
-    /** the left button is pressed */
-    SKTCaptureButtonsStateLeft=0x01,
-    /** the right button is pressed */
-    SKTCaptureButtonsStateRight=0x02,
-    /** the middle button is pressed */
-    SKTCaptureButtonsStateMiddle=0x04,
-    /** the power button is pressed */
-    SKTCaptureButtonsStatePower=0x08,
-    /** the ring is a in detached state (Series 9 only) */
-    SKTCaptureButtonsStateRingDetach=0x10
-};
-
-/**
- @brief Mask for the Theme selection property. It applies the theme selection on the given device(s) set with the mask
- */
-typedef NS_OPTIONS(UInt8, SKTCaptureThemeSelectionMask)
-{
-    /** mask applied on the Default device */
-    SKTCaptureThemeSelectionMaskDefault=0x01,
-    /** mask applied on the Nfc device */
-    SKTCaptureThemeSelectionMaskNfc=0x02,
-    /** mask applied on the Default and Nfc devices */
-    SKTCaptureThemeSelectionMaskDefaultNfc=0x03,
-    /** mask applied on the BArcode device */
-    SKTCaptureThemeSelectionMaskBarcode=0x04,
-    /** mask applied on the Default and Barcode devices */
-    SKTCaptureThemeSelectionMaskDefaultBarcode=0x05,
-    /** mask applied on the Nfc and Barcode devices */
-    SKTCaptureThemeSelectionMaskNfcBarcode=0x06,
-    /** mask applied on the Default, Nfc and Barcode devices */
-    SKTCaptureThemeSelectionMaskAll=0x07
 };
 
 /**
@@ -614,7 +581,7 @@ typedef NS_ENUM(NSInteger, SKTCaptureRumbleActionType)
 /**
  @brief Define the action for a local decode 
 */
-typedef NS_ENUM(NSInteger, SKTCaptureLocalDecodeAction) 
+typedef NS_OPTIONS(NSInteger, SKTCaptureLocalDecodeAction) 
 {
 	/** no action */
 	SKTCaptureLocalDecodeActionNone=0,
@@ -834,7 +801,7 @@ typedef NS_ENUM(NSInteger, SKTCaptureProfileConfig)
 /**
  @brief Configuration masks for selecting the notifications the device should send to the host 
 */
-typedef NS_ENUM(NSInteger, SKTCaptureNotifications) 
+typedef NS_OPTIONS(NSInteger, SKTCaptureNotifications) 
 {
 	/** The device sends a notification when the trigger button is pressed */
 	SKTCaptureNotificationsTriggerButtonPress=1,
@@ -945,31 +912,33 @@ typedef NS_ENUM(NSInteger, SKTCaptureConnectBeepConfig)
 */
 typedef NS_ENUM(NSInteger, SKTCaptureStandConfig) 
 {
+	/** Disabled the stand config property and sets the scanner as it is intended */
+	SKTCaptureStandConfigDisabled=0,
 	/** Mobile mode Works like today existing firmware Engine is always in   trigger mode Engine hibernate enabled */
-	SKTCaptureStandConfigMobileMode=0,
+	SKTCaptureStandConfigMobileMode=1,
 	/** Stand mode Engine always in presentation mode Engine hibernate  disabled Scanner turns on immediately Power timers disabled Connection  retries forever */
-	SKTCaptureStandConfigStandMode=1,
+	SKTCaptureStandConfigStandMode=2,
 	/** Detect mode On stand engine in presentation mode On stand engine  hibernate disabled On stand charging led state not show On stand  scanner turns on immediately On stand power timers disabled On stand  connection retries forever Off stand engine in level mode Off stand  battery led state reported Off stand engine hibernate enabled Off stand  power off timers running Off stand connection retries halt after max  count */
-	SKTCaptureStandConfigDetectMode=2,
+	SKTCaptureStandConfigDetectMode=3,
 	/** Auto mode On stand engine in presentation mode On stand engine hibernate  disabled On stand charging led state not show On stand scanner turns on  immediately On stand power timers disabled On stand connection retries  forever Off stand does nothing, engine remains in presentation mode Off  stand trigger press causes engine to enter level mode Engine in level  mode battery led state reported Engine in level mode hibernate enabled  Engine in level mode power off timers running Engine in level mode  connection retries halt after max count */
-	SKTCaptureStandConfigAutoMode=3,
+	SKTCaptureStandConfigAutoMode=4,
 };
 
 /**
  @brief The mask to apply for each button that is pressed 
 */
-typedef NS_ENUM(NSInteger, SKTCaptureButtonPressMask) 
+typedef NS_OPTIONS(UInt8, SKTCaptureButtonsState) 
 {
 	/** The left button is pressed. */
-	SKTCaptureButtonPressMaskLeft=1,
+	SKTCaptureButtonsStateLeft=0x01,
 	/** The right button is pressed. */
-	SKTCaptureButtonPressMaskRight=2,
+	SKTCaptureButtonsStateRight=0x02,
 	/** The middle button is pressed. */
-	SKTCaptureButtonPressMaskMiddle=4,
+	SKTCaptureButtonsStateMiddle=0x04,
 	/** The power button is pressed. */
-	SKTCaptureButtonPressMaskPower=8,
+	SKTCaptureButtonsStatePower=0x08,
 	/** The Ring is detached from the wrist unit. */
-	SKTCaptureButtonPressMaskRingDetach=16,
+	SKTCaptureButtonsStateRingDetach=0x16,
 };
 
 /**
@@ -987,6 +956,27 @@ typedef NS_ENUM(NSInteger, SKTCaptureThemeSelection)
 	SKTCaptureThemeSelectionValue=3,
 	/** The Membership theme. */
 	SKTCaptureThemeSelectionMembership=4,
+};
+
+/**
+ @brief Mask for the Theme selection property. It applies the theme selection on the given device(s) set with the mask 
+*/
+typedef NS_OPTIONS(UInt8, SKTCaptureThemeSelectionMask) 
+{
+	/** Mask applied on the Default device */
+	SKTCaptureThemeSelectionMaskDefault=0x01,
+	/** Mask applied on the Nfc device */
+	SKTCaptureThemeSelectionMaskNfc=0x02,
+	/** Mask applied on the Default and Nfc devices */
+	SKTCaptureThemeSelectionMaskDefaultNfc=0x03,
+	/** Mask applied on the Barcode device */
+	SKTCaptureThemeSelectionMaskBarcode=0x04,
+	/** Mask applied on the Default and Barcode devices */
+	SKTCaptureThemeSelectionMaskDefaultBarcode=0x05,
+	/** Mask applied on the Nfc and Barcode devices */
+	SKTCaptureThemeSelectionMaskNfcBarcode=0x06,
+	/** Mask applied on the Default, Nfc and Barcode devices */
+	SKTCaptureThemeSelectionMaskAll=0x07,
 };
 
 

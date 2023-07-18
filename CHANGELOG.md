@@ -1,7 +1,17 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
-## [Version 1.6.39]((https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.6.39)
+## [Version 1.7.5](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.5)
+### New
+  * Compatibility with the new device M930
+
+### Improvements
+  * Add a SocketCam section in the documentation
+
+### Bug fixes
+  * The stand/kiosk mode is now working properly (property SKTCaptureStandConfig)
+
+## [Version 1.6.39](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.6.39)
 ### New
   * n/a
 

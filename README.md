@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.6.39 - Swift Package Manager
+# CaptureSDK Version 1.7.5 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -15,12 +15,13 @@ The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to t
 More documentation can be found [here](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
 # Devices compatibility and CaptureSDK versions
-|       Devices                                          |          < 1.4         |          1.4           |          1.5          |          1.6          |
-| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: | :-------------------: |
-|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |           ✅          |
-|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |           ✅          |
-|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |           ✅          |
-|   **S370**                                             |          ❌            |           ❌           |           ❌           |           ✅          |
+|       Devices                                          |          < 1.4         |          1.4           |          1.5          |          1.6          |         1.7          |
+| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: | :-------------------: |:-------------------: |
+|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |           ✅          |           ✅          |
+|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |           ✅          |           ✅          |
+|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |           ✅          |           ✅          |
+|   **S370**                                             |          ❌            |           ❌           |           ❌           |           ✅          |           ✅          |
+|   **M930**                                             |          ❌            |           ❌           |           ❌           |           ❌          |           ✅          |
 
 # Table of Contents
 * [Breaking changes](#breaking-changes)

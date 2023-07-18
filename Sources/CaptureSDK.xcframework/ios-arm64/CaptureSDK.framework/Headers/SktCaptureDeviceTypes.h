@@ -327,25 +327,25 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeNFCTag = 393239,
 
 	/**
-	Model D930
+	Model M930
 
 	value: 196894 (0x3011E)
 	*/
-	SKTCaptureDeviceTypeScannerD930 = 196894,
+	SKTCaptureDeviceTypeScannerM930 = 196894,
 
 	/**
-	Model D940
+	Model M940
 
 	value: 327967 (0x5011F)
 	*/
-	SKTCaptureDeviceTypeScannerD940 = 327967,
+	SKTCaptureDeviceTypeScannerM940 = 327967,
 
 	/**
-	Model D960
+	Model M960
 
 	value: 327968 (0x50120)
 	*/
-	SKTCaptureDeviceTypeScannerD960 = 327968,
+	SKTCaptureDeviceTypeScannerM960 = 327968,
 
 	/**
 	device type unknown by this version of Capture
