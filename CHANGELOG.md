@@ -1,6 +1,16 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.7.9](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.9)
+### New
+  * N/A
+
+### Improvements
+  * N/A
+
+### Bug fixes
+  * Special configuration flag added to avoid launching the Bluetooth Low Energy Manager that might crash in certain cases (given on request through developer@socketmobile.com)
+
 ## [Version 1.7.5](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.5)
 ### New
   * Compatibility with the new device M930
