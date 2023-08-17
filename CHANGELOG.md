@@ -1,6 +1,16 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.7.11](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.11)
+### New
+  * N/A
+
+### Improvements
+  * N/A
+
+### Bug fixes
+  * The Special configuration flag added in version 1.7.9 was causing the Bluetooth Classic connection not starting. It's still possible to enable this flag (given on request through developer@socketmobile.com)
+
 ## [Version 1.7.9](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.9)
 ### New
   * N/A
