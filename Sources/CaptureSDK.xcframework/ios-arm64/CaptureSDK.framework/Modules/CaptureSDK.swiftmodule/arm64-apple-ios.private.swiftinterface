@@ -1,18 +1,18 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CaptureSDK
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CaptureSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AudioToolbox
 @_exported import CaptureSDK
 import CoreBluetooth
-import CoreFoundation
 import Foundation
-import Foundation/*.Bundle*/
 import Swift
 import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public protocol CaptureHelperDelegate {
 }
 public protocol CaptureHelperErrorDelegate : CaptureSDK.CaptureHelperDelegate {
@@ -111,13 +111,39 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc(SWIFTSocketCamControllerSwift) public class SocketCamControllerSwift : ObjectiveC.NSObject {
+extension Foundation.URL : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StaticString)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StaticString
+  public typealias StringLiteralType = Swift.StaticString
+  public typealias UnicodeScalarLiteralType = Swift.StaticString
+}
+@objc @_inheritsConvenienceInitializers open class SocketCamControllerSwift : ObjectiveC.NSObject {
+  @objc public var isBeepFilePresent: Swift.Bool {
+    @objc get
+  }
   @objc public var parent: UIKit.UIViewController?
+  @objc public var isViewPresented: Swift.Bool
+  @objc public var getLastSymbologyCallback: ((Foundation.Date) -> ())?
   @objc override dynamic public init()
   @objc deinit
+  @objc open func startScan(with continousScan: Swift.Bool) -> Swift.Bool
+  @objc open func addLastSymbology(with completion: @escaping (Swift.Bool, Foundation.Date?) -> Swift.Void)
+  @objc open func addDataSourceCount(enabled: Swift.Bool)
+  @objc open func setAppBundleIdentifier(appId: Swift.String)
+  @objc open func refreshUI()
+  @objc open func stopScan() -> Swift.Bool
+  @objc open func turnFlash(with turnOn: Swift.Bool)
+  @objc open func setBeep(with beepOn: Swift.Bool)
+  @objc open func setVibrate(with vibrateOn: Swift.Bool)
+  @objc open func updateDataSourceStatus(with status: ObjectiveC.NSInteger, with dataSourceIndex: Swift.Int)
+  @objc open func getDataSourcesCount() -> Swift.Int
+  @objc open func getDataSourceType(from index: Swift.Int) -> Foundation.NSString?
+  @objc open func getDataSourceIndex(from index: Swift.Int) -> Swift.Int
+  @objc open func getDataSourceName(from index: Swift.Int) -> Swift.String?
+  @objc open func getDataSourceDescription(from index: Swift.Int) -> Swift.String?
+  @objc open func retrieveDataSourceId(from type: Swift.String) -> Swift.Int
 }
 extension CaptureSDK.SocketCamControllerSwift {
   public func didRead(_ barcode: Swift.String, ofType type: Swift.String)
   public func didNotRead()
-  public func buildDataSourceEnabledList() -> Foundation.NSArray
 }

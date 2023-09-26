@@ -1,6 +1,17 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## [Version 1.8.34](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.8.34)
+### New
+  * Minimum target deployment: iOS 12.0
+  * CaptureSDK is [signed](https://developer.apple.com/videos/play/wwdc2023/10061/) and [contains the Privacy manifest file](https://developer.apple.com/videos/play/wwdc2023/10060/) as required by Apple from iOS17
+
+### Improvements
+  * N/A
+
+### Bug fixes
+  * Bluetooth Manager crashed should be now fixed
+
 ## [Version 1.7.11](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.7.11)
 ### New
   * N/A

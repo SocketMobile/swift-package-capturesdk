@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.7.11 - Swift Package Manager
+# CaptureSDK Version 1.8.34 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -15,13 +15,16 @@ The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to t
 More documentation can be found [here](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
 # Devices compatibility and CaptureSDK versions
-|       Devices                                          |          < 1.4         |          1.4           |          1.5          |          1.6          |         1.7          |
-| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: | :-------------------: |:-------------------: |
-|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |           ✅          |           ✅          |
-|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |           ✅          |           ✅          |
-|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |           ✅          |           ✅          |
-|   **S370**                                             |          ❌            |           ❌           |           ❌           |           ✅          |           ✅          |
-|   **M930**                                             |          ❌            |           ❌           |           ❌           |           ❌          |           ✅          |
+|       Devices                                          |          < 1.4         |          1.4           |          1.5          |          1.6          |         1.7          |         1.8          |
+| :----------------------------------------------------: | :--------------------: | :--------------------: | :-------------------: | :-------------------: |:-------------------: |:-------------------: |
+|   **SocketCam C820**                                   |          ❌            |           ✅           |           ✅           |           ✅          |           ✅          |           ✅         |
+|   **S720/D720/S820**                                   |          ❌            |           ❌           |           ✅           |           ✅          |           ✅          |           ✅         |
+|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |           ✅          |           ✅          |           ✅         |
+|   **S370**                                             |          ❌            |           ❌           |           ❌           |           ✅          |           ✅          |           ✅         |
+|   **M930**                                             |          ❌            |           ❌           |           ❌           |           ❌          |           ✅          |           ✅         |
+|   **SocketCam C860**                                   |          ❌            |           ❌           |           ❌           |           ❌          |           ❌          |           🟧         |
+
+🟧: SocketCam C860 is available in Beta version. For more information and how to access, please visit our page [about this new product](https://www.socketmobile.com/readers-accessories/product-families/socketcam) and our [Developer Portal](https://www.socketmobile.com/developers/portal).
 
 # Table of Contents
 * [Breaking changes](#breaking-changes)

@@ -266,9 +266,14 @@ typedef NS_ENUM(NSInteger, SKTCaptureDataSourceID) {
 	SKTCaptureDataSourceIDSymbologyDigimarc = 49,
 
 	/**
+	the barcode symbology Korea Post
+	*/
+	SKTCaptureDataSourceIDSymbologyKoreaPost = 50,
+
+	/**
 	the last barcode symbology ID, not an actual barcode symbology
 	*/
-	SKTCaptureDataSourceIDLastSymbologyID = 50,
+	SKTCaptureDataSourceIDLastSymbologyID = 51,
 
 	/**
 	the RFID Tag Type ISO 14443 A
