@@ -1,6 +1,10 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## DEPRECATION
+  * SocketCam C860 is available through our [Developer Portal](https://www.socketmobile.com/developers/portal). For more information and how to access, please visit our page [about this new product](https://www.socketmobile.com/readers-accessories/product-families/socketcam).
+  * Beyond SocketCam C860, we have introduced a new feature. SocketCam C820 and SocketCam C860 are available for developers as view controllers that can be adapted to the size and position required in their workflow, and not only as full screen.
+
 ## [Version 1.8.34](https://github.com/SocketMobile/swift-package-capturesdk/releases/tag/1.8.34)
 ### New
   * Minimum target deployment: iOS 12.0
