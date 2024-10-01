@@ -1,9 +1,22 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
-## DEPRECATION
-  * SocketCam C860 is available through our [Developers Portal](https://www.socketmobile.com/developers/portal). For more information and how to access, please visit our page [about this new product](https://www.socketmobile.com/readers-accessories/product-families/socketcam).
-  * Beyond SocketCam C860, we have introduced a new feature. SocketCam C820 and SocketCam C860 are available for developers as view controllers that can be adapted to the size and position required in their workflow, and not only as full screen.
+## Version 1.9.63
+
+### New
+
+  * N/A
+
+### Improvements
+
+  * N/A
+
+### Bug fixes
+
+  * Continuous scan on C860 has been fixed
+
+  * Flash toggle has been fixed for SocketCam C860
+
 
 ## Version 1.9.59
 
@@ -11,19 +24,15 @@ This file tracks released versions with the changes made to this project.
 
   * CaptureSDK is now built for iOS 18 with Xcode 16
 
-
-
 ### Improvements
 
   * Update SwiftDecoder to 6.0.9
 
   * Add helpers on CaptureHelperDevice to know if it’s a barcode or NFC reader
 
-
 ### Bug fixes
 
   * When closing CaptureSDK a result is now returned
-
 
 
 ## Version 1.9.36
