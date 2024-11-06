@@ -435,6 +435,27 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	*/
 	SKTCapturePropertyIDThemeSelectionMaskDevice = 262430,
 
+	/**
+	property to define if the Lasso feature is enabled or not
+
+	Device: True	Get Type: None 	Set Type: Byte
+	*/
+	SKTCapturePropertyIDLassoStatusDevice = 131359,
+
+	/**
+	property to define the Lasso Id for a device
+
+	Device: True	Get Type: NotApplicable 	Set Type: Array
+	*/
+	SKTCapturePropertyIDLassoIdDevice = 1311008,
+
+	/**
+	property to define the Lasso life span for a device
+
+	Device: True	Get Type: None 	Set Type: Ulong
+	*/
+	SKTCapturePropertyIDLassoLifeSpanDevice = 196897,
+
 
 };
 
@@ -644,7 +665,7 @@ typedef NS_ENUM(NSInteger, SKTCaptureFlash)
 };
 
 /**
- @brief Define the SocketCam experience (iOS-iPadOS only) 
+ @brief Define the SocketCam experience 
 */
 typedef NS_ENUM(NSInteger, SKTCaptureSocketCam) 
 {
@@ -979,55 +1000,16 @@ typedef NS_OPTIONS(UInt8, SKTCaptureThemeSelectionMask)
 	SKTCaptureThemeSelectionMaskAll=0x07,
 };
 
-
-
 /**
-    KVC key for the SocketCam Overlay definition. The context should be
- the application UIViewController from which the SocketCam viewfinder should be
- attached.
- */
-extern NSString* _Nonnull SKTCaptureSocketCamContext;
-
-/**
- KVC key for the Layout ID. This is not used in iOS, it is ignored if set.
- */
-extern NSString* _Nonnull SKTCaptureSocketCamLayoutId;
-
-/**
- KVC key for the viewfinder ID. This is not used in iOS, it is ignored if set.
- */
-extern NSString* _Nonnull SKTCaptureSocketCamViewFinderId;
-/**
- KVC key for the SocketCam Flash Button ID. This is not used in iOS, it is ignored if set.
- */
-extern NSString* _Nonnull SKTCaptureSocketCamFlashButtonId;
-
-/**
- KVC text to display on the Cancel button in the SocketCam overlay
- if this key value is missing the English version is displayed by default
- */
-extern NSString* _Nonnull SKTCaptureSocketCamCancelButton;
-/**
- KVC for if the dictionary for SocketCam overlay doesn't have this
- key, the flash button won't be displayed in the overlay
- */
-extern NSString* _Nonnull SKTCaptureSocketCamFlashButton;// coma-separated text: Flash,ON,OFF
-/**
- KVC key for the text that gives some direction to the user on how to scan with SocketCam.
- */
-extern NSString* _Nonnull SKTCaptureSocketCamDirectionText;
-/**
- KVC key for the Background Color
- */
-extern NSString* _Nonnull SKTCaptureSocketCamBackgroundColor;//"rgb() or rgba()
-/**
- KVC key  for the SocketCam viewfinder text color
- */
-extern NSString* _Nonnull SKTCaptureSocketCamTextColor;//"rgb() or rgba()
-/**
- KVC key for selecting which camera (front or back) SocketCam should use
- */
-extern NSString* _Nonnull SKTCaptureSocketCamCamera; // "front" "back"
+ @brief Define the Lasso experience 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureLassoDeviceStatus) 
+{
+	/** Disable Lasso */
+	SKTCaptureLassoDeviceStatusDisable=0,
+	/** Enable Lasso */
+	SKTCaptureLassoDeviceStatusEnable=1,
+};
 
 
 /**

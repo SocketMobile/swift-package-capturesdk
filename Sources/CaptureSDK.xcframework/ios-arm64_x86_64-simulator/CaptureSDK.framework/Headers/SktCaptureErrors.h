@@ -31,24 +31,19 @@
 */
 typedef NS_ENUM(NSInteger, SKTCaptureErrors) {
 	/**
-	The wait timed out
+	The Lasso feature is disabled
 	*/
-	SKTCaptureE_WAITTIMEOUT = 1,
+	SKTCaptureE_LASSODISABLED = 8,
 
 	/**
-	This operation is already complete
+	This operation is deprecated
 	*/
-	SKTCaptureE_ALREADYDONE = 2,
+	SKTCaptureE_DEPRECATED = 7,
 
 	/**
-	This operation is pending
+	No data present
 	*/
-	SKTCaptureE_PENDING = 3,
-
-	/**
-	This operation is still pending
-	*/
-	SKTCaptureE_STILLPENDING = 4,
+	SKTCaptureE_NODATA = 6,
 
 	/**
 	The object has been created
@@ -56,9 +51,24 @@ typedef NS_ENUM(NSInteger, SKTCaptureErrors) {
 	SKTCaptureE_CREATED = 5,
 
 	/**
-	No data present
+	This operation is still pending
 	*/
-	SKTCaptureE_NODATA = 6,
+	SKTCaptureE_STILLPENDING = 4,
+
+	/**
+	This operation is pending
+	*/
+	SKTCaptureE_PENDING = 3,
+
+	/**
+	This operation is already complete
+	*/
+	SKTCaptureE_ALREADYDONE = 2,
+
+	/**
+	The wait timed out
+	*/
+	SKTCaptureE_WAITTIMEOUT = 1,
 
 	/**
 	There is no error
@@ -425,9 +435,19 @@ typedef NS_ENUM(NSInteger, SKTCaptureErrors) {
 	SKTCaptureE_SERVICENOTCOMMUNICATING = -87,
 
 	/**
-	The SocketCam overlay view is not set
+	The Lasso Id is expired
 	*/
-	SKTCaptureE_OVERLAYVIEWNOTSET = -90,
+	SKTCaptureE_LASSOIDEXPIRED = -88,
+
+	/**
+	The Lasso Id does not match
+	*/
+	SKTCaptureE_LASSOIDTNOTMATCHING = -89,
+
+	/**
+	The device already has a Lasso Id
+	*/
+	SKTCaptureE_LASSOIDALREADYSET = -90,
 
 	/**
 	This operation has been canceled

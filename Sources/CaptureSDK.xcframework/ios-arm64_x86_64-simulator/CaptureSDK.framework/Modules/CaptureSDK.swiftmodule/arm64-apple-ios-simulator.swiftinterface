@@ -1,11 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CaptureSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CaptureSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AudioToolbox
 @_exported import CaptureSDK
-import CoreBluetooth
 import Foundation
 import Swift
 import UIKit
@@ -40,12 +39,18 @@ public protocol CaptureHelperDevicePowerDelegate : CaptureSDK.CaptureHelperDeleg
 public protocol CaptureHelperDeviceButtonsDelegate : CaptureSDK.CaptureHelperDelegate {
   func didChangeButtonsState(_ buttonsState: CaptureSDK.SKTCaptureButtonsState, forDevice device: CaptureSDK.CaptureHelperDevice)
 }
-public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperErrorDelegate {
+public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperErrorDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDevice : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
   public var deviceInfo: CaptureSDK.SKTCaptureDeviceInfo
   public var dispatchQueue: Dispatch.DispatchQueue?
+  public var isBarcodeReader: Swift.Bool {
+    get
+  }
+  public var isNFCReader: Swift.Bool {
+    get
+  }
   open func getFriendlyNameWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ name: Swift.String?) -> Swift.Void)
   open func setFriendlyName(_ name: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getBluetoothAddressWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ bluetoothAddress: Foundation.Data?) -> Swift.Void)
@@ -64,10 +69,11 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setPostamble(_ postamble: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getDataSourceInfoFromId(_ dataSourceId: CaptureSDK.SKTCaptureDataSourceID, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataSourceInfo: CaptureSDK.SKTCaptureDataSource?) -> Swift.Void)
   open func setDataSourceInfo(_ dataSource: CaptureSDK.SKTCaptureDataSource, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  open func setTrigger(_ trigger: CaptureSDK.SKTCaptureTrigger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setTrigger(_ trigger: CaptureSDK.SKTCaptureTrigger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ propertyResult: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setDataConfirmationWithLed(_ led: CaptureSDK.SKTCaptureDataConfirmationLed, withBeep beep: CaptureSDK.SKTCaptureDataConfirmationBeep, withRumble rumble: CaptureSDK.SKTCaptureDataConfirmationRumble, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setNotifications(_ notifications: CaptureSDK.SKTCaptureNotifications, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getNotificationsWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ notifications: CaptureSDK.SKTCaptureNotifications?) -> Swift.Void)
+  @available(*, deprecated)
   open func setSocketCamOverlayViewParameter(_ parameters: Swift.Dictionary<Swift.String, Any>, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSocketCamOverlayViewParameterWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ parameter: Swift.Dictionary<Swift.String, Any>?) -> Swift.Void)
   open func getDeviceSpecificCommand(_ command: Foundation.Data, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
@@ -75,6 +81,12 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func getDataFormatWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataFormat: CaptureSDK.SKTCaptureDataFormat?) -> Swift.Void)
   open func getThemeSelection(with completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
   open func setThemeSelection(_ mask: CaptureSDK.SKTCaptureThemeSelectionMask, themes: [CaptureSDK.SKTCaptureThemeSelection], withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getLassoStatus(with completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureLassoDeviceStatus?) -> Swift.Void)
+  open func setLassoFeatureStatus(_ status: CaptureSDK.SKTCaptureLassoDeviceStatus, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setLassoId(_ lassoId: Foundation.UUID, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getLassoLifeSpanWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ lifespan: ObjectiveC.NSInteger?) -> Swift.Void)
+  open func setLassoLifeSpan(_ lifespan: Swift.Int, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setDisconnect(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
@@ -111,23 +123,39 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
 }
-extension Foundation.URL : Swift.ExpressibleByStringLiteral {
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   public init(stringLiteral value: Swift.StaticString)
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
   public typealias ExtendedGraphemeClusterLiteralType = Swift.StaticString
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
   public typealias StringLiteralType = Swift.StaticString
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
   public typealias UnicodeScalarLiteralType = Swift.StaticString
 }
+#else
+extension Foundation.URL : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StaticString)
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StaticString
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias StringLiteralType = Swift.StaticString
+  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+  public typealias UnicodeScalarLiteralType = Swift.StaticString
+}
+#endif
 @objc @_inheritsConvenienceInitializers open class SocketCamControllerSwift : ObjectiveC.NSObject {
+  @objc public var isCloseButtonHidden: Swift.Bool
   @objc public var isBeepFilePresent: Swift.Bool {
     @objc get
   }
-  @objc public var parent: UIKit.UIViewController?
   @objc public var isViewPresented: Swift.Bool
   @objc public var getLastSymbologyCallback: ((Foundation.Date) -> ())?
+  @objc public var saveOpeningDatesCallback: (([Swift.String : Swift.String]) -> ())?
   @objc override dynamic public init()
   @objc deinit
-  @objc open func startScan(with continousScan: Swift.Bool) -> Swift.Bool
-  @objc open func addLastSymbology(with completion: @escaping (Swift.Bool, Foundation.Date?) -> Swift.Void)
+  @objc open func startScan(with continousScan: Swift.Bool, completion: @escaping (UIKit.UIViewController?) -> Swift.Void)
+  @objc open func addLastSymbology(with symbology: Swift.String, with ids: [Swift.String : Swift.String], completion: @escaping (Swift.Bool, Foundation.Date?) -> Swift.Void)
   @objc open func addDataSourceCount(enabled: Swift.Bool)
   @objc open func setAppBundleIdentifier(appId: Swift.String)
   @objc open func refreshUI()
@@ -146,4 +174,7 @@ extension Foundation.URL : Swift.ExpressibleByStringLiteral {
 extension CaptureSDK.SocketCamControllerSwift {
   public func didRead(_ barcode: Swift.String, ofType type: Swift.String)
   public func didNotRead()
+  public func didClose()
+}
+public enum CaptureEnvironment {
 }

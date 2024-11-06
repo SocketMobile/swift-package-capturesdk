@@ -350,6 +350,11 @@ typedef NS_ENUM(NSInteger, SKTCaptureDataSourceID) {
  */
 typedef NS_ENUM(NSInteger, SKTCaptureDataSourceStatus) {
 	/**
+	the data source status by default
+	*/
+	SKTCaptureDataSourceStatusDefault = -1,
+
+	/**
 	the data source status is disabled
 	*/
 	SKTCaptureDataSourceStatusDisable = 0,

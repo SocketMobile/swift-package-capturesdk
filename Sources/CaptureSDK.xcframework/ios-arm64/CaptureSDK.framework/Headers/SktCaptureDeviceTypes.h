@@ -145,14 +145,14 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeScanner9 = 196611,
 
 	/**
-	SocketCam C820 (only used in iOS and Android)
+	SocketCam C820
 
 	value: 5 (0x00005)
 	*/
 	SKTCaptureDeviceTypeSocketCamC820 = 5,
 
 	/**
-	SocketCam C860 (only used in iOS and Android)
+	SocketCam C860
 
 	value: 29 (0x0001D)
 	*/
@@ -306,7 +306,7 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeScannerS370 = 327963,
 
 	/**
-	Model S370 - NFC ReaderWriter
+	Model S370 - NFC Reader/Writer
 
 	value: 329243 (0x5061B)
 	*/
@@ -336,19 +336,12 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	/**
 	Model M940
 
-	value: 327967 (0x5011F)
+	value: 196895 (0x3011F)
 	*/
-	SKTCaptureDeviceTypeScannerM940 = 327967,
+	SKTCaptureDeviceTypeScannerM940 = 196895,
 
 	/**
-	Model M960
-
-	value: 327968 (0x50120)
-	*/
-	SKTCaptureDeviceTypeScannerM960 = 327968,
-
-	/**
-	device type unknown by this version of Capture
+	Bluetooth device type unknown by this version of Capture
 
 	value: 196641 (0x30021)
 	*/
@@ -360,6 +353,13 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	value: 17104897 (0x1050001)
 	*/
 	SKTCaptureDeviceTypeDeviceManagerBle = 17104897,
+
+	/**
+	Ble device type unknown by this version of Capture
+
+	value: 329761 (0x50821)
+	*/
+	SKTCaptureDeviceTypeBleUnknown = 329761,
 
 };
 
@@ -387,6 +387,12 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceFunction){
 	/// value: 4 (0x00004)
 	///</summary>
 	SKTCaptureDeviceFunctionNFCWriter = 4,
+
+	///<summary>
+	/// Unknown function for this device
+	/// value: 8 (0x00008)
+	///</summary>
+	SKTCaptureDeviceFunctionUnknown = 8,
 
 };
 

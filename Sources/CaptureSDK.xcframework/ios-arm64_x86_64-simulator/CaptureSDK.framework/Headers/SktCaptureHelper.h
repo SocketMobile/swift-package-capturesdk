@@ -148,6 +148,21 @@
 -(void)getButtonsStateWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureButtonsState buttonsState))block;
 
 
+#pragma mark - Capture device helpers
+
+/**
+ * get a boolean saying if the CaptureHelperDevice is a barcode reader
+ *
+ */
+-(BOOL)isBarcodeReader;
+
+/**
+ * get a boolean saying if the CaptureHelperDevice is a NFC reader
+ *
+ */
+-(BOOL)isNFCReader;
+
+
 #pragma mark - Behaviour Configuration
 
 /**
@@ -239,7 +254,7 @@
  * @param trigger contains the command to apply
  * @param block receiving the result of setting the trigger
  */
--(void)setTrigger:(SKTCaptureTrigger)trigger completionHandler:(void(^)(SKTResult result))block;
+-(void)setTrigger:(SKTCaptureTrigger)trigger completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *propertyResult))block;
 
 /**
  * set the decoded data confirmation
@@ -296,12 +311,13 @@
 
 #pragma mark - SocketCam (scanner using Camera)
 /**
+ * DEPRECATED - From CaptureSDK 1.8 - Use the setTrigger method on a SocketCam device and it returns the viewcontroller that you can display full screen or as a subview
  * set the device overlay view
  *
  * @param overlay overlay settings
  * @param block receiving the result of setting the overlay view
  */
--(void)setOverlayView:(NSDictionary *)overlay completionHandler:(void(^)(SKTResult result))block;
+-(void)setOverlayView:(NSDictionary *)overlay completionHandler:(void(^)(SKTResult result))block __deprecated;
 
 
 #pragma mark - Data Format (D600 Reading data from card)

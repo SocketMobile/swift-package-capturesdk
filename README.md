@@ -1,12 +1,4 @@
-# ********************************************************
-# THIS REPOSITORY HAS BEEN MOVED BEHIND OUR [DEVELOPERS PORTAL](https://www.socketmobile.com/dev-portal/portal)
-# BUT PLEASE WATCH 👁️‍🗨️ ALL ACTIVITY IT AS WE REPORT THE README AND CHANGELOG HERE. YOU'LL BE NOTIFIED WITH:
-# - Bug fixes
-# - OS version update
-# - Support of new products
-# ********************************************************
-
-# CaptureSDK Version 1.9.63 - Swift Package Manager
+# CaptureSDK Version 1.9.73 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -63,7 +55,7 @@ First, you need to install Xcode.
 
 To include the SDK in your Xcode project you have to add a `Package Dependency` in the project's settings section and in the tab "Package Dependencies".
 
-Add the url of this repository: https://oauth2:<YOUR-OAUTH_TOKEN_HERE>@sdk.socketmobile.com/capture/swift-package-capturesdk.git
+Add the url of this repository: [https://github.com/SocketMobile/swift-package-capturesdk.git](https://github.com/SocketMobile/swift-package-capturesdk.git)
 
 ![Add the Package to the project](./docs/add-to-your-project.png)
 
