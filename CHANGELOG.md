@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.74
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Some files were missing in our Cocoapods build. This doe not affect SPM.
+
+
+
 ## Version 1.9.73
 
 ### New

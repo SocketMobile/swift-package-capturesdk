@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/CaptureSDK</key>
 		<data>
-		NdWYeznV8z5JKEqH/0pBozpeMqg=
+		LNdTmXt8/zH1o+tO+UvE5i+il/g=
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/Headers/Capture-Swift.h</key>
 		<data>
@@ -270,7 +270,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/CaptureSDK</key>
 		<data>
-		yU9CE7VNaSLjUpUFYmGU5y1/y3w=
+		GE260tfNA3T/tqmxU27mt2xKllw=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/Headers/Capture-Swift.h</key>
 		<data>
@@ -558,11 +558,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NdWYeznV8z5JKEqH/0pBozpeMqg=
+			LNdTmXt8/zH1o+tO+UvE5i+il/g=
 			</data>
 			<key>hash2</key>
 			<data>
-			4oHUxdGVJ8AXhx/WbKUKxrU5L48SThBgt4W1/I72Lns=
+			3NIbFD0iRAtbVsWpcRHGB4M8qrBNRK57L6I/1Bk8SlY=
 			</data>
 		</dict>
 		<key>ios-arm64/CaptureSDK.framework/Headers/Capture-Swift.h</key>
@@ -1179,11 +1179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yU9CE7VNaSLjUpUFYmGU5y1/y3w=
+			GE260tfNA3T/tqmxU27mt2xKllw=
 			</data>
 			<key>hash2</key>
 			<data>
-			NIDPgu1eLyq8Md4TUWiaVa4ZxDXcbeD+TpotoHGEhWw=
+			BaDOaXaZnevq704po9GRZhqybGn08SPYUB9wmOfK17I=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/Headers/Capture-Swift.h</key>
