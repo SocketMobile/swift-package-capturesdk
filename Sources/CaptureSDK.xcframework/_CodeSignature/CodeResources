@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/CaptureSDK</key>
 		<data>
-		LNdTmXt8/zH1o+tO+UvE5i+il/g=
+		2def0/IbojRETAXYbV1b1+x4BG4=
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/Headers/Capture-Swift.h</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		29s5oPfZ+NVsrGsAaokxvuskSX8=
+		E/Q3PFpQ6FPIpFMuH0ruaRrJCkE=
 		</data>
 		<key>ios-arm64/CaptureSDK.framework/camera.png</key>
 		<data>
@@ -270,7 +270,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/CaptureSDK</key>
 		<data>
-		GE260tfNA3T/tqmxU27mt2xKllw=
+		CCG2Gp6Bjt8T2H6v+Q1KA+OxjZA=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/Headers/Capture-Swift.h</key>
 		<data>
@@ -402,7 +402,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		ektNNVKgDX5gtdNj7oMKF06apxY=
+		kYMICRYgX7AO3BCj2m9docwVYpk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/camera.png</key>
 		<data>
@@ -558,11 +558,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LNdTmXt8/zH1o+tO+UvE5i+il/g=
+			2def0/IbojRETAXYbV1b1+x4BG4=
 			</data>
 			<key>hash2</key>
 			<data>
-			3NIbFD0iRAtbVsWpcRHGB4M8qrBNRK57L6I/1Bk8SlY=
+			vHfsGw1dT1m4Z2Z30Cc7d3pL5O9RO1l7UIMRZ5KgFR0=
 			</data>
 		</dict>
 		<key>ios-arm64/CaptureSDK.framework/Headers/Capture-Swift.h</key>
@@ -877,11 +877,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			29s5oPfZ+NVsrGsAaokxvuskSX8=
+			E/Q3PFpQ6FPIpFMuH0ruaRrJCkE=
 			</data>
 			<key>hash2</key>
 			<data>
-			f+QplH5VfGyjdi4FN0qBN3It4uGBvAlXEihLXI8mJzM=
+			k9z7aHTfENXnPSGhsCb19fhdlMHac1mppUZdv2RkEIU=
 			</data>
 		</dict>
 		<key>ios-arm64/CaptureSDK.framework/camera.png</key>
@@ -1179,11 +1179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GE260tfNA3T/tqmxU27mt2xKllw=
+			CCG2Gp6Bjt8T2H6v+Q1KA+OxjZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BaDOaXaZnevq704po9GRZhqybGn08SPYUB9wmOfK17I=
+			83yQfwVYa0tPMGbi8RMasht1y6qVONJ7SMx4k0gZ50A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/Headers/Capture-Swift.h</key>
@@ -1542,11 +1542,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ektNNVKgDX5gtdNj7oMKF06apxY=
+			kYMICRYgX7AO3BCj2m9docwVYpk=
 			</data>
 			<key>hash2</key>
 			<data>
-			65/6YCkih5rI96FyfEh48pzj/lPWEgEQllaJgwmsgYI=
+			kxMyCktkl5BDj5hpixrKDNxiw/BK2jtNWGR53DJzh0E=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/CaptureSDK.framework/camera.png</key>

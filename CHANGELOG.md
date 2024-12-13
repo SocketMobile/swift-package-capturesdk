@@ -1,6 +1,23 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.79
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Fix a potential crash when CaptureSDK's host app uses also CryptoSwift (<https://github.com/SocketMobile/cocoapods-capturesdk/issues/7>)
+
+
 ## Version 1.9.74
 
 ### New

@@ -15,12 +15,13 @@ let package = Package(
         .library(
             name: "CaptureSDK",
             targets: [
-                "CaptureSDKFramework", "SwiftDecoderCaptureSDK"
+                "CaptureSDKFramework", "SwiftDecoderCaptureSDK", "CryptoSwiftCaptureSDK"
             ]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/SocketMobile/swift-package-swiftdecodersdk.git", exact: "6.0.10")
+        .package(url: "https://github.com/SocketMobile/swift-package-swiftdecodersdk.git", exact: "6.0.10"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.6.0")
     ],
     targets: [
         .target(
@@ -34,6 +35,13 @@ let package = Package(
                 .product(name: "SwiftDecoderSDK", package: "swift-package-swiftdecodersdk"),
             ],
             path: "Sources/SwiftDecoderDummy"
+        ),
+        .target(
+            name: "CryptoSwiftCaptureSDK",
+            dependencies: [
+                .product(name: "CryptoSwift", package: "CryptoSwift"),
+            ],
+            path: "Sources/CryptoSwiftDummy"
         ),
         .binaryTarget(
             name: "CaptureSDKBinaryTarget",
