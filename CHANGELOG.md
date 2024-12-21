@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.83
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Fix the BLE Manager crashes that may happen when the app is in background
+
+
+
 ## Version 1.9.79
 
 ### New

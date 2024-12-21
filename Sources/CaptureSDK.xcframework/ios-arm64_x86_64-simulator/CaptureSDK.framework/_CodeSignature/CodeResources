@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		X06nw3CSERa06ERKxlRTrsi19XE=
+		aWieqmeXfecJ/N95KpqRJbXGXxo=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IfL/kwFfWnMuTHkP+xDGEkgAndI=
+		Up+++2SMFdAkhVEedYfYSWYvN00=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,19 +54,19 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ME+WiVhdFhKuYjndcGz9WpL6++o=
+		nXm5P5We6be967wBD3OylU5yvCs=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		edsTWobi/6MlPQAGxIyv/oF9EBk=
+		be20j34SPTvWB2ic82TvsP893zg=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ME+WiVhdFhKuYjndcGz9WpL6++o=
+		nXm5P5We6be967wBD3OylU5yvCs=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kCJfgp4TVdTkmudsMViDhZPwB8k=
+		Gm+BGA6d3mE+EZZEygWGUBLm8LM=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -74,19 +74,19 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Z4Q8BEwcHVwu6QlLTjiCmcsvsXA=
+		O6jyT1/q/nBxXYHdpwDG8HtNjVU=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		W0x2FDS9bNxQg0CnhOdCaAPeOtA=
+		Jhc9V9h6ddG/BswqBVdUdpVqJe0=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Z4Q8BEwcHVwu6QlLTjiCmcsvsXA=
+		O6jyT1/q/nBxXYHdpwDG8HtNjVU=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		gmShTFFeURu/zNzc5WZYjMLx9ts=
+		jU0uMZQfgh/BzPo0G6QA0bh1T9U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -294,7 +294,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LwdYUb/v5Bw6aCSVOvcnhpOKnidNzdVEFagOhriRD5s=
+			SvlB5yYFcJnCODFennX16Sv/KhSW+oW+H/qijgr3fE4=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -364,28 +364,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CR9m2Sv5m8wXxgYdUZkXe9NBkv9fi4KI2thDG3lBVD4=
+			REILi9TYj4F2+nYniK3mYndeJ7miMZ5DKqmsnzjpa7Y=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			38gYKF2OEsybblwkDWU0GPCfvNUZpNPrvQdwy/Yko/g=
+			qvmx2fSZ2b2oD0bcZuVYYWj9mJ71qfdnVqzB3DiIsho=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CR9m2Sv5m8wXxgYdUZkXe9NBkv9fi4KI2thDG3lBVD4=
+			REILi9TYj4F2+nYniK3mYndeJ7miMZ5DKqmsnzjpa7Y=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			96o5FzwnDIgKr1J6NiNahpsTcRK43tt5OAq3wxRArqw=
+			WLJ9b7DuC5AlMg2rIxaf6Fkken+MmPbU0YR1RAojC3Q=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -399,28 +399,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			djavlFTQ/6wLXbIKKdAQoUOXgBsKunt9SsIdVJs55Bc=
+			TDinEexaj8K2mPlR6ddP4n3weHEkpGruWjegs6f/h54=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WGV0RPHaVtHmTZmUqy+I9/EzrN6jEkynX0asfDv4n6Y=
+			UyPtXtF8vvMCrZhpiXX26l1DSHyJVRkRURr7pIFi8HY=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			djavlFTQ/6wLXbIKKdAQoUOXgBsKunt9SsIdVJs55Bc=
+			TDinEexaj8K2mPlR6ddP4n3weHEkpGruWjegs6f/h54=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NJWo496fSovHeXOtp1QxmyDflj8rV5Ka7T0pnh3fpy8=
+			eDYtA0pRiiab6UOx39mBL305rC0LHg9xQNubPxEkoys=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
