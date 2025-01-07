@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.86
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Add another safeguard to prevent our BLE Manager to crash
+
+
+
 ## Version 1.9.83
 
 ### New
