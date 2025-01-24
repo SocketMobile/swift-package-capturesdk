@@ -1,6 +1,48 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.91
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Fix a crash in BLE Manager when closing CaptureSDK
+
+  * Fix unknown symbology for UPC A in SocketCam C860
+
+  * Remove the leading zero on EAN symbology
+
+
+
+## Version 1.9.88
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * Fix unknown symbology for UPC A in SocketCam C860
+
+  * Remove the leading zero on EAN symbology
+
+
+
 ## Version 1.9.86
 
 ### New
