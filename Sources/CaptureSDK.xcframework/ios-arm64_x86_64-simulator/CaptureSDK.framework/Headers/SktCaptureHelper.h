@@ -337,6 +337,16 @@
 -(void)getDataFormatWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDataFormat dataFormat))block;
 
 
+#pragma mark - Single Partnership
+
+/**
+ * reset the single partnership mode of the device
+ *
+ * @param block receiving the result of setting the single partnership
+ */
+-(void)resetSinglePartnershipWithCompletionHandler:(void(^)(SKTResult result))block;
+
+
 #pragma mark - generic get and set property
 /*
  * Get a Device Property
@@ -711,6 +721,21 @@
  * result as argument.
  */
 -(void)setSocketCamStatus:(SKTCaptureSocketCam)status completionHandler:(void(^)(SKTResult result))block;
+
+
+#pragma mark - Single Partnership
+
+/**
+ * set the Single Partnership status. The Single Partnership is a feature
+ * @param block called upon completion of setting the single partnership with result as argument
+ */
+-(void)setSinglePartnershipWithCompletionHandler:(void(^)(SKTResult result))block;
+
+/**
+ * get the Single Partnership stamp to get connection for a Bluetooth Low Energy device like S320, S370, S550,,,
+ * @param block receiving the result of sending the command and the Single Partnership stamp
+ */
+-(void)getSinglePartnershipStampWithCompletionHandler:(void (^)(SKTResult result, NSString *stamp))block;
 
 
 #pragma mark - Generic get and set property

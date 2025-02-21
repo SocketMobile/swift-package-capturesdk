@@ -328,8 +328,16 @@ SWIFT_CLASS("_TtC10CaptureSDK26CaptureHelperDeviceManager")
 @interface CaptureHelperDeviceManager : CaptureHelperDevice
 @end
 
-@class NSDate;
 @class NSString;
+
+SWIFT_CLASS("_TtC10CaptureSDK35PermanentPartnershipControllerSwift")
+@interface PermanentPartnershipControllerSwift : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)retrieveServiceUuidWithCompletion:(void (^ _Nonnull)(NSString * _Nullable))completion;
+- (NSString * _Nullable)createPermanentPartnershipStamp SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class NSDate;
 @class UIViewController;
 
 SWIFT_CLASS("_TtC10CaptureSDK24SocketCamControllerSwift")

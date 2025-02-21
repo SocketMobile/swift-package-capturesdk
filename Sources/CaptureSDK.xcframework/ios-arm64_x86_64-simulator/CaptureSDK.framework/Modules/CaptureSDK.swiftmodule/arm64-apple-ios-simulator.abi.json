@@ -26,41 +26,6 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftDecoder",
-        "printedName": "SwiftDecoder",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK",
-        "declAttributes": [
-          "ImplementationOnly",
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3222,6 +3187,45 @@
           },
           {
             "kind": "Function",
+            "name": "resetSinglePartnership",
+            "printedName": "resetSinglePartnership(withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A12HelperDeviceC22resetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "mangledName": "$s10CaptureSDK0A12HelperDeviceC22resetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getProperty",
             "printedName": "getProperty(_:withCompletionHandler:)",
             "children": [
@@ -4597,6 +4601,105 @@
           },
           {
             "kind": "Function",
+            "name": "setSinglePartnership",
+            "printedName": "setSinglePartnership(withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC20setSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "mangledName": "$s10CaptureSDK0A6HelperC20setSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSinglePartnershipStamp",
+            "printedName": "getSinglePartnershipStamp(withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors, Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CaptureSDK.SKTCaptureErrors, Swift.String?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SKTCaptureErrors",
+                        "printedName": "CaptureSDK.SKTCaptureErrors",
+                        "usr": "c:@E@SKTCaptureErrors"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
+            "mangledName": "$s10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getProperty",
             "printedName": "getProperty(_:withCompletionHandler:)",
             "children": [
@@ -4858,20 +4961,14 @@
       },
       {
         "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
+        "name": "SwiftDecoder",
+        "printedName": "SwiftDecoder",
         "declKind": "Import",
         "moduleName": "CaptureSDK",
         "declAttributes": [
+          "ImplementationOnly",
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
       },
       {
         "kind": "Import",
@@ -4896,33 +4993,6 @@
         "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "CaptureSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -6296,6 +6366,316 @@
       },
       {
         "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFAudio",
+        "printedName": "AVFAudio",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PermanentPartnershipControllerSwift",
+        "printedName": "PermanentPartnershipControllerSwift",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PermanentPartnershipControllerSwift",
+                "printedName": "CaptureSDK.PermanentPartnershipControllerSwift",
+                "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)init",
+            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftCACycfc",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "retrieveServiceUuid",
+            "printedName": "retrieveServiceUuid(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)retrieveServiceUuidWithCompletion:",
+            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC19retrieveServiceUuid10completionyySSSgc_tF",
+            "moduleName": "CaptureSDK",
+            "isOpen": true,
+            "objc_name": "retrieveServiceUuidWithCompletion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createPermanentPartnershipStamp",
+            "printedName": "createPermanentPartnershipStamp()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)createPermanentPartnershipStamp",
+            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC06createcD5StampSSSgyF",
+            "moduleName": "CaptureSDK",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift",
+        "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC",
+        "moduleName": "CaptureSDK",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFAudio",
+        "printedName": "AVFAudio",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -6576,378 +6956,399 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 240,
-      "length": 22,
-      "value": "\"----> SocketCam C860\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1084,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1129,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1180,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1216,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C860\/SocketCamSwiftDecoderViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1258,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "StringLiteral",
-      "offset": 227,
-      "length": 17,
-      "value": "\"----> SocketCam\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1143,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1180,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "Dictionary",
-      "offset": 1232,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1341,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1375,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 40056,
+      "offset": 40717,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1078,
       "length": 45,
       "value": "\"socketcam.popup.message.companionNotPresent\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1207,
       "length": 41,
       "value": "\"socketcam.popup.message.companionUpdate\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1329,
       "length": 44,
       "value": "\"socketcam.popup.message.companionNotOpened\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1466,
       "length": 49,
       "value": "\"socketcam.popup.message.licenseAlreadyCompleted\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SktLogger.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SktLogger.swift",
       "kind": "StringLiteral",
       "offset": 1018,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenseServer.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
       "kind": "StringLiteral",
-      "offset": 698,
+      "offset": 715,
       "length": 30,
       "value": "\"----> SocketCamLicenseServer\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenseServer.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
       "kind": "StringLiteral",
-      "offset": 760,
+      "offset": 785,
       "length": 65,
       "value": "\"https:\/\/subscriptionsmanagement.azurewebsites.net\/subscriptions\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "StringLiteral",
-      "offset": 278,
+      "offset": 240,
       "length": 22,
-      "value": "\"----> SocketCam C820\""
+      "value": "\"----> SocketCam C860\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1261,
+      "offset": 1084,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1326,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1451,
+      "offset": 1129,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1535,
+      "offset": 1180,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamWebViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1216,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1258,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 159,
       "length": 38,
       "value": "\"https:\/\/sckt.tech\/sdk-aboutsocketcam\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/C820\/SocketCamWebViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 41,
       "value": "\"https:\/\/sckt.tech\/sdk-feedbacksocketcam\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 247,
-      "length": 30,
-      "value": "\"----> SocketCamLicenceEngine\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 612,
-      "length": 17,
-      "value": "\"sktcompanion:\/\/\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 683,
-      "length": 28,
-      "value": "\"SocketCamLicenceEnabledKey\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamLicence\/SocketCamLicenceEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 764,
-      "length": 65,
-      "value": "\"https:\/\/apps.apple.com\/app\/socket-mobile-companion\/id1175638950\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 27,
       "value": "\"----> SocketCamController\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 779,
       "length": 6,
       "value": "\"c820\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 809,
       "length": 6,
       "value": "\"c860\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 917,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 955,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "Array",
       "offset": 1015,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "IntegerLiteral",
       "offset": 1184,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1224,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1279,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 1419,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "Array",
       "offset": 1487,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "IntegerLiteral",
       "offset": 1560,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1878,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1933,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1978,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 2251,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
+      "length": 22,
+      "value": "\"----> SocketCam C820\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1261,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1326,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1451,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1535,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "StringLiteral",
+      "offset": 227,
+      "length": 17,
+      "value": "\"----> SocketCam\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1143,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1180,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "Dictionary",
+      "offset": 1232,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1341,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1375,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipController.swift",
+      "kind": "StringLiteral",
+      "offset": 291,
+      "length": 38,
+      "value": "\"----> PermanentPartnershipController\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipServer.swift",
+      "kind": "StringLiteral",
+      "offset": 443,
+      "length": 34,
+      "value": "\"----> PermanentPartnershipServer\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipServer.swift",
+      "kind": "StringLiteral",
+      "offset": 517,
+      "length": 28,
+      "value": "\"https:\/\/setpartnership.com\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "kind": "StringLiteral",
+      "offset": 247,
+      "length": 30,
+      "value": "\"----> SocketCamLicenceEngine\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "kind": "StringLiteral",
+      "offset": 612,
+      "length": 17,
+      "value": "\"sktcompanion:\/\/\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "kind": "StringLiteral",
+      "offset": 683,
+      "length": 28,
+      "value": "\"SocketCamLicenceEnabledKey\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "kind": "StringLiteral",
+      "offset": 764,
+      "length": 65,
+      "value": "\"https:\/\/apps.apple.com\/app\/socket-mobile-companion\/id1175638950\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 29,
       "value": "\"----> CaptureSDKEnvironment\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 404,
       "length": 8,
       "value": "\"HW_KEY\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 773,
       "length": 26,
       "value": "\"com.socketmobile.Capture\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 904,
       "length": 47,
       "value": "\"CaptureSDK Info.plist not found - Not package\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "Dictionary",
       "offset": 972,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 1242,
       "length": 37,
       "value": "\"CaptureSDK Info.plist key not found\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 1300,
       "length": 2,

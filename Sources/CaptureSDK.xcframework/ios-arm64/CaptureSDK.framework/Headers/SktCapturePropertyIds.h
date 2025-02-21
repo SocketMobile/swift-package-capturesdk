@@ -456,6 +456,20 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	*/
 	SKTCapturePropertyIDLassoLifeSpanDevice = 196897,
 
+	/**
+	property to set a device's Permanent Partnership connection
+
+	Device: False	Get Type: NotApplicable 	Set Type: None
+	*/
+	SKTCapturePropertyIDPermanentPartnership = -2146434782,
+
+	/**
+	property to get a stamp from the host for Permanent Partnership connection
+
+	Device: False	Get Type: None 	Set Type: NotApplicable
+	*/
+	SKTCapturePropertyIDPermanentPartnershipStamp = -2147417821,
+
 
 };
 

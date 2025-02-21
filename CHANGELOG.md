@@ -1,6 +1,26 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.100
+
+### New
+
+  * Add the Permanent Partnership feature to Bluetooth Low Energy devices
+
+  * Add factory reset command to Bluetooth Low Energy devices
+
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.91
 
 ### New
