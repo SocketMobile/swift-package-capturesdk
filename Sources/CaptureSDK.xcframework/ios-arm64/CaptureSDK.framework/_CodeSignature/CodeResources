@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/SktCaptureDeviceTypes.h</key>
 		<data>
-		eB5+3c/BTgfUMWydqfNcGSYnQbs=
+		//C4mMD8An1ZvUEEXsm/B+vZK6Y=
 		</data>
 		<key>Headers/SktCaptureErrors.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		3LaaNJQMzUfydU5VVVylKQWKG/E=
+		3YxfLal/m+iBy0o4MLueCj7haiU=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		R2pIFNBP5UUl8lfBTkXfBIku+9A=
+		Fj9BkoSOZ8Or4gBR492q7DPpMn8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -295,7 +295,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZyVMAElst46B/CwN4iwCsV3LGYXOYYyDDCTgTqYyzrc=
+			w/WVQVTW+k9XcBcWPntyli4V/9b4jAsImBIPO7RnLZw=
 			</data>
 		</dict>
 		<key>Headers/SktCaptureErrors.h</key>
@@ -337,7 +337,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y/DGB6lXrIjQXWBEYeMardPaLjEBzu7JbtPO+OuqDEU=
+			FwSuU417XWvCcR7UqXjJmCfjtdKswtsQPhOPF0I+k00=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -365,7 +365,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Wf3LUUOGxLf4M6Ev3tMb2yokIowfmqbdTfby2J+Otc=
+			2MbfrYgU1VC+bR/MGBK+XS4Vebwxt91D2U6aTi4SdJQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

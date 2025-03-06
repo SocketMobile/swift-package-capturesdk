@@ -1,6 +1,41 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.104
+
+### New
+
+  * Add set property DataConfirmationDevice for our Bluetooth Low Energy devices
+
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
+## Version 1.9.101
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.100
 
 ### New
