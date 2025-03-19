@@ -308,6 +308,14 @@
  */
 -(void)getDeviceSpecificCommand:(NSData *)command completionHandler:(void(^)(SKTResult result, NSData *commandResult))block;
 
+/**
+ * factory resets a Bluetooth Low Energy device like S320, S370, S550,,,
+ * This makes a factory reset to the device
+ *
+ * @param block receiving the result of sending the factory reset command
+ */
+-(void)setDeviceFactoryResetWithCompletionHandler:(void(^)(SKTResult result))block;
+
 
 #pragma mark - SocketCam (scanner using Camera)
 /**
@@ -340,9 +348,10 @@
 #pragma mark - Single Partnership
 
 /**
- * reset the single partnership mode of the device
+ * Resets a Single Partnership connection for a Bluetooth Low Energy device like S320, S370, S550,,,
+ * This makes the device to be discoverable again by any client
  *
- * @param block receiving the result of setting the single partnership
+ * @param block receiving the result of sending the reset Single Partnership command
  */
 -(void)resetSinglePartnershipWithCompletionHandler:(void(^)(SKTResult result))block;
 
@@ -726,10 +735,20 @@
 #pragma mark - Single Partnership
 
 /**
- * set the Single Partnership status. The Single Partnership is a feature
- * @param block called upon completion of setting the single partnership with result as argument
+ * Gets Single Partnership status for connection for a Bluetooth Low Energy device like S320, S370, S550,,,
+ *
+ * @param block called upon completion of setting the Single Partnership status with result and status as arguments
  */
--(void)setSinglePartnershipWithCompletionHandler:(void(^)(SKTResult result))block;
+-(void)getSinglePartnershipStatusWithCompletionHandler:(void (^)(SKTResult result, SKTCaptureSinglePartnership status))block;
+
+/**
+ * Sets a Single Partnership connection for a Bluetooth Low Energy device like S320, S370, S550,,,
+ *
+ * @param status: contains the new Single Partnership status
+ * @param uuidString: contains the uuid string that you want to setup in your Socket Mobile Bluetooth Low Energy device to be discoverable only with this host - Available if `status` = SKTCaptureSinglePartnershipUuid (3)
+ * @param block called upon completion of setting the Single Partnership status with result as argument
+ */
+-(void)setSinglePartnershipStatus:(SKTCaptureSinglePartnership)status uuidString:(NSString *)uuidString completionHandler:(void (^)(SKTResult result))block;
 
 /**
  * get the Single Partnership stamp to get connection for a Bluetooth Low Energy device like S320, S370, S550,,,

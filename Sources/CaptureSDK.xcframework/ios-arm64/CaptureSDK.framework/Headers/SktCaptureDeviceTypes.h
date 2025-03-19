@@ -397,11 +397,18 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeDeviceM963 = 327975,
 
 	/**
+	Model XS663
+
+	value: 327976 (0x50128)
+	*/
+	SKTCaptureDeviceTypeDeviceXS663 = 327976,
+
+	/**
 	Bluetooth device type unknown by this version of Capture
 
-	value: 196648 (0x30028)
+	value: 196649 (0x30029)
 	*/
-	SKTCaptureDeviceTypeBtUnknown = 196648,
+	SKTCaptureDeviceTypeBtUnknown = 196649,
 
 	/**
 	device manager for controlling BLE
@@ -413,9 +420,9 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	/**
 	Ble device type unknown by this version of Capture
 
-	value: 329768 (0x50828)
+	value: 329769 (0x50829)
 	*/
-	SKTCaptureDeviceTypeBleUnknown = 329768,
+	SKTCaptureDeviceTypeBleUnknown = 329769,
 
 };
 

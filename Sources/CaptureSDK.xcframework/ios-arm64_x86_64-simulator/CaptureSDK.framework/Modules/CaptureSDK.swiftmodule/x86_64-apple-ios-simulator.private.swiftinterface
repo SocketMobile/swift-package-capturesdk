@@ -88,7 +88,8 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func getLassoLifeSpanWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ lifespan: ObjectiveC.NSInteger?) -> Swift.Void)
   open func setLassoLifeSpan(_ lifespan: Swift.Int, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setDisconnect(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  open func resetSinglePartnership(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setFactoryReset(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setResetSinglePartnership(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
@@ -121,7 +122,8 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
   open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  open func setSinglePartnership(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
+  open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSinglePartnershipStamp(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ stamp: Swift.String?) -> Swift.Void)
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
@@ -159,11 +161,12 @@ extension CaptureSDK.SocketCamControllerSwift {
   public func didNotRead()
   public func didClose()
 }
-@objc @_inheritsConvenienceInitializers open class PermanentPartnershipControllerSwift : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
+  @objc open func retrieveServiceUuidFromApi(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func retrieveServiceUuidFromWebUI(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func createStamp() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
-  @objc open func retrieveServiceUuid(completion: @escaping (Swift.String?) -> Swift.Void)
-  @objc open func createPermanentPartnershipStamp() -> Swift.String?
 }
 #if compiler(>=5.3) && $RetroactiveAttribute
 extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
@@ -187,4 +190,16 @@ extension Foundation.URL : Swift.ExpressibleByStringLiteral {
 }
 #endif
 public enum CaptureEnvironment {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SinglePartnershipWebViewControllerSwift : UIKit.UIViewController, WebKit.WKNavigationDelegate {
+  @objc @_Concurrency.MainActor @preconcurrency public var stamp: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var hostId: Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency public var serviceUuidCallback: ((Swift.String?, Swift.Int) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func loadView()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc open func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
 }

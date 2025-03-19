@@ -3187,8 +3187,8 @@
           },
           {
             "kind": "Function",
-            "name": "resetSinglePartnership",
-            "printedName": "resetSinglePartnership(withCompletionHandler:)",
+            "name": "setFactoryReset",
+            "printedName": "setFactoryReset(withCompletionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3215,8 +3215,47 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10CaptureSDK0A12HelperDeviceC22resetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
-            "mangledName": "$s10CaptureSDK0A12HelperDeviceC22resetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "usr": "s:10CaptureSDK0A12HelperDeviceC15setFactoryReset21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "mangledName": "$s10CaptureSDK0A12HelperDeviceC15setFactoryReset21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setResetSinglePartnership",
+            "printedName": "setResetSinglePartnership(withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A12HelperDeviceC25setResetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "mangledName": "$s10CaptureSDK0A12HelperDeviceC25setResetSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
             "moduleName": "CaptureSDK",
             "declAttributes": [
               "AccessControl",
@@ -4601,13 +4640,94 @@
           },
           {
             "kind": "Function",
-            "name": "setSinglePartnership",
-            "printedName": "setSinglePartnership(withCompletionHandler:)",
+            "name": "getSinglePartnershipStatus",
+            "printedName": "getSinglePartnershipStatus(withCompletionHandler:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors, CaptureSDK.SKTCaptureSinglePartnership?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(CaptureSDK.SKTCaptureErrors, CaptureSDK.SKTCaptureSinglePartnership?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SKTCaptureErrors",
+                        "printedName": "CaptureSDK.SKTCaptureErrors",
+                        "usr": "c:@E@SKTCaptureErrors"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "CaptureSDK.SKTCaptureSinglePartnership?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SKTCaptureSinglePartnership",
+                            "printedName": "CaptureSDK.SKTCaptureSinglePartnership",
+                            "usr": "c:@E@SKTCaptureSinglePartnership"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC26getSinglePartnershipStatus21withCompletionHandleryySo16SKTCaptureErrorsV_So0keF0VSgtc_tF",
+            "mangledName": "$s10CaptureSDK0A6HelperC26getSinglePartnershipStatus21withCompletionHandleryySo16SKTCaptureErrorsV_So0keF0VSgtc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSinglePartnership",
+            "printedName": "setSinglePartnership(_:uuidString:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SKTCaptureSinglePartnership",
+                "printedName": "CaptureSDK.SKTCaptureSinglePartnership",
+                "usr": "c:@E@SKTCaptureSinglePartnership"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeFunc",
@@ -4629,8 +4749,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10CaptureSDK0A6HelperC20setSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
-            "mangledName": "$s10CaptureSDK0A6HelperC20setSinglePartnership21withCompletionHandleryySo16SKTCaptureErrorsVc_tF",
+            "usr": "s:10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString17completionHandlerySo010SKTCaptureeF0V_SSSgySo0K6ErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString17completionHandlerySo010SKTCaptureeF0V_SSSgySo0K6ErrorsVctF",
             "moduleName": "CaptureSDK",
             "declAttributes": [
               "AccessControl",
@@ -6431,40 +6551,13 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "PermanentPartnershipControllerSwift",
-        "printedName": "PermanentPartnershipControllerSwift",
+        "name": "SinglePartnershipControllerSwift",
+        "printedName": "SinglePartnershipControllerSwift",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PermanentPartnershipControllerSwift",
-                "printedName": "CaptureSDK.PermanentPartnershipControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)init",
-            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftCACycfc",
-            "moduleName": "CaptureSDK",
-            "overriding": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
             "kind": "Function",
-            "name": "retrieveServiceUuid",
-            "printedName": "retrieveServiceUuid(completion:)",
+            "name": "retrieveServiceUuidFromApi",
+            "printedName": "retrieveServiceUuidFromApi(completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6474,7 +6567,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(Swift.String?) -> ()",
+                "printedName": "(Swift.String?, Swift.Int) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6483,27 +6576,40 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String?, Swift.Int)",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
-                    ],
-                    "usr": "s:Sq"
+                    ]
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)retrieveServiceUuidWithCompletion:",
-            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC19retrieveServiceUuid10completionyySSSgc_tF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromApiWithCompletion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC26retrieveServiceUuidFromApi10completionyySSSg_Sitc_tF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
-            "objc_name": "retrieveServiceUuidWithCompletion:",
+            "objc_name": "retrieveServiceUuidFromApiWithCompletion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -6513,8 +6619,70 @@
           },
           {
             "kind": "Function",
-            "name": "createPermanentPartnershipStamp",
-            "printedName": "createPermanentPartnershipStamp()",
+            "name": "retrieveServiceUuidFromWebUI",
+            "printedName": "retrieveServiceUuidFromWebUI(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromWebUIWithCompletion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC28retrieveServiceUuidFromWebUI10completionyySSSg_Sitc_tF",
+            "moduleName": "CaptureSDK",
+            "isOpen": true,
+            "objc_name": "retrieveServiceUuidFromWebUIWithCompletion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createStamp",
+            "printedName": "createStamp()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6532,8 +6700,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift(im)createPermanentPartnershipStamp",
-            "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC06createcD5StampSSSgyF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)createStamp",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC11createStampSSSgyF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
             "declAttributes": [
@@ -6541,11 +6709,37 @@
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SinglePartnershipControllerSwift",
+                "printedName": "CaptureSDK.SinglePartnershipControllerSwift",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)init",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftCACycfc",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@CaptureSDK@objc(cs)PermanentPartnershipControllerSwift",
-        "mangledName": "$s10CaptureSDK35PermanentPartnershipControllerSwiftC",
+        "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift",
+        "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC",
         "moduleName": "CaptureSDK",
         "isOpen": true,
         "declAttributes": [
@@ -6625,27 +6819,13 @@
       },
       {
         "kind": "Import",
-        "name": "AVFAudio",
-        "printedName": "AVFAudio",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "CaptureSDK",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK"
       },
       {
         "kind": "Import",
@@ -6709,6 +6889,818 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "CaptureSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SinglePartnershipWebViewControllerSwift",
+        "printedName": "SinglePartnershipWebViewControllerSwift",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "stamp",
+            "printedName": "stamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(py)stamp",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5stampSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)stamp",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5stampSSSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)setStamp:",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5stampSSSgvs",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5stampSSSgvM",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5stampSSSgvM",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hostId",
+            "printedName": "hostId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(py)hostId",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC6hostIdSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)hostId",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC6hostIdSSSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)setHostId:",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC6hostIdSSSgvs",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CaptureSDK39SinglePartnershipWebViewControllerSwiftC6hostIdSSSgvM",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC6hostIdSSSgvM",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "serviceUuidCallback",
+            "printedName": "serviceUuidCallback",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String?, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String?, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(py)serviceUuidCallback",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC19serviceUuidCallbackySSSg_SitcSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String?, Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String?, Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String?, Swift.Int)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)serviceUuidCallback",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC19serviceUuidCallbackySSSg_SitcSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String?, Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String?, Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String?, Swift.Int)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)setServiceUuidCallback:",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC19serviceUuidCallbackySSSg_SitcSgvs",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CaptureSDK39SinglePartnershipWebViewControllerSwiftC19serviceUuidCallbackySSSg_SitcSgvM",
+                "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC19serviceUuidCallbackySSSg_SitcSgvM",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)viewDidLoad",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC11viewDidLoadyyF",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)viewWillAppear:",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC14viewWillAppearyySbF",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadView",
+            "printedName": "loadView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)loadView",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC04loadF0yyF",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "loadView",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:didFinish:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "WebKit.WKNavigation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigation",
+                    "printedName": "WebKit.WKNavigation",
+                    "usr": "c:objc(cs)WKNavigation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)webView:didFinishNavigation:",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC03webF0_9didFinishySo05WKWebF0C_So12WKNavigationCSgtF",
+            "moduleName": "CaptureSDK",
+            "isOpen": true,
+            "objc_name": "webView:didFinishNavigation:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SinglePartnershipWebViewControllerSwift",
+                "printedName": "CaptureSDK.SinglePartnershipWebViewControllerSwift",
+                "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)initWithNibName:bundle:",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CaptureSDK.SinglePartnershipWebViewControllerSwift?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SinglePartnershipWebViewControllerSwift",
+                    "printedName": "CaptureSDK.SinglePartnershipWebViewControllerSwift",
+                    "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift(im)initWithCoder:",
+            "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipWebViewControllerSwift",
+        "mangledName": "$s10CaptureSDK39SinglePartnershipWebViewControllerSwiftC",
+        "moduleName": "CaptureSDK",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -6956,403 +7948,459 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 40717,
+      "offset": 41370,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1078,
       "length": 45,
       "value": "\"socketcam.popup.message.companionNotPresent\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1207,
       "length": 41,
       "value": "\"socketcam.popup.message.companionUpdate\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1329,
       "length": 44,
       "value": "\"socketcam.popup.message.companionNotOpened\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",
       "kind": "StringLiteral",
       "offset": 1466,
       "length": 49,
       "value": "\"socketcam.popup.message.licenseAlreadyCompleted\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SktLogger.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SktLogger.swift",
       "kind": "StringLiteral",
       "offset": 1018,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
       "kind": "StringLiteral",
       "offset": 715,
       "length": 30,
       "value": "\"----> SocketCamLicenseServer\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenseServer.swift",
       "kind": "StringLiteral",
       "offset": 785,
       "length": 65,
       "value": "\"https:\/\/subscriptionsmanagement.azurewebsites.net\/subscriptions\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "StringLiteral",
       "offset": 240,
       "length": 22,
       "value": "\"----> SocketCam C860\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1084,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1129,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1180,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1216,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C860\/SocketCamSwiftDecoderViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1258,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 159,
       "length": 38,
       "value": "\"https:\/\/sckt.tech\/sdk-aboutsocketcam\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamWebViewController.swift",
       "kind": "StringLiteral",
       "offset": 216,
       "length": 41,
       "value": "\"https:\/\/sckt.tech\/sdk-feedbacksocketcam\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 27,
       "value": "\"----> SocketCamController\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 779,
       "length": 6,
       "value": "\"c820\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 809,
       "length": 6,
       "value": "\"c860\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 917,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 955,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "Array",
       "offset": 1015,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "IntegerLiteral",
       "offset": 1184,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1224,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1279,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "StringLiteral",
       "offset": 1419,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "Array",
       "offset": 1487,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "IntegerLiteral",
       "offset": 1560,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1878,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1933,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 1978,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamController.swift",
       "kind": "BooleanLiteral",
       "offset": 2251,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
       "kind": "StringLiteral",
       "offset": 278,
       "length": 22,
       "value": "\"----> SocketCam C820\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1261,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1326,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1451,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/C820\/SocketCamViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1535,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "StringLiteral",
       "offset": 227,
       "length": 17,
       "value": "\"----> SocketCam\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "BooleanLiteral",
       "offset": 1143,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "BooleanLiteral",
       "offset": 1180,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "Dictionary",
       "offset": 1232,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "BooleanLiteral",
       "offset": 1341,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCam.swift",
       "kind": "BooleanLiteral",
       "offset": 1375,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipController.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "StringLiteral",
-      "offset": 291,
-      "length": 38,
-      "value": "\"----> PermanentPartnershipController\""
+      "offset": 285,
+      "length": 35,
+      "value": "\"----> SinglePartnershipController\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipServer.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "StringLiteral",
-      "offset": 443,
-      "length": 34,
-      "value": "\"----> PermanentPartnershipServer\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/PermanentPartnership\/PermanentPartnershipServer.swift",
-      "kind": "StringLiteral",
-      "offset": 517,
+      "offset": 357,
       "length": 28,
       "value": "\"https:\/\/setpartnership.com\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 410,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 437,
+      "length": 3,
+      "value": "-17"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 478,
+      "length": 3,
+      "value": "-24"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 511,
+      "length": 3,
+      "value": "-32"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 544,
+      "length": 3,
+      "value": "-41"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 580,
+      "length": 3,
+      "value": "-42"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 614,
+      "length": 3,
+      "value": "-85"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipServer.swift",
+      "kind": "StringLiteral",
+      "offset": 405,
+      "length": 31,
+      "value": "\"----> SinglePartnershipServer\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
       "kind": "StringLiteral",
       "offset": 247,
       "length": 30,
       "value": "\"----> SocketCamLicenceEngine\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
       "kind": "StringLiteral",
       "offset": 612,
       "length": 17,
       "value": "\"sktcompanion:\/\/\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
       "kind": "StringLiteral",
       "offset": 683,
       "length": 28,
       "value": "\"SocketCamLicenceEnabledKey\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceEngine.swift",
       "kind": "StringLiteral",
       "offset": 764,
       "length": 65,
       "value": "\"https:\/\/apps.apple.com\/app\/socket-mobile-companion\/id1175638950\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 238,
       "length": 29,
       "value": "\"----> CaptureSDKEnvironment\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 404,
       "length": 8,
       "value": "\"HW_KEY\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 773,
       "length": 26,
       "value": "\"com.socketmobile.Capture\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 904,
       "length": 47,
       "value": "\"CaptureSDK Info.plist not found - Not package\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "Dictionary",
       "offset": 972,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 1242,
       "length": 37,
       "value": "\"CaptureSDK Info.plist key not found\""
     },
     {
-      "filePath": "\/Users\/build\/builds\/xz6u8G6q\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
       "offset": 1300,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 204,
+      "length": 32,
+      "value": "\"----> SinglePartnershipWebview\""
     }
   ]
 }

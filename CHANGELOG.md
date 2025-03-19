@@ -1,6 +1,25 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.110
+
+### New
+
+  * We have added the support of our new XS663 device
+
+
+
+### Improvements
+
+  * We have improved the Single Partnership feature
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.104
 
 ### New

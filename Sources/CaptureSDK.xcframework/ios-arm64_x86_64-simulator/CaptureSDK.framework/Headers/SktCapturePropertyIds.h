@@ -73,7 +73,6 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 
 	/**
 	property to get or set the SocketCam status
-	(iOS only)
 
 	Device: False	Get Type: None 	Set Type: Byte
 	*/
@@ -457,18 +456,25 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	SKTCapturePropertyIDLassoLifeSpanDevice = 196897,
 
 	/**
-	property to set a device's Permanent Partnership connection
+	property to get or set a device's Single Partnership connection
 
-	Device: False	Get Type: NotApplicable 	Set Type: None
+	Device: False	Get Type: None 	Set Type: Array
 	*/
-	SKTCapturePropertyIDPermanentPartnership = -2146434782,
+	SKTCapturePropertyIDSinglePartnership = -2147221214,
 
 	/**
-	property to get a stamp from the host for Permanent Partnership connection
+	property to get a stamp from the host for Single Partnership connection
 
 	Device: False	Get Type: None 	Set Type: NotApplicable
 	*/
-	SKTCapturePropertyIDPermanentPartnershipStamp = -2147417821,
+	SKTCapturePropertyIDSinglePartnershipStamp = -2147417821,
+
+	/**
+	property to reset a device's Single Partnership connection
+
+	Device: True	Get Type: None 	Set Type: None
+	*/
+	SKTCapturePropertyIDResetSinglePartnership = 292,
 
 
 };
@@ -1023,6 +1029,21 @@ typedef NS_ENUM(NSInteger, SKTCaptureLassoDeviceStatus)
 	SKTCaptureLassoDeviceStatusDisable=0,
 	/** Enable Lasso */
 	SKTCaptureLassoDeviceStatusEnable=1,
+};
+
+/**
+ @brief Define the Single Partnership experience 
+*/
+typedef NS_ENUM(NSInteger, SKTCaptureSinglePartnership) 
+{
+	/** Disable Single Partnership */
+	SKTCaptureSinglePartnershipDisable=0,
+	/** Get a Single Partnership through our Web API */
+	SKTCaptureSinglePartnershipWebApi=1,
+	/** Show a Single Partnership QRcode through our Web UI */
+	SKTCaptureSinglePartnershipWebUI=2,
+	/** Set your own Service UUID for a Single Partnership */
+	SKTCaptureSinglePartnershipUuid=3,
 };
 
 
