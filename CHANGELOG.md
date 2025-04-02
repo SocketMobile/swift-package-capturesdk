@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.113
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have improved the scanning of SocketCam C820
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.110
 
 ### New
