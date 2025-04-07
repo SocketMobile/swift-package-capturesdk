@@ -1,6 +1,40 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.118
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * Improved documentation for our Single Partnership feature
+
+
+### Bug fixes
+
+  * Fixed an issue with SocketCam C820 when used as a subview
+
+
+## Version 1.9.115
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.113
 
 ### New

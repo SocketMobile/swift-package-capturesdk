@@ -1044,6 +1044,8 @@ typedef NS_ENUM(NSInteger, SKTCaptureSinglePartnership)
 	SKTCaptureSinglePartnershipWebUI=2,
 	/** Set your own Service UUID for a Single Partnership */
 	SKTCaptureSinglePartnershipUuid=3,
+	/** Show a Single Partnership Web UI where you can input information about the device */
+	SKTCaptureSinglePartnershipWebUIPrompt=4,
 };
 
 

@@ -282,8 +282,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
-@import WebKit;
 #endif
 
 #endif
@@ -336,29 +334,13 @@ SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 @interface SinglePartnershipControllerSwift : NSObject
 - (void)retrieveServiceUuidFromApiWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (void)retrieveServiceUuidFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)promptDeviceInfoFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class WKWebView;
-@class WKNavigation;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC10CaptureSDK39SinglePartnershipWebViewControllerSwift")
-@interface SinglePartnershipWebViewControllerSwift : UIViewController <WKNavigationDelegate>
-@property (nonatomic, copy) NSString * _Nullable stamp;
-@property (nonatomic, copy) NSString * _Nullable hostId;
-@property (nonatomic, copy) void (^ _Nullable serviceUuidCallback)(NSString * _Nullable, NSInteger);
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)loadView;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class NSDate;
+@class UIViewController;
 
 SWIFT_CLASS("_TtC10CaptureSDK24SocketCamControllerSwift")
 @interface SocketCamControllerSwift : NSObject
@@ -680,8 +662,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
-@import WebKit;
 #endif
 
 #endif
@@ -734,29 +714,13 @@ SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 @interface SinglePartnershipControllerSwift : NSObject
 - (void)retrieveServiceUuidFromApiWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (void)retrieveServiceUuidFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)promptDeviceInfoFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class WKWebView;
-@class WKNavigation;
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC10CaptureSDK39SinglePartnershipWebViewControllerSwift")
-@interface SinglePartnershipWebViewControllerSwift : UIViewController <WKNavigationDelegate>
-@property (nonatomic, copy) NSString * _Nullable stamp;
-@property (nonatomic, copy) NSString * _Nullable hostId;
-@property (nonatomic, copy) void (^ _Nullable serviceUuidCallback)(NSString * _Nullable, NSInteger);
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)loadView;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class NSDate;
+@class UIViewController;
 
 SWIFT_CLASS("_TtC10CaptureSDK24SocketCamControllerSwift")
 @interface SocketCamControllerSwift : NSObject

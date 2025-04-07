@@ -164,6 +164,7 @@ extension CaptureSDK.SocketCamControllerSwift {
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
   @objc open func retrieveServiceUuidFromApi(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func retrieveServiceUuidFromWebUI(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func promptDeviceInfoFromWebUI(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func createStamp() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit
@@ -191,15 +192,15 @@ extension Foundation.URL : Swift.ExpressibleByStringLiteral {
 #endif
 public enum CaptureEnvironment {
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class SinglePartnershipWebViewControllerSwift : UIKit.UIViewController, WebKit.WKNavigationDelegate {
-  @objc @_Concurrency.MainActor @preconcurrency public var stamp: Swift.String?
-  @objc @_Concurrency.MainActor @preconcurrency public var hostId: Swift.String?
-  @objc @_Concurrency.MainActor @preconcurrency public var serviceUuidCallback: ((Swift.String?, Swift.Int) -> ())?
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func loadView()
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc open func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+public enum SinglePartnershipPage : Swift.String {
+  case getQrCode
+  case promptDeviceInfo
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
+extension CaptureSDK.SinglePartnershipPage : Swift.Equatable {}
+extension CaptureSDK.SinglePartnershipPage : Swift.Hashable {}
+extension CaptureSDK.SinglePartnershipPage : Swift.RawRepresentable {}
