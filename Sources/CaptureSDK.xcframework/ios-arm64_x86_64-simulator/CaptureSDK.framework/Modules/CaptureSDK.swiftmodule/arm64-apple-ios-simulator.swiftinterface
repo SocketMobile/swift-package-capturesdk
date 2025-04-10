@@ -162,9 +162,9 @@ extension CaptureSDK.SocketCamControllerSwift {
   public func didClose()
 }
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
-  @objc open func retrieveServiceUuidFromApi(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
-  @objc open func retrieveServiceUuidFromWebUI(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
-  @objc open func promptDeviceInfoFromWebUI(completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func retrieveServiceUuidFromApi(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func retrieveServiceUuidFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func promptDeviceInfoFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func createStamp() -> Swift.String?
   @objc override dynamic public init()
   @objc deinit

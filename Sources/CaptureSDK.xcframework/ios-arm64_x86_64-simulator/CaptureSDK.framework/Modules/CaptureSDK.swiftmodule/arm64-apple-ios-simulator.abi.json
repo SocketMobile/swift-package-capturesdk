@@ -6557,12 +6557,18 @@
           {
             "kind": "Function",
             "name": "retrieveServiceUuidFromApi",
-            "printedName": "retrieveServiceUuidFromApi(completion:)",
+            "printedName": "retrieveServiceUuidFromApi(with:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -6605,11 +6611,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromApiWithCompletion:",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC26retrieveServiceUuidFromApi10completionyySSSg_Sitc_tF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromApiWith:completion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC26retrieveServiceUuidFromApi4with10completionySS_ySSSg_SitctF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
-            "objc_name": "retrieveServiceUuidFromApiWithCompletion:",
+            "objc_name": "retrieveServiceUuidFromApiWith:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -6620,12 +6626,18 @@
           {
             "kind": "Function",
             "name": "retrieveServiceUuidFromWebUI",
-            "printedName": "retrieveServiceUuidFromWebUI(completion:)",
+            "printedName": "retrieveServiceUuidFromWebUI(with:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -6668,11 +6680,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromWebUIWithCompletion:",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC28retrieveServiceUuidFromWebUI10completionyySSSg_Sitc_tF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromWebUIWith:completion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC28retrieveServiceUuidFromWebUI4with10completionySS_ySSSg_SitctF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
-            "objc_name": "retrieveServiceUuidFromWebUIWithCompletion:",
+            "objc_name": "retrieveServiceUuidFromWebUIWith:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -6682,12 +6694,18 @@
           {
             "kind": "Function",
             "name": "promptDeviceInfoFromWebUI",
-            "printedName": "promptDeviceInfoFromWebUI(completion:)",
+            "printedName": "promptDeviceInfoFromWebUI(with:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -6730,11 +6748,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)promptDeviceInfoFromWebUIWithCompletion:",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC25promptDeviceInfoFromWebUI10completionyySSSg_Sitc_tF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)promptDeviceInfoFromWebUIWith:completion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC25promptDeviceInfoFromWebUI4with10completionySS_ySSSg_SitctF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
-            "objc_name": "promptDeviceInfoFromWebUIWithCompletion:",
+            "objc_name": "promptDeviceInfoFromWebUIWith:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -7799,6 +7817,13 @@
       "value": "-85"
     },
     {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 726,
+      "length": 3,
+      "value": "-91"
+    },
+    {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipServer.swift",
       "kind": "StringLiteral",
       "offset": 405,
@@ -7906,7 +7931,28 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 728,
+      "offset": 437,
+      "length": 16,
+      "value": "\"contentChanged\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 475,
+      "length": 11,
+      "value": "\"resetHost\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 808,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 896,
       "length": 2,
       "value": "\"\""
     }

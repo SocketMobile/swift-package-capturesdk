@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		Tflan6NNCyL/rYkZtKYmxcgUYyk=
+		jfsLZqbBb3SUwho0QGCrcZ1Ipow=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		uBV1FxXXW4rvLOU9SKhcIoIPLuw=
+		ZuNoyVpEc4ExAosEix3fpld8a60=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mioFb+wH7CXOvPyRwV+6Cg/62ZE=
+		wvcaUPAikhapMYVKrq5UC4l2H4I=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,19 +62,19 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mioFb+wH7CXOvPyRwV+6Cg/62ZE=
+		wvcaUPAikhapMYVKrq5UC4l2H4I=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kfdN4oBLooEeyVWrrKkG8dGwPro=
+		m56NyZdd/HaRlmnPWUOWdMdtR8o=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		uBV1FxXXW4rvLOU9SKhcIoIPLuw=
+		ZuNoyVpEc4ExAosEix3fpld8a60=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TZ68v+wPOUbjvXhlZPxUaN7pkfA=
+		0rOl75VIqvjEQIXJ5XNZoqPKi0M=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -82,11 +82,11 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TZ68v+wPOUbjvXhlZPxUaN7pkfA=
+		0rOl75VIqvjEQIXJ5XNZoqPKi0M=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		giPEjVUjP2XOY9GxUUvlYirgFiQ=
+		vEb/q4pIVFXG8rM3aJg1z1JKZd8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -294,7 +294,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UasJjc14+LFSCzE0Hebtv7TLCEahbRVlwdenhC4rPlY=
+			K1q54PZ95Ts7tHYuSoglEIYazLpSwG0ee/J0LjqSXhE=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -357,14 +357,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O/ZxTXrUOO77QBpFB6BpXWdsIN3stCWBVY/PFYkw8Qg=
+			9GeW0zJE1+SwjevP+h5SRNZ5pKhxUjjW2OUabIsAk38=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JUTtSiBpBnlEXonYGEV2tdnxbDJc7c2UFUBEeyJIJug=
+			/HZg18akh/KF/YteI5adbufoXdCXluXmSfUl4q5V5LE=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -378,28 +378,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JUTtSiBpBnlEXonYGEV2tdnxbDJc7c2UFUBEeyJIJug=
+			/HZg18akh/KF/YteI5adbufoXdCXluXmSfUl4q5V5LE=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mlm3L1BCTYsSy0iphU9o/mcOhzszD/p+80PFXWiMDx8=
+			zPZ1REAZOKOPcwZqHWnQTElLLObFIqllVxTyMeP+yy8=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O/ZxTXrUOO77QBpFB6BpXWdsIN3stCWBVY/PFYkw8Qg=
+			9GeW0zJE1+SwjevP+h5SRNZ5pKhxUjjW2OUabIsAk38=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gb0daK/w2seB+1ozHec4zT3hhYHy9rod879p7pOGaxA=
+			zHOwedvSJ2hEYg2HFwoe0jWIItnCSjKQ4LF2ku31Uig=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -413,14 +413,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gb0daK/w2seB+1ozHec4zT3hhYHy9rod879p7pOGaxA=
+			zHOwedvSJ2hEYg2HFwoe0jWIItnCSjKQ4LF2ku31Uig=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+MrlpQix2maJzEPPn8T13nUvJcOpil6iEo7JB7Ae0JU=
+			NCi2xaHG+wRDnsbs7MhhBeSBLs0trtEvNyih7hmN/WU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

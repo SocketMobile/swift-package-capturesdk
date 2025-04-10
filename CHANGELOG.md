@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.122
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have improved the Single Partnership experience
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.118
 
 ### New

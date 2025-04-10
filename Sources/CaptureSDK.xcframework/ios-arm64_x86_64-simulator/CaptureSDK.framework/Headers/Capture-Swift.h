@@ -332,9 +332,9 @@ SWIFT_CLASS("_TtC10CaptureSDK26CaptureHelperDeviceManager")
 
 SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 @interface SinglePartnershipControllerSwift : NSObject
-- (void)retrieveServiceUuidFromApiWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
-- (void)retrieveServiceUuidFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
-- (void)promptDeviceInfoFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)retrieveServiceUuidFromApiWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)retrieveServiceUuidFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)promptDeviceInfoFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -712,9 +712,9 @@ SWIFT_CLASS("_TtC10CaptureSDK26CaptureHelperDeviceManager")
 
 SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 @interface SinglePartnershipControllerSwift : NSObject
-- (void)retrieveServiceUuidFromApiWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
-- (void)retrieveServiceUuidFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
-- (void)promptDeviceInfoFromWebUIWithCompletion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)retrieveServiceUuidFromApiWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)retrieveServiceUuidFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)promptDeviceInfoFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
