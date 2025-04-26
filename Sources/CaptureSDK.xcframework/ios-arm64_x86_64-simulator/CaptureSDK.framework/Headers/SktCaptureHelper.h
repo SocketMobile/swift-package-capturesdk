@@ -746,15 +746,16 @@
  *
  * @param status contains the new Single Partnership status
  * @param uuidString contains the uuid string that you want to setup in your Socket Mobile Bluetooth Low Energy device to be discoverable only with this host - Available if `status` = SKTCaptureSinglePartnershipUuid (3)
+ * @param deviceId contains a string that will be processed to display a QRcode to setup your Socket Mobile Bluetooth Low Energy device to be discoverable only with this host - Available if `status` = SKTCaptureSinglePartnershipUuid (5)
  * @param block called upon completion of setting the Single Partnership status with result as argument
  */
--(void)setSinglePartnershipStatus:(SKTCaptureSinglePartnership)status uuidString:(NSString *)uuidString completionHandler:(void (^)(SKTResult result))block;
+-(void)setSinglePartnershipStatus:(SKTCaptureSinglePartnership)status uuidString:(NSString * _Nullable)uuidString deviceId:(NSString * _Nullable)deviceId completionHandler:(void (^ _Nullable)(SKTResult result))block;
 
 /**
  * get the Single Partnership stamp to get connection for a Bluetooth Low Energy device like S320, S370, S550,,,
  * @param block receiving the result of sending the command and the Single Partnership stamp
  */
--(void)getSinglePartnershipStampWithCompletionHandler:(void (^)(SKTResult result, NSString *stamp))block;
+-(void)getSinglePartnershipStampWithCompletionHandler:(void (^ _Nullable)(SKTResult result, NSString * _Nullable stamp))block;
 
 
 #pragma mark - Generic get and set property

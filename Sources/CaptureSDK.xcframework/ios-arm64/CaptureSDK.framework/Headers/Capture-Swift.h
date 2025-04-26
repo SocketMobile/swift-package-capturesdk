@@ -334,6 +334,7 @@ SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 @interface SinglePartnershipControllerSwift : NSObject
 - (void)retrieveServiceUuidFromApiWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (void)retrieveServiceUuidFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
+- (void)retrieveServiceUuidFromDeviceIdWith:(NSString * _Nonnull)uuidString deviceId:(NSString * _Nonnull)deviceId completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (void)promptDeviceInfoFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

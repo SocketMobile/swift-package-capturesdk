@@ -123,7 +123,7 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
   open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
-  open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, deviceId: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSinglePartnershipStamp(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ stamp: Swift.String?) -> Swift.Void)
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
@@ -164,6 +164,7 @@ extension CaptureSDK.SocketCamControllerSwift {
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
   @objc open func retrieveServiceUuidFromApi(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func retrieveServiceUuidFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func retrieveServiceUuidFromDeviceId(with uuidString: Swift.String, deviceId: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func promptDeviceInfoFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func createStamp() -> Swift.String?
   @objc override dynamic public init()
@@ -195,6 +196,7 @@ public enum CaptureEnvironment {
 public enum SinglePartnershipPage : Swift.String {
   case getQrCode
   case promptDeviceInfo
+  case product
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {

@@ -1046,6 +1046,8 @@ typedef NS_ENUM(NSInteger, SKTCaptureSinglePartnership)
 	SKTCaptureSinglePartnershipUuid=3,
 	/** Show a Single Partnership Web UI where you can input information about the device */
 	SKTCaptureSinglePartnershipWebUIPrompt=4,
+	/** Set your own Device Id that will return a Single Partnership Web page with a QRcode to scan */
+	SKTCaptureSinglePartnershipDeviceId=5,
 };
 
 
