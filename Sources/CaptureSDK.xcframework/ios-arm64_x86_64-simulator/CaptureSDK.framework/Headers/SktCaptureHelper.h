@@ -39,25 +39,25 @@
 #pragma mark - Basic Read Only Device Information
 
 /** device friendly name */
-@property (strong, readonly) NSString *friendlyName;
+@property (strong, readonly) NSString * _Nullable friendlyName;
 
 /** device type as a SKT Capture device type numeric value */
 @property (readonly) SKTCaptureDeviceType deviceType;
 
 /** device GUID (for the same device the GUID changes at each connection) */
-@property (strong, readonly) NSString *guid;
+@property (strong, readonly) NSString * _Nullable guid;
 
 
 #pragma mark - Convenience properties for Device Information
 
 /** device battery level expressed as a percentage: 84% */
-@property (strong, readonly) NSString *batteryLevel;
+@property (strong, readonly) NSString * _Nullable batteryLevel;
 
 
 #pragma mark - Initialization
 
 /** initialize the device with the device information coming from Device Arrival notification */
--(instancetype)initWithDeviceInfo:(SKTCaptureDeviceInfo *)deviceInfo;
+-(instancetype _Nullable)initWithDeviceInfo:(SKTCaptureDeviceInfo * _Nonnull)deviceInfo;
 
 /**
  * set the dispatch queue used by Capture when invoking
@@ -67,13 +67,13 @@
  * then UI controls can be updated directly from the Capture Helper
  * delegates and completion handlers.
  */
--(void)setDispatchQueue:(__weak dispatch_queue_t) queue;
+-(void)setDispatchQueue:(__weak dispatch_queue_t _Nonnull) queue;
 
 /**
  * retrieve the dispatch queue used by Capture when invoking
  * delegates and completion handlers
  */
--(__weak dispatch_queue_t)getDispatchQueue;
+-(__weak dispatch_queue_t _Nonnull)getDispatchQueue;
 
 
 #pragma mark - Device Information
@@ -83,7 +83,7 @@
  *  @param block receiving the response with the result and the friendly name of
  *  the device if the result is successful
  */
--(void)getFriendlyNameWithCompletionHandler:(void(^)(SKTResult result, NSString *name))block;
+-(void)getFriendlyNameWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable name))block;
 
 /**
  *  set the device friendly name. The device friendly name has a limit of
@@ -93,7 +93,7 @@
  *  @param name friendly name to set the device with
  *  @param block receiving the result of setting the new friendly name
  */
--(void)setFriendlyName:(NSString *)name completionHandler:(void(^)(SKTResult result))block;
+-(void)setFriendlyName:(NSString * _Nonnull)name completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * get the device Bluetooth address
@@ -101,21 +101,21 @@
  *  @param block receiving the result of getting the device Bluetooth Address if the result
  *  is successful
  */
--(void)getBluetoothAddressWithCompletionHandler:(void(^)(SKTResult result, NSArray *address))block;
+-(void)getBluetoothAddressWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSArray * _Nullable address))block;
 
 /**
  * get the device Type
  *
  *  @param block receiving the result and the device Type if the result is successful
  */
--(void)getTypeWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDeviceType deviceType))block;
+-(void)getTypeWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureDeviceType deviceType))block;
 
 /**
  * get the device Firmware version
  *
  *  @param block receiving the result and the device Firmware version if the result is successful
  */
--(void)getFirmwareVersionWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureVersion *version))block;
+-(void)getFirmwareVersionWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureVersion * _Nullable  _Nullableversion))block;
 
 /**
  * get the device battery level
@@ -125,7 +125,7 @@
  *
  *  @param block receiving the result and the device battery level if the result is successful
  */
--(void)getBatteryLevelWithCompletionHandler:(void(^)(SKTResult result, NSInteger levelInPercentage))block;
+-(void)getBatteryLevelWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSInteger levelInPercentage))block;
 
 /**
  * get the device power state
@@ -135,7 +135,7 @@
  *
  *  @param block receiving the result and the device power state if the result is successful
  */
--(void)getPowerStateWithCompletionHandler:(void(^)(SKTResult result, SKTCapturePowerState powerState))block;
+-(void)getPowerStateWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCapturePowerState powerState))block;
 
 
 /**
@@ -145,7 +145,7 @@
  *
  *  @param block receiving the result and the device buttons state if the result is successful
  */
--(void)getButtonsStateWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureButtonsState buttonsState))block;
+-(void)getButtonsStateWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureButtonsState buttonsState))block;
 
 
 #pragma mark - Capture device helpers
@@ -170,7 +170,7 @@
  *
  *  @param block receiving the result and the device stand configuration if the result is successful
  */
--(void)getStandConfigWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureStandConfig config))block;
+-(void)getStandConfigWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureStandConfig config))block;
 
 /**
  * set the device stand configuration
@@ -178,14 +178,14 @@
  *  @param config stand configuration to set the device with
  *  @param block receiving the result of changing the device stand configuration
  */
--(void)setStandConfig:(SKTCaptureStandConfig)config completionHandler:(void(^)(SKTResult result))block;
+-(void)setStandConfig:(SKTCaptureStandConfig)config completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * get the device decode action
  *
  *  @param block receiving the result and the device decode action if the result is successful
  */
--(void)getDecodeActionWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureLocalDecodeAction decodeAction))block;
+-(void)getDecodeActionWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureLocalDecodeAction decodeAction))block;
 
 /**
  * set the device decode action
@@ -193,14 +193,14 @@
  *  @param decodeAction decode action to set the device with
  *  @param block receiving the result of changing the device decode action
  */
--(void)setDecodeAction:(SKTCaptureLocalDecodeAction)decodeAction completionHandler:(void(^)(SKTResult result))block;
+-(void)setDecodeAction:(SKTCaptureLocalDecodeAction)decodeAction completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * get the device local data acknowledgment
  *
  *  @param block receiving the result and the device local acknowledgment if the result is successful
  */
--(void)getDataAcknowledgmentWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDeviceDataAcknowledgment dataAcknowledgment))block;
+-(void)getDataAcknowledgmentWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureDeviceDataAcknowledgment dataAcknowledgment))block;
 
 /**
  * set the device local data acknowledgment
@@ -208,7 +208,7 @@
  *  @param dataAcknowledgment set how the device acknwoledges data locally on the device
  *  @param block receiving the result of changing the device stand configuration
  */
--(void)setDataAcknowledgment:(SKTCaptureDeviceDataAcknowledgment)dataAcknowledgment completionHandler:(void(^)(SKTResult result))block;
+-(void)setDataAcknowledgment:(SKTCaptureDeviceDataAcknowledgment)dataAcknowledgment completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - Decoded Data
@@ -218,7 +218,7 @@
  *
  *  @param block receiving the result and the device postamble if the result is successful
  */
--(void)getPostambleWithCompletionHandler:(void(^)(SKTResult result, NSString *postamble))block;
+-(void)getPostambleWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable postamble))block;
 
 /**
  * set the device postamble
@@ -226,7 +226,7 @@
  *  @param postamble postamble to set the device with
  *  @param block receiving the result of changing the device postamble
  */
--(void)setPostamble:(NSString *)postamble completionHandler:(void(^)(SKTResult result))block;
+-(void)setPostamble:(NSString * _Nonnull)postamble completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * get the device data source information
@@ -234,7 +234,7 @@
  * @param dataSourceId contains the data source ID for which the information would be retrieved
  * @param block receiving the result and the device data source information if the result is successful
  */
--(void)getDataSourceInfo:(SKTCaptureDataSourceID)dataSourceId completionHandler:(void(^)(SKTResult result, SKTCaptureDataSource *dataSource))block;
+-(void)getDataSourceInfo:(SKTCaptureDataSourceID)dataSourceId completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureDataSource * _Nullable dataSource))block;
 
 /**
  * set the device data source
@@ -242,7 +242,7 @@
  * @param dataSource dataSource to enable or disable
  * @param block receiving the result of changing the device data source
  */
--(void)setDataSourceInfo:(SKTCaptureDataSource *)dataSource completionHandler:(void(^)(SKTResult result))block;
+-(void)setDataSourceInfo:(SKTCaptureDataSource * _Nonnull)dataSource completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * set the device trigger
@@ -254,7 +254,7 @@
  * @param trigger contains the command to apply
  * @param block receiving the result of setting the trigger
  */
--(void)setTrigger:(SKTCaptureTrigger)trigger completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *propertyResult))block;
+-(void)setTrigger:(SKTCaptureTrigger)trigger completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureProperty * _Nullable propertyResult))block;
 
 /**
  * set the decoded data confirmation
@@ -273,7 +273,7 @@
  * @param rumble contains the rumble to perform (None, Good, Bad)
  * @param block receiving the result of setting the decoded data confirmation
  */
--(void)setDataConfirmationWithLed:(SKTCaptureDataConfirmationLed)led withBeep:(SKTCaptureDataConfirmationBeep)beep withRumble:(SKTCaptureDataConfirmationRumble)rumble completionHandler:(void(^)(SKTResult result))block;
+-(void)setDataConfirmationWithLed:(SKTCaptureDataConfirmationLed)led withBeep:(SKTCaptureDataConfirmationBeep)beep withRumble:(SKTCaptureDataConfirmationRumble)rumble completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - Notifications
@@ -284,14 +284,14 @@
  * @param notifications select the notifications to receive
  * @param block receiving the result of setting the notifications
  */
--(void)setNotifications:(SKTCaptureNotifications)notifications completionHandler:(void(^)(SKTResult result))block;
+-(void)setNotifications:(SKTCaptureNotifications)notifications completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * get the device notifications selection
  *
  * @param block receiving the result and the device notifications setting if the result is successful
  */
--(void)getNotificationsWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureNotifications notifications))block;
+-(void)getNotificationsWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureNotifications notifications))block;
 
 
 #pragma mark - Advanced Commands
@@ -306,7 +306,7 @@
  * @param command an array of bytes that holds the specific command to send to the device
  * @param block receiving the result and the device specific command response if the result is successful
  */
--(void)getDeviceSpecificCommand:(NSData *)command completionHandler:(void(^)(SKTResult result, NSData *commandResult))block;
+-(void)getDeviceSpecificCommand:(NSData * _Nonnull)command completionHandler:(void(^ _Nullable)(SKTResult result, NSData * _Nullable commandResult))block;
 
 /**
  * factory resets a Bluetooth Low Energy device like S320, S370, S550,,,
@@ -314,7 +314,7 @@
  *
  * @param block receiving the result of sending the factory reset command
  */
--(void)setDeviceFactoryResetWithCompletionHandler:(void(^)(SKTResult result))block;
+-(void)setDeviceFactoryResetWithCompletionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - SocketCam (scanner using Camera)
@@ -325,7 +325,7 @@
  * @param overlay overlay settings
  * @param block receiving the result of setting the overlay view
  */
--(void)setOverlayView:(NSDictionary *)overlay completionHandler:(void(^)(SKTResult result))block __deprecated;
+-(void)setOverlayView:(NSDictionary * _Nonnull)overlay completionHandler:(void(^ _Nullable)(SKTResult result))block __deprecated;
 
 
 #pragma mark - Data Format (D600 Reading data from card)
@@ -336,13 +336,13 @@
  * ID-Only, TagType-and-ID, Data-Only, TagType-and-Data
  * NOTE: Only tagType-and-ID , TagType-and-Data formats are accepted. The other two will purposely return an error
  */
--(void)setDataFormat:(SKTCaptureDataFormat)dataFormat completionHandler:(void(^)(SKTResult result))block;
+-(void)setDataFormat:(SKTCaptureDataFormat)dataFormat completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * Get current data format from the device
  *
  */
--(void)getDataFormatWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDataFormat dataFormat))block;
+-(void)getDataFormatWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureDataFormat dataFormat))block;
 
 
 #pragma mark - Single Partnership
@@ -353,7 +353,7 @@
  *
  * @param block receiving the result of sending the reset Single Partnership command
  */
--(void)resetSinglePartnershipWithCompletionHandler:(void(^)(SKTResult result))block;
+-(void)resetSinglePartnershipWithCompletionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - generic get and set property
@@ -363,7 +363,7 @@
  * not already provided in the Capture Helper
  * device methods.
  */
--(void)getProperty:(SKTCaptureProperty *)property completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *property))block;
+-(void)getProperty:(SKTCaptureProperty * _Nonnull)property completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureProperty * _Nullable property))block;
 
 /*
  * Set a Device Property
@@ -371,7 +371,7 @@
  * not already provided in the Capture Helper
  * device methods.
  */
--(void)setProperty:(SKTCaptureProperty *)property completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *property))block;
+-(void)setProperty:(SKTCaptureProperty * _Nonnull)property completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureProperty * _Nullable property))block;
 
 @end
 
@@ -397,7 +397,7 @@
  * @param timeInSeconds contains the number of seconds the discovery should last
  * @param block receiving the result of starting the discovery
  */
--(void)startDiscoveryWithTimeout:(NSInteger)timeInSeconds completionHandler:(void(^)(SKTResult result))block;
+-(void)startDiscoveryWithTimeout:(NSInteger)timeInSeconds completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * set the favorites for the auto connection. If favorites are set, the DeviceManager
@@ -408,7 +408,7 @@
  * in case there are more than one device to connect to
  * @param block called when the favorites has been set with the result as argument
  */
--(void)setFavoriteDevices:(NSString *)favorites completionHandler:(void(^)(SKTResult result))block;
+-(void)setFavoriteDevices:(NSString * _Nonnull)favorites completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * retrieve the list of favorites devices.
@@ -417,7 +417,7 @@
  * @param block called when getting the favorites has completed with the result and the
  * actual favorites string as argument.
  */
--(void)getFavoriteDevicesWithCompletionHandler:(void(^)(SKTResult result, NSString *favorites))block;
+-(void)getFavoriteDevicesWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable favorites))block;
 
 /**
  * retrieve the device unique identifier from the device GUID. The unique identifier can
@@ -427,7 +427,7 @@
  * @param block called when getting the device unique identifier has completed with the result and the
  * unique identifier as argument.
  */
--(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString *)deviceGuid completionHandler:(void(^)(SKTResult result, NSString *deviceUniqueIdentifier))block;
+-(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block;
 
 @end
 
@@ -449,7 +449,7 @@
  * @param error contains the error code
  * @param message contains an optional message, can be null
  */
--(void)didReceiveError:(SKTResult)error withMessage:(NSString *)message;
+-(void)didReceiveError:(SKTResult)error withMessage:(NSString * _Nullable)message;
 
 /**
  * called when a device has connected to the host
@@ -457,7 +457,7 @@
  * @param device identifies the device that has just connected
  * @param result contains an error if something went wrong during the device connection
  */
--(void)didNotifyArrivalForDevice:(SKTCaptureHelperDevice *)device withResult:(SKTResult)result;
+-(void)didNotifyArrivalForDevice:(SKTCaptureHelperDevice * _Nonnull)device withResult:(SKTResult)result;
 
 /**
  * called when a device has disconnected from the host
@@ -465,7 +465,7 @@
  * @param device identifies the device that has just disconnected
  * @param result contains an error if something went wrong during the device disconnection
  */
--(void)didNotifyRemovalForDevice:(SKTCaptureHelperDevice *)device withResult:(SKTResult)result;
+-(void)didNotifyRemovalForDevice:(SKTCaptureHelperDevice * _Nonnull)device withResult:(SKTResult)result;
 
 /**
  * called when decoded data are received from a device
@@ -475,7 +475,7 @@
  * @param result contains an error if something wrong happen while getting the decoded data
  * or if the SocketCam trigger operation has been cancelled
  */
--(void)didReceiveDecodedData:(SKTCaptureDecodedData *)decodedData fromDevice:(SKTCaptureHelperDevice *)device withResult:(SKTResult)result;
+-(void)didReceiveDecodedData:(SKTCaptureDecodedData * _Nullable)decodedData fromDevice:(SKTCaptureHelperDevice * _Nonnull)device withResult:(SKTResult)result;
 
 /**
  * called when the device power state has changed and if the device notifications
@@ -484,7 +484,7 @@
  * @param powerState contains the new power state
  * @param device identifies the device for which the power state has changed
  */
--(void)didChangePowerState:(SKTCapturePowerState)powerState forDevice:(SKTCaptureHelperDevice *)device;
+-(void)didChangePowerState:(SKTCapturePowerState)powerState forDevice:(SKTCaptureHelperDevice * _Nonnull)device;
 
 /**
  * called when the device buttons state has changed and if the device notifications
@@ -493,7 +493,7 @@
  * @param buttonsState contains the actual button state of the device
  * @param device identifies the device for which the button state has changed
  */
--(void)didChangeButtonsState:(SKTCaptureButtonsState)buttonsState forDevice:(SKTCaptureHelperDevice *)device;
+-(void)didChangeButtonsState:(SKTCaptureButtonsState)buttonsState forDevice:(SKTCaptureHelperDevice * _Nonnull)device;
 
 /**
  * called when the device battery level has changed and if the device notifications
@@ -502,7 +502,7 @@
  * @param batteryPercentage contains the new battery level in percentage
  * @param device identifies the device for which the battery level has changed
  */
--(void)didChangeBatteryLevel:(NSInteger)batteryPercentage forDevice:(SKTCaptureHelperDevice *)device withResult:(SKTResult)result;
+-(void)didChangeBatteryLevel:(NSInteger)batteryPercentage forDevice:(SKTCaptureHelperDevice * _Nonnull)device withResult:(SKTResult)result;
 
 /**
  * called when the listener thread in Capture has started.
@@ -528,7 +528,7 @@
  * @param deviceManager identifies the device manager that is just available
  * @param result contains an error if something went wrong during the device connection
  */
--(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager *)deviceManager withResult:(SKTResult)result;
+-(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
 
 /**
  * called when a device manager is unavailable to the host
@@ -536,7 +536,7 @@
  * @param deviceManager identifies the device manage that is just unavailable
  * @param result contains an error if something went wrong during the device disconnection
  */
--(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager *)deviceManager withResult:(SKTResult)result;
+-(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
 
 /**
  * called when a device has been discovered by the DeviceManager
@@ -546,7 +546,7 @@
  * @param device contains the device discovered indentification
  * @param deviceManager from which the device discovery has started
  */
--(void)didDiscoverDevice:(NSString *)device fromDeviceManager:(SKTCaptureHelperDeviceManager *)deviceManager;
+-(void)didDiscoverDevice:(NSString * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
 
 /**
  * called with a device discovery has ended.
@@ -556,7 +556,7 @@
  * @param result contains the result of the discovery
  * @param deviceManager from which the device discovery has started
  */
--(void)didDiscoveryEndWithResult:(SKTResult)result fromDeviceManager:(SKTCaptureHelperDeviceManager *)deviceManager;
+-(void)didDiscoveryEndWithResult:(SKTResult)result fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
 
 @end
 
@@ -583,7 +583,7 @@
  * instantiate a capture helper for the entire app
  * @return a unique capture helper instance
  */
-+(instancetype)sharedInstance;
++(instancetype _Nonnull)sharedInstance;
 
 
 #pragma mark - Queue context for delegates and completion handlers
@@ -596,13 +596,13 @@
  * then UI controls can be updated directly from the Capture Helper
  * delegates and completion handlers.
  */
--(void)setDispatchQueue:(__weak dispatch_queue_t)queue;
+-(void)setDispatchQueue:(__weak dispatch_queue_t _Nonnull)queue;
 
 /**
  * retrieve the dispatch queue used by Capture when invoking
  * delegates and completion handlers
  */
--(__weak dispatch_queue_t)getDispatchQueue;
+-(__weak dispatch_queue_t _Nonnull)getDispatchQueue;
 
 
 #pragma mark - Delegates Stack to handle View hierarchy
@@ -617,7 +617,7 @@
  * returns true if the delegate has been added, false
  * otherwise.
  */
--(BOOL)pushDelegate:(id<SKTCaptureHelperDelegate>)delegate;
+-(BOOL)pushDelegate:(id<SKTCaptureHelperDelegate> _Nullable)delegate;
 
 /**
  * pop a delegate from the delegates stack. The last delegate
@@ -630,7 +630,7 @@
  * returns true if the delegate has been removed, false
  * otherwise.
  */
--(BOOL)popDelegate:(id<SKTCaptureHelperDelegate>)delegate;
+-(BOOL)popDelegate:(id<SKTCaptureHelperDelegate> _Nullable)delegate;
 
 
 #pragma mark - SKTCaptureHelper Open and Close
@@ -647,7 +647,7 @@
  * @param block called upon completion of opening capture with the
  * result code
  */
--(void)openWithAppInfo:(SKTAppInfo *)appInfo completionHandler:(void(^)(SKTResult result))block;
+-(void)openWithAppInfo:(SKTAppInfo * _Nonnull)appInfo completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 /**
  * Close capture when the application needs to free some resources.
@@ -655,7 +655,7 @@
  * @param block called upon completion of closing capture with the
  * result code
  */
--(void)closeWithCompletionHandler:(void(^)(SKTResult result))block;
+-(void)closeWithCompletionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - Capture Devices list
@@ -666,7 +666,7 @@
  * the host.
  * @returns the list of devices
  */
--(NSArray *)getDevicesList;
+-(NSArray * _Nonnull)getDevicesList;
 
 #pragma mark - Capture Devices managers list
 
@@ -676,7 +676,7 @@
  * the host.
  * @returns the list of device managers
  */
--(NSArray *)getDeviceManagersList;
+-(NSArray * _Nonnull)getDeviceManagersList;
 
 #pragma  mark - Capture information
 
@@ -686,7 +686,7 @@
  * @param block called upon completion of getting the Capture version
  * with the result and the version as argument.
  */
--(void)getVersionWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureVersion *version))block;
+-(void)getVersionWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureVersion * _Nullable version))block;
 
 
 #pragma mark - Capture configuration
@@ -698,7 +698,7 @@
  * @param block called upon completion of getting the confirmation mode
  * with the result and the confirmation mode as argument.
  */
--(void)getConfirmationModeWithCompletionHandler:(void(^)(SKTResult result, SKTCaptureDataConfirmationMode confirmationMode))block;
+-(void)getConfirmationModeWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureDataConfirmationMode confirmationMode))block;
 
 /**
  * set the confirmation mode to define how the decoded data should be confirmed.
@@ -707,7 +707,7 @@
  * @param block called upon completion of setting the confirmation mode
  * with the result of setting the confirmation mode.
  */
--(void)setConfirmationMode:(SKTCaptureDataConfirmationMode)confirmationMode completionHandler:(void(^)(SKTResult result))block;
+-(void)setConfirmationMode:(SKTCaptureDataConfirmationMode)confirmationMode completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - SocketCam (Scanner using the Camera)
@@ -719,7 +719,7 @@
  * @param block called upon completion of getting the SocketCam status with
  * result and SocketCam status as argument.
  */
--(void)getSocketCamStatusWithConfirmationHandler:(void(^)(SKTResult result, SKTCaptureSocketCam status))block;
+-(void)getSocketCamStatusWithConfirmationHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureSocketCam status))block;
 
 /**
  * set the SocketCam (Scanning using the host camera) status. The status could
@@ -729,7 +729,7 @@
  * @param block called upon completion of setting the SocketCam status with the
  * result as argument.
  */
--(void)setSocketCamStatus:(SKTCaptureSocketCam)status completionHandler:(void(^)(SKTResult result))block;
+-(void)setSocketCamStatus:(SKTCaptureSocketCam)status completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
 #pragma mark - Single Partnership
@@ -739,7 +739,7 @@
  *
  * @param block called upon completion of setting the Single Partnership status with result and status as arguments
  */
--(void)getSinglePartnershipStatusWithCompletionHandler:(void (^)(SKTResult result, SKTCaptureSinglePartnership status))block;
+-(void)getSinglePartnershipStatusWithCompletionHandler:(void (^ _Nullable)(SKTResult result, SKTCaptureSinglePartnership status))block;
 
 /**
  * Sets a Single Partnership connection for a Bluetooth Low Energy device like S320, S370, S550,,,
@@ -766,7 +766,7 @@
  * not already provided in the Capture Helper
  * device methods.
  */
--(void)getProperty:(SKTCaptureProperty *)property completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *property))block;
+-(void)getProperty:(SKTCaptureProperty * _Nonnull)property completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureProperty * _Nullable property))block;
 
 /*
  * Set a Capture Property
@@ -774,7 +774,7 @@
  * not already provided in the Capture Helper
  * device methods.
  */
--(void)setProperty:(SKTCaptureProperty *)property completionHandler:(void(^)(SKTResult result, SKTCaptureProperty *property))block;
+-(void)setProperty:(SKTCaptureProperty * _Nonnull)property completionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureProperty * _Nullable property))block;
 
 
 @end

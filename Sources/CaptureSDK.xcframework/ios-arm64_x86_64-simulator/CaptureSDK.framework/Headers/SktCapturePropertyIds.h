@@ -474,7 +474,7 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 
 	Device: True	Get Type: None 	Set Type: None
 	*/
-	SKTCapturePropertyIDResetSinglePartnership = 292,
+	SKTCapturePropertyIDResetSinglePartnershipDevice = 292,
 
 
 };

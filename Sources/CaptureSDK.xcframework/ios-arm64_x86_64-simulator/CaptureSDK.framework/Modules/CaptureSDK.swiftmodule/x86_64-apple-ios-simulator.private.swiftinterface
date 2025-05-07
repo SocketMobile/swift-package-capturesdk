@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -170,7 +170,6 @@ extension CaptureSDK.SocketCamControllerSwift {
   @objc override dynamic public init()
   @objc deinit
 }
-#if compiler(>=5.3) && $RetroactiveAttribute
 extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   public init(stringLiteral value: Swift.StaticString)
   @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
@@ -180,17 +179,6 @@ extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
   public typealias UnicodeScalarLiteralType = Swift.StaticString
 }
-#else
-extension Foundation.URL : Swift.ExpressibleByStringLiteral {
-  public init(stringLiteral value: Swift.StaticString)
-  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
-  public typealias ExtendedGraphemeClusterLiteralType = Swift.StaticString
-  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
-  public typealias StringLiteralType = Swift.StaticString
-  @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
-  public typealias UnicodeScalarLiteralType = Swift.StaticString
-}
-#endif
 public enum CaptureEnvironment {
 }
 public enum SinglePartnershipPage : Swift.String {
