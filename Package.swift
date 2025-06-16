@@ -20,7 +20,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/SocketMobile/swift-package-swiftdecodersdk.git", exact: "6.0.10"),
+        .package(url: "https://github.com/SocketMobile/swift-package-swiftdecodersdk.git", exact: "6.2.3"),
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.6.0")
     ],
     targets: [

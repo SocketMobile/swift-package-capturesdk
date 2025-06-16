@@ -246,8 +246,10 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 /** @brief get the decoded data*/
 @property (nullable, nonatomic, strong) NSData* DecodedData;
 
-/**
+/** @brief get the NFC Tag ID data*/
+@property (nullable, nonatomic, strong) NSData* TagIdData;
 
+/**
  @brief get the decoded data as string UTF8 encoded
 
  @remark there is no guaranty this property displays
@@ -265,6 +267,11 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
         are not the chose encoding.
  */
 -(NSString * _Nullable)stringFromDecodedDataWithEncoding:(NSStringEncoding)encoding;
+
+/**
+ @brief get the NFC Tag Id data as string
+ */
+-(NSString * _Nullable)stringFromTagIdData;
 
 @end
 

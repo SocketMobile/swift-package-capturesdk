@@ -1,6 +1,26 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.139
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * Added the TagIdData into the SKTCaptureDecodedData so you can get the NFC Tag ID
+
+  * We have updated SwiftDecoder to 6.2.3 that fixes the [signature error](https://github.com/SocketMobile/swift-package-capturesdk/issues/28)
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.133
 
 ### New
