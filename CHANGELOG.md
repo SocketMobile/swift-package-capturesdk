@@ -1,6 +1,25 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.157
+
+### New
+
+  * We have worked on a new Bluetooth Low Energy Manager that is not crashing anymore and will smooth the connection experience to our devices
+
+
+
+### Improvements
+
+  * We have added the methods in CaptureHelper to get and set the scanners timers
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.139
 
 ### New

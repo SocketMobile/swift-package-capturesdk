@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -90,6 +90,8 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setDisconnect(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setFactoryReset(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setResetSinglePartnership(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setTimers(_ timer: CaptureSDK.SKTCaptureTimer, connectedPowerOffTimer: Swift.UInt16, disconnectedPowerOffTimer: Swift.UInt16, triggerLockTimer: Swift.UInt16, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func getTimers(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ timer: CaptureSDK.SKTCaptureTimer?, _ connectedPowerOffTimer: Swift.UInt16, _ disconnectedPowerOffTimer: Swift.UInt16, _ triggerLockTimer: Swift.UInt16) -> Swift.Void)
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
