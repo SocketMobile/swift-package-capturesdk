@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.166
+
+### New
+
+  * Our CaptureSDK can now connect to Bluetooth LE readers seamlessly through Companion
+
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 1.9.157
 
 ### New

@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		1Ss0u8Q8gj/WHTOzzTwWw0gSZqI=
+		mnwckn7W9hHMCGyVUrBSR3AaLJo=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JxvGOs3K9ZySsjUgpQu7zgA0zW8=
+		QZDTYoByxloy1ohQHmxrHyASWQ8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -337,7 +337,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PqAPQvo6WlOvnda8JFdpa4pZn0wrm+oWq9tmFmHpDA4=
+			pZUl40OEOC8hxbTlNHWbHPT3jWATK4NiDatQyB4XopY=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -365,7 +365,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yXPFes3mB+UIUfZMQ6ne5T839uU8+Q1o5amXGWtF9J4=
+			0cmYF1NTDpQP9GEfsgTdZCmGe/Dx7rD0l65fLwXajIA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
