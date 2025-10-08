@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -27,11 +27,13 @@ public protocol CaptureHelperDeviceManagerPresenceDelegate : CaptureSDK.CaptureH
   func didNotifyRemovalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
 }
 public protocol CaptureHelperDeviceManagerDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
-  func didDiscoverDevice(_ device: Swift.String, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
+  func didDiscoverDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
   func didEndDiscoveryWithResult(_ result: CaptureSDK.SKTResult, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
 }
 public protocol CaptureHelperDeviceDecodedDataDelegate : CaptureSDK.CaptureHelperDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   func didReceiveDecodedData(_ decodedData: CaptureSDK.SKTCaptureDecodedData?, fromDevice device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
+  #endif
 }
 public protocol CaptureHelperDevicePowerDelegate : CaptureSDK.CaptureHelperDelegate {
   func didChangePowerState(_ powerState: CaptureSDK.SKTCapturePowerState, forDevice device: CaptureSDK.CaptureHelperDevice)
@@ -52,63 +54,128 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   public var isNFCReader: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getFriendlyNameWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ name: Swift.String?) -> Swift.Void)
+  #endif
   open func setFriendlyName(_ name: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getBluetoothAddressWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ bluetoothAddress: Foundation.Data?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getTypeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceType: Swift.UInt?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getFirmwareVersionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ version: CaptureSDK.SKTCaptureVersion?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getBatteryLevelWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ batteryLevel: Swift.UInt?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getPowerStateWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ powerState: Swift.UInt?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getButtonsStateWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ buttonsState: CaptureSDK.SKTCaptureButtonsState?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getStandConfigWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ config: CaptureSDK.SKTCaptureStandConfig?) -> Swift.Void)
+  #endif
   open func setStandConfig(_ config: CaptureSDK.SKTCaptureStandConfig, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDecodeActionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction?) -> Swift.Void)
+  #endif
   open func setDecodeAction(_ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDataAcknowledgmentWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataAcknownledgement: CaptureSDK.SKTCaptureDeviceDataAcknowledgment?) -> Swift.Void)
+  #endif
   open func setDataAcknowledgment(_ dataAcknowledgment: CaptureSDK.SKTCaptureDeviceDataAcknowledgment, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getPostambleWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ postamble: Swift.String?) -> Swift.Void)
+  #endif
   open func setPostamble(_ postamble: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDataSourceInfoFromId(_ dataSourceId: CaptureSDK.SKTCaptureDataSourceID, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataSourceInfo: CaptureSDK.SKTCaptureDataSource?) -> Swift.Void)
+  #endif
   open func setDataSourceInfo(_ dataSource: CaptureSDK.SKTCaptureDataSource, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func setTrigger(_ trigger: CaptureSDK.SKTCaptureTrigger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ propertyResult: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  #endif
   open func setDataConfirmationWithLed(_ led: CaptureSDK.SKTCaptureDataConfirmationLed, withBeep beep: CaptureSDK.SKTCaptureDataConfirmationBeep, withRumble rumble: CaptureSDK.SKTCaptureDataConfirmationRumble, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setNotifications(_ notifications: CaptureSDK.SKTCaptureNotifications, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getNotificationsWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ notifications: CaptureSDK.SKTCaptureNotifications?) -> Swift.Void)
+  #endif
   @available(*, deprecated)
   open func setSocketCamOverlayViewParameter(_ parameters: Swift.Dictionary<Swift.String, Any>, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getSocketCamOverlayViewParameterWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ parameter: Swift.Dictionary<Swift.String, Any>?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDeviceSpecificCommand(_ command: Foundation.Data, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
+  #endif
   open func setDataFormat(dataFormat: CaptureSDK.SKTCaptureDataFormat, completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDataFormatWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataFormat: CaptureSDK.SKTCaptureDataFormat?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getThemeSelection(with completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
+  #endif
   open func setThemeSelection(_ mask: CaptureSDK.SKTCaptureThemeSelectionMask, themes: [CaptureSDK.SKTCaptureThemeSelection], withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getLassoStatus(with completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureLassoDeviceStatus?) -> Swift.Void)
+  #endif
   open func setLassoFeatureStatus(_ status: CaptureSDK.SKTCaptureLassoDeviceStatus, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setLassoId(_ lassoId: Foundation.UUID, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getLassoLifeSpanWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ lifespan: ObjectiveC.NSInteger?) -> Swift.Void)
+  #endif
   open func setLassoLifeSpan(_ lifespan: Swift.Int, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setDisconnect(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setFactoryReset(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setResetSinglePartnership(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setTimers(_ timer: CaptureSDK.SKTCaptureTimer, connectedPowerOffTimer: Swift.UInt16, disconnectedPowerOffTimer: Swift.UInt16, triggerLockTimer: Swift.UInt16, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getTimers(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ timer: CaptureSDK.SKTCaptureTimer?, _ connectedPowerOffTimer: Swift.UInt16, _ disconnectedPowerOffTimer: Swift.UInt16, _ triggerLockTimer: Swift.UInt16) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   open func startDiscoveryWithTimeout(_ timeout: ObjectiveC.NSInteger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setFavoriteDevices(_ favorites: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getFavoriteDevicesWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ favorites: Swift.String?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getDeviceUniqueIdentifierFromDeviceGuid(_ deviceGuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceUniqueIdentifier: Swift.String?) -> Swift.Void)
+  #endif
+  open func connectToDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func disconnectFromDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelper : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
   public var dispatchQueue: Dispatch.DispatchQueue?
   public static let sharedInstance: CaptureSDK.CaptureHelper
+  #if compiler(>=5.3) && $NonescapableTypes
   public var captureApi: CaptureSDK.SKTCapture? {
     get
+  }
+  #endif
+  public enum SktBluetoothDiscoveryMode : Swift.Int8 {
+    case bluetoothLowEnergy
+    case bluetoothClassic
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int8)
+    #endif
+    public typealias RawValue = Swift.Int8
+    public var rawValue: Swift.Int8 {
+      get
+    }
   }
   @discardableResult
   open func pushDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
@@ -119,16 +186,34 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func closeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   public func didReceive(_ event: CaptureSDK.SKTCaptureEvent, for capture: CaptureSDK.SKTCapture, withResult result: CaptureSDK.SKTResult)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getVersionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ version: CaptureSDK.SKTCaptureVersion?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getConfirmationModeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode?) -> Swift.Void)
+  #endif
   open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
+  #endif
   open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, deviceId: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getSinglePartnershipStamp(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ stamp: Swift.String?) -> Swift.Void)
+  #endif
+  open func addBluetoothDevice(_ bluetoothDiscoveryMode: CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func removeBluetoothDevice(_ deviceUuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers open class SocketCamControllerSwift : ObjectiveC.NSObject {
@@ -141,8 +226,12 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   @objc public var saveOpeningDatesCallback: (([Swift.String : Swift.String]) -> ())?
   @objc override dynamic public init()
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func startScan(with continousScan: Swift.Bool, completion: @escaping (UIKit.UIViewController?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func addLastSymbology(with symbology: Swift.String, with ids: [Swift.String : Swift.String], completion: @escaping (Swift.Bool, Foundation.Date?) -> Swift.Void)
+  #endif
   @objc open func addDataSourceCount(enabled: Swift.Bool)
   @objc open func setAppBundleIdentifier(appId: Swift.String)
   @objc open func refreshUI()
@@ -152,10 +241,16 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   @objc open func setVibrate(with vibrateOn: Swift.Bool)
   @objc open func updateDataSourceStatus(with status: ObjectiveC.NSInteger, with dataSourceIndex: Swift.Int)
   @objc open func getDataSourcesCount() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func getDataSourceType(from index: Swift.Int) -> Foundation.NSString?
+  #endif
   @objc open func getDataSourceIndex(from index: Swift.Int) -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func getDataSourceName(from index: Swift.Int) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func getDataSourceDescription(from index: Swift.Int) -> Swift.String?
+  #endif
   @objc open func retrieveDataSourceId(from type: Swift.String) -> Swift.Int
 }
 extension CaptureSDK.SocketCamControllerSwift {
@@ -164,11 +259,21 @@ extension CaptureSDK.SocketCamControllerSwift {
   public func didClose()
 }
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func retrieveServiceUuidFromApi(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func retrieveServiceUuidFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func retrieveServiceUuidFromDeviceId(with uuidString: Swift.String, deviceId: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func promptDeviceInfoFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc open func createStamp() -> Swift.String?
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -187,12 +292,17 @@ public enum SinglePartnershipPage : Swift.String {
   case getQrCode
   case promptDeviceInfo
   case product
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
+extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.Equatable {}
+extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.Hashable {}
+extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.RawRepresentable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Equatable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Hashable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.RawRepresentable {}

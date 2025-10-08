@@ -374,9 +374,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "SKTCaptureDiscoveredDeviceInfo",
+                "printedName": "CaptureSDK.SKTCaptureDiscoveredDeviceInfo",
+                "usr": "c:objc(cs)SKTCaptureDiscoveredDeviceInfo"
               },
               {
                 "kind": "TypeNominal",
@@ -386,8 +386,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10CaptureSDK0A36HelperDeviceManagerDiscoveryDelegateP011didDiscoverD0_04fromdE0ySS_AA0acdE0CtF",
-            "mangledName": "$s10CaptureSDK0A36HelperDeviceManagerDiscoveryDelegateP011didDiscoverD0_04fromdE0ySS_AA0acdE0CtF",
+            "usr": "s:10CaptureSDK0A36HelperDeviceManagerDiscoveryDelegateP011didDiscoverD0_04fromdE0ySo020SKTCaptureDiscoveredD4InfoC_AA0acdE0CtF",
+            "mangledName": "$s10CaptureSDK0A36HelperDeviceManagerDiscoveryDelegateP011didDiscoverD0_04fromdE0ySo020SKTCaptureDiscoveredD4InfoC_AA0acdE0CtF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate>",
@@ -3834,6 +3834,94 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connectToDiscoveredDevice",
+            "printedName": "connectToDiscoveredDevice(_:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SKTCaptureDiscoveredDeviceInfo",
+                "printedName": "CaptureSDK.SKTCaptureDiscoveredDeviceInfo",
+                "usr": "c:objc(cs)SKTCaptureDiscoveredDeviceInfo"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A19HelperDeviceManagerC019connectToDiscoveredD0_21withCompletionHandlerySo010SKTCapturehD4InfoC_ySo0L6ErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A19HelperDeviceManagerC019connectToDiscoveredD0_21withCompletionHandlerySo010SKTCapturehD4InfoC_ySo0L6ErrorsVctF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnectFromDiscoveredDevice",
+            "printedName": "disconnectFromDiscoveredDevice(_:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SKTCaptureDiscoveredDeviceInfo",
+                "printedName": "CaptureSDK.SKTCaptureDiscoveredDeviceInfo",
+                "usr": "c:objc(cs)SKTCaptureDiscoveredDeviceInfo"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A19HelperDeviceManagerC024disconnectFromDiscoveredD0_21withCompletionHandlerySo010SKTCapturehD4InfoC_ySo0L6ErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A19HelperDeviceManagerC024disconnectFromDiscoveredD0_21withCompletionHandlerySo010SKTCapturehD4InfoC_ySo0L6ErrorsVctF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -4265,6 +4353,220 @@
                 "mangledName": "$s10CaptureSDK0A6HelperC10captureApiSo10SKTCaptureCSgvg",
                 "moduleName": "CaptureSDK",
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "SktBluetoothDiscoveryMode",
+            "printedName": "SktBluetoothDiscoveryMode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bluetoothLowEnergy",
+                "printedName": "bluetoothLowEnergy",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode.Type) -> CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SktBluetoothDiscoveryMode",
+                        "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                        "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SktBluetoothDiscoveryMode",
+                            "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                            "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO18bluetoothLowEnergyyA2EmF",
+                "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO18bluetoothLowEnergyyA2EmF",
+                "moduleName": "CaptureSDK"
+              },
+              {
+                "kind": "Var",
+                "name": "bluetoothClassic",
+                "printedName": "bluetoothClassic",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode.Type) -> CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SktBluetoothDiscoveryMode",
+                        "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                        "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "SktBluetoothDiscoveryMode",
+                            "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                            "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO16bluetoothClassicyA2EmF",
+                "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO16bluetoothClassicyA2EmF",
+                "moduleName": "CaptureSDK"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SktBluetoothDiscoveryMode",
+                        "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                        "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValueAESgs4Int8V_tcfc",
+                "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValueAESgs4Int8V_tcfc",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int8",
+                    "printedName": "Swift.Int8",
+                    "usr": "s:s4Int8V"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValues4Int8Vvp",
+                "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValues4Int8Vvp",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int8",
+                        "printedName": "Swift.Int8",
+                        "usr": "s:s4Int8V"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValues4Int8Vvg",
+                    "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO8rawValues4Int8Vvg",
+                    "moduleName": "CaptureSDK",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO",
+            "mangledName": "$s10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "Int8",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int8",
+                        "printedName": "Swift.Int8",
+                        "usr": "s:s4Int8V"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
               }
             ]
           },
@@ -4967,6 +5269,96 @@
             "declKind": "Func",
             "usr": "s:10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
             "mangledName": "$s10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addBluetoothDevice",
+            "printedName": "addBluetoothDevice(_:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SktBluetoothDiscoveryMode",
+                "printedName": "CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode",
+                "usr": "s:10CaptureSDK0A6HelperC25SktBluetoothDiscoveryModeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC18addBluetoothDevice_21withCompletionHandleryAC03SktE13DiscoveryModeO_ySo16SKTCaptureErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A6HelperC18addBluetoothDevice_21withCompletionHandleryAC03SktE13DiscoveryModeO_ySo16SKTCaptureErrorsVctF",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeBluetoothDevice",
+            "printedName": "removeBluetoothDevice(_:withCompletionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC21removeBluetoothDevice_21withCompletionHandlerySS_ySo16SKTCaptureErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A6HelperC21removeBluetoothDevice_21withCompletionHandlerySS_ySo16SKTCaptureErrorsVctF",
             "moduleName": "CaptureSDK",
             "declAttributes": [
               "AccessControl",
@@ -7542,6 +7934,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -7705,6 +8104,35 @@
             "printedName": "_ExpressibleByFileReferenceLiteral",
             "usr": "s:s34_ExpressibleByFileReferenceLiteralP",
             "mangledName": "$ss34_ExpressibleByFileReferenceLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       }
@@ -7715,9 +8143,23 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 45943,
+      "offset": 47219,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 48380,
+      "length": 4,
+      "value": "0x00"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 48417,
+      "length": 4,
+      "value": "0x01"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SocketCamLicenceError.swift",

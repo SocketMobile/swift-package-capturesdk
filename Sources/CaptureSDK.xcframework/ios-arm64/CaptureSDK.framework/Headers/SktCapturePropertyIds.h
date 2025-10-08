@@ -476,6 +476,34 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	*/
 	SKTCapturePropertyIDResetSinglePartnershipDevice = 292,
 
+	/**
+	property to connect to a discovered BLE device with a Device Manager
+
+	Device: True	Get Type: NotApplicable 	Set Type: String
+	*/
+	SKTCapturePropertyIDConnectDiscoveredDevice = 1376771,
+
+	/**
+	property to disconnect from a discovered BLE device with a Device Manager
+
+	Device: True	Get Type: NotApplicable 	Set Type: String
+	*/
+	SKTCapturePropertyIDDisconnectDiscoveredDevice = 1376768,
+
+	/**
+	property to add a Bluetooth device (Classic or Low Energy)
+
+	Device: False	Get Type: NotApplicable 	Set Type: Byte
+	*/
+	SKTCapturePropertyIDAddDevice = -2146303981,
+
+	/**
+	property to remove a Bluetooth device (Classic or Low Energy)
+
+	Device: False	Get Type: NotApplicable 	Set Type: String
+	*/
+	SKTCapturePropertyIDRemoveDevice = -2146107372,
+
 
 };
 

@@ -429,6 +429,26 @@
  */
 -(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block;
 
+/**
+ * connect to a discovered device with a device discovery (startDiscoveryWithTimeout)
+ *
+ * This feature works only when used with a BLE DeviceManager
+ *
+ * @param device contains the result of the discovery
+ * @param block called when connecting the device has completed with the result as argument.
+ */
+-(void)connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
+
+/**
+ * disconnect from a discovered device
+ *
+ * This feature works only when used with a BLE DeviceManager
+ *
+ * @param device contains the result of the discovery
+ * @param block called when disconnecting the device has completed with the result as argument.
+ */
+-(void)disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
+
 @end
 
 
@@ -546,7 +566,7 @@
  * @param device contains the device discovered indentification
  * @param deviceManager from which the device discovery has started
  */
--(void)didDiscoverDevice:(NSString * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
+-(void)didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
 
 /**
  * called with a device discovery has ended.

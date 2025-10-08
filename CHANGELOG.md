@@ -1,6 +1,35 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.14
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have added the possibility to add Bluetooth Classic discovery in your flow also with CaptureHelper’s addBluetoothDevice method
+
+  * We have added our new S721 barcode scanner Bluetooth LE to CaptureSDK
+
+  * Use the CaptureHelper’s methods addBluetoothDevice and removeBluetoothDevice to add and remove Bluetooth LE devices
+
+  * The star as a favorite to discover Bluetooth LE device is now not supported
+
+  * We have improved our Bluetooth LE discovery flow for Bluetooth LE devices. You receive now an object instead of a string. The CaptureHelper method didDiscoverDevice has changed. Replace the device string attribute with a SKTCaptureDiscoveredDeviceInfo
+
+  * Update minimum target to iOS 15.0
+
+
+
+### Bug fixes
+
+  * We have fixed a crash when closing the sdk
+
+
+
 ## Version 1.9.166
 
 ### New
