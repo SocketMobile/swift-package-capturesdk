@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.16
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have update our documentation to match our new CaptureSDK 2.0
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 2.0.14
 
 ### New
