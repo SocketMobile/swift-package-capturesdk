@@ -1,4 +1,4 @@
-# CaptureSDK Version 2.0.16 - Swift Package Manager
+# CaptureSDK Version 2.0.29 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -124,123 +124,14 @@ Once `CaptureSDK` is open, then the device arrival notification can occurs as so
 
 The decoded data coming from the scanner can be retrieved by overriding the `onDecodedData` delegate.
 
-### 4. Summary for integrating `CaptureSDK` in a Xcode project
-
-Example of ViewController.m for SingleEntry app:
-
-```swift
-import UIKit
-import CaptureSDK
-
-class MasterViewController:
-  UITableViewController,
-  CaptureHelperDevicePresenceDelegate,
-  CaptureHelperDeviceManagerPresenceDelegate,
-  CaptureHelperDeviceDecodedDataDelegate,
-  CaptureHelperErrorDelegate,
-  CaptureHelperDevicePowerDelegate {
-
-
-  // Capture Helper shareInstance allows to share
-  // the same instance of Capture Helper with the
-  // entire application. That static property can
-  // be used in any views but it is recommended
-  // to open only once Capture Helper (in the main
-  // view controller) and pushDelegate, popDelegate
-  // each time a new view requiring scanning capability
-  // is loaded or unloaded respectively.
-  var captureHelper = CaptureHelper.sharedInstance
-
-  override func viewDidLoad() {
-      super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-      // fill out the App Info with the Bundle ID which should start by the
-      // platform on which the application is running and followed with the
-      // case sensitive application Bundle ID,
-      // with the Socket Mobile Portal developer ID
-      // and with the Application Key generated from the Socket Mobile Developer
-      // portal
-      let AppInfo = SKTAppInfo()
-      AppInfo.appKey = "MC0CFQD1tdTpaABkppmG+iP3dB9kolYVtwIUY8c3UmEfaPoTI3AxbPOTpNgw+fo="
-      AppInfo.appID = "ios:com.socketmobile.SingleEntrySwift"
-      AppInfo.developerID = "bb57d8e1-f911-47ba-b510-693be162686a"
-
-      // there is a stack of delegates the last push is the
-      // delegate active, when a new view requiring notifications from the
-      // scanner, then push its delegate and pop its delegate when the
-      // view is done
-      captureHelper.pushDelegate(self)
-
-      // to make all the delegates able to update the UI without the app
-      // having to dispatch the UI update code, set the dispatchQueue
-      // property to the DispatchQueue.main
-      captureHelper.dispatchQueue = DispatchQueue.main
-
-      // open Capture Helper only once in the application
-      captureHelper.openWithAppInfo(AppInfo, withCompletionHandler: { (_ result: SKTResult) in
-          print("Result of Capture initialization: \(result.rawValue)")
-      })
-  }
-}
-```
-
-`CaptureHelper` makes the application aware of a new device connection by invoking the `onDeviceArrival` of the protocol and, in the same way when a device disconnects, the `onDeviceRemoval` is invoked. A `CaptureHelper` device instance representing the device that is connected can be used to retrieve or set a device property.
-
-Example of the view controller being aware of the scanner:
-
-```swift
-func didNotifyArrivalForDevice(_ device: CaptureHelperDevice, withResult result: SKTResult) {
-    print("Main view device arrival:\(device.deviceInfo.name!)")
-}
-
-func didNotifyRemovalForDevice(_ device: CaptureHelperDevice, withResult result: SKTResult) {
-    print("Main view device removal:\(device.deviceInfo.name!)")
-}
-```
-
-For a combo device like the S370 which has 2 devices, there will be two ``didNotifyArrivalForDevice`` and two ``didNotifyRemovalForDevice`` notifications.
-
-The following code shows how you can distinghuish and handle them:
-
-```swift
-func didNotifyArrivalForDevice(_ device: CaptureHelperDevice, withResult result: SKTResult) {
-    print("didNotifyArrivalForDevice: \(String(describing: device.deviceInfo.name))")
-    if device.deviceInfo.deviceType == .NFCS370 {
-    // handle the NFC reader of the S370
-    } else if device.deviceInfo.deviceType == .scannerS370 {
-    // handle the Barcode scanner of the S370
-    }
-}
-```
-
-If the scanner triggers a scan, the decoded data can be retrieve in the protocol function `onDecodedData`.
-
-Example of retrieving the decoded data received by a scanner:
-
-```swift
-func didReceiveDecodedData(_ decodedData: SKTCaptureDecodedData?, fromDevice device: CaptureHelperDevice, withResult result: SKTResult) {
-    if result == SKTCaptureErrors.E_NOERROR {
-        let rawData = decodedData?.decodedData
-        let rawDataSize = rawData?.count
-        print("Size: \(String(describing: rawDataSize))")
-        print("data: \(String(describing: decodedData?.decodedData))")
-        let string = decodedData?.stringFromDecodedData()!
-        print("Decoded Data \(String(describing: string))")
-    }
-}
-```
-
-The application can retrieve or modify the device properties by calling the various `CaptureHelperDevice` get/set methods. By example there is a method to retrieve the device friendly name: `getFriendlyNameWithCompletionHandler`. The call is asynchronous and will return immediately. The final result and the friendly name can be retrieved in the
-completion handler function block.
-
 **IMPORTANT**:
 If a property is not accessible through the available `CaptureHelper` methods, it is very easy to add new ones, by creating a `CaptureHelper` **extension** class and copy and paste a similar get/set method and change the property settings inside the new method.
 
 Creating a `CaptureHelper` extension allows to avoid an overwrite of a modified version of `CaptureHelper` when updating to a more recent `CaptureSDK` CocoaPods.
 
-## Sample code
+### 4. Sample code
 
-Sample code can be found in [GitHub / SocketMobile](https://github.com/SocketMobile "Socket Mobile Samples")
+Try out our sample [our Single Entry app on Github SocketMobile](https://github.com/SocketMobile/capturesingleentryswift-ios)
 
 ## SocketCam C820 and C860
 

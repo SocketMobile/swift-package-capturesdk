@@ -323,7 +323,7 @@ SWIFT_CLASS("_TtC10CaptureSDK19CaptureHelperDevice")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC10CaptureSDK26CaptureHelperDeviceManager")
+SWIFT_CLASS("_TtC10CaptureSDK26CaptureHelperDeviceManager") SWIFT_DEPRECATED_MSG("This class will be deprecated and removed soon. Most of the functions will be transferred at the CaptureHelper level.")
 @interface CaptureHelperDeviceManager : CaptureHelperDevice
 @end
 
@@ -335,6 +335,7 @@ SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 - (void)retrieveServiceUuidFromDeviceIdWith:(NSString * _Nonnull)uuidString deviceId:(NSString * _Nonnull)deviceId completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (void)promptDeviceInfoFromWebUIWith:(NSString * _Nonnull)uuidString completion:(void (^ _Nonnull)(NSString * _Nullable, NSInteger))completion;
 - (NSString * _Nullable)createStamp SWIFT_WARN_UNUSED_RESULT;
+- (void)cancelAllSessions;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -350,6 +351,7 @@ SWIFT_CLASS("_TtC10CaptureSDK24SocketCamControllerSwift")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)startScanWith:(BOOL)continousScan completion:(void (^ _Nonnull)(UIViewController * _Nullable))completion;
 - (void)addLastSymbologyWith:(NSString * _Nonnull)symbology with:(NSDictionary<NSString *, NSString *> * _Nonnull)ids completion:(void (^ _Nonnull)(BOOL, NSDate * _Nullable))completion;
+- (void)removeLastSymbology;
 - (void)addDataSourceCountWithEnabled:(BOOL)enabled;
 - (void)setAppBundleIdentifierWithAppId:(NSString * _Nonnull)appId;
 - (void)refreshUI;

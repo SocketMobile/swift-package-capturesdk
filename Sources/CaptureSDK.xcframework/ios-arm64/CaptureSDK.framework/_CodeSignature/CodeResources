@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		GR4lnP6qn2euPI7bsENafkdnlGo=
+		ZbnlBa6TnGadhldhK5GXkfvHYs0=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/SktCaptureDeviceTypes.h</key>
 		<data>
-		NAGxCB44sIvIXVhaJgMR3fKvTOY=
+		gr4dzYZjjXxEFz5MahJePZ/ix2o=
 		</data>
 		<key>Headers/SktCaptureErrors.h</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/SktCaptureHelper.h</key>
 		<data>
-		1oqMShE9X2vyLJ+ZWUd8j4ZXw9Y=
+		x1EZugnAAFOAwJZWQf8WNLd0cjE=
 		</data>
 		<key>Headers/SktCapturePropertyIds.h</key>
 		<data>
-		DET5ywEgsiycHiS+Gg4l8GiDcAw=
+		h5yW5ckepoLIVorFqfE2+CaKzCg=
 		</data>
 		<key>Headers/SktCaptureVersion.h</key>
 		<data>
@@ -50,23 +50,23 @@
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		OniydSaj8NBZh6AlHsNzPyJigPA=
+		OZ4YoPVLWLNa0bsbtpDNLEPEpac=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		vH5p9YHDAyw9t4PmnZkCGHsfVYk=
+		1QDXfsb7BAPJjGK3SJXfXdk8I9I=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		WjZvWbe24AfQwkq2nMm/xIBw7PM=
+		GWMxR96N4rUMy505BH/5PrSLu8g=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		vH5p9YHDAyw9t4PmnZkCGHsfVYk=
+		1QDXfsb7BAPJjGK3SJXfXdk8I9I=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		89SR81e5/w1EFg+rifGE5UgbZvg=
+		y/pnLGFZWyp4LJb637nUvRAzD/I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -274,7 +274,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hZ0u8F3EaEv0JtZx79LQDG9jLlfXDfJnY9iZXrB0G30=
+			1gHWrcOixgWo1hptcY+Re5sTlexKlDPVPSM5+3CtxPk=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -295,7 +295,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UqTmTdB7/5p7ZLHzDRfsO6B/ARB0oW19TXm6RCNiAlo=
+			EdOBXgeluRkMBv84n+2RjoO84MPUn1INQVvbgjXTP7I=
 			</data>
 		</dict>
 		<key>Headers/SktCaptureErrors.h</key>
@@ -316,14 +316,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pD5rHWCKSA7r4CRzXEu3DduRB4k7cUo1vSljWktiDqQ=
+			7iHRKY5I1yuPhiOx3SYGyOJxe/PDdB1SycH+OpZHkDc=
 			</data>
 		</dict>
 		<key>Headers/SktCapturePropertyIds.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aS4S1l32nqj1YM7X63uokN3n27HUPqG5fyuSYbMXcfA=
+			NcClnfdJwdxWf0jytkgizuunA9JJ0RLvhtmwaIibabI=
 			</data>
 		</dict>
 		<key>Headers/SktCaptureVersion.h</key>
@@ -337,35 +337,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pCAnTUIDhqXeMtH+DwSmavQ1iz/9QweU6T2xprGbopM=
+			wBzZ43bPWCJs8j4udHmf99AOWm0+WQBUCwMnbZE6uSk=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IaQl/X+q/EfIRbpWx/OpFm7ZFkVa4rLyDEIyKCtgKvo=
+			YLE6ehTZPfZXK6ewUv+oGH4lD3SAR+BlPRrI/cvnaPE=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AsbJIVIiNWG5PU7H4axQsZYwz+nmRHAyT3ur8w25GfE=
+			LfSJFSaaA9Tf5nFQ1OiO9kTnwidPvTJnDJAzc+/Zl+I=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IaQl/X+q/EfIRbpWx/OpFm7ZFkVa4rLyDEIyKCtgKvo=
+			YLE6ehTZPfZXK6ewUv+oGH4lD3SAR+BlPRrI/cvnaPE=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bGPTI2e3Fb7vWjQispDdexMQL/Dr+Biuk5xLfD0LbLI=
+			XZ8feY6UzgoMA6w4WKxiDhVXC6sGt5csG6UoC+tb8eE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

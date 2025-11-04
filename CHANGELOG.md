@@ -1,6 +1,29 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.29
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * Our SocketCam C860 has been improved to aim barcodes within the view finder
+
+  * CaptureHelper has some breaking changes to end the transition for a better CaptureSDK 2.0
+
+  * We have removed CryptoSwift as a dependency of our CaptureSDK
+
+
+
+### Bug fixes
+
+  * We have fixed the D600 connection
+
+
+
 ## Version 2.0.16
 
 ### New

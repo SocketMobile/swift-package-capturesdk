@@ -22,13 +22,23 @@ public protocol CaptureHelperDevicePresenceDelegate : CaptureSDK.CaptureHelperDe
   func didNotifyArrivalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
   func didNotifyRemovalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
 }
+@available(*, deprecated, message: "This protocol will be deprecated and removed soon")
 public protocol CaptureHelperDeviceManagerPresenceDelegate : CaptureSDK.CaptureHelperDelegate {
+  @available(*, deprecated, message: "This function will be deprecated and removed soon. You can delete it and you don't need to retain the Device Manager anymore")
   func didNotifyArrivalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
+  @available(*, deprecated, message: "This function will be deprecated and removed soon. You can delete it and you don't need to retain the Device Manager anymore")
   func didNotifyRemovalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
 }
+@available(*, deprecated, renamed: "CaptureHelperDiscoveryDelegate", message: "This protocol will be deprecated and removed soon")
 public protocol CaptureHelperDeviceManagerDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
+  @available(*, deprecated, renamed: "didDiscoverDevice(_:)", message: "This method will be deprecated and removed soon")
   func didDiscoverDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
+  @available(*, deprecated, renamed: "didEndDiscoveryWithResult(_:)", message: "This method will be deprecated and removed soon")
   func didEndDiscoveryWithResult(_ result: CaptureSDK.SKTResult, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
+}
+public protocol CaptureHelperDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didDiscoverDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo)
+  func didEndDiscoveryWithResult(_ result: CaptureSDK.SKTResult)
 }
 public protocol CaptureHelperDeviceDecodedDataDelegate : CaptureSDK.CaptureHelperDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
@@ -42,7 +52,7 @@ public protocol CaptureHelperDevicePowerDelegate : CaptureSDK.CaptureHelperDeleg
 public protocol CaptureHelperDeviceButtonsDelegate : CaptureSDK.CaptureHelperDelegate {
   func didChangeButtonsState(_ buttonsState: CaptureSDK.SKTCaptureButtonsState, forDevice device: CaptureSDK.CaptureHelperDevice)
 }
-public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperErrorDelegate {
+public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperDiscoveryDelegate, CaptureSDK.CaptureHelperErrorDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDevice : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
@@ -104,11 +114,6 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #if compiler(>=5.3) && $NonescapableTypes
   open func getNotificationsWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ notifications: CaptureSDK.SKTCaptureNotifications?) -> Swift.Void)
   #endif
-  @available(*, deprecated)
-  open func setSocketCamOverlayViewParameter(_ parameters: Swift.Dictionary<Swift.String, Any>, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
-  open func getSocketCamOverlayViewParameterWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ parameter: Swift.Dictionary<Swift.String, Any>?) -> Swift.Void)
-  #endif
   #if compiler(>=5.3) && $NonescapableTypes
   open func getDeviceSpecificCommand(_ command: Foundation.Data, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ commandResult: Foundation.Data?) -> Swift.Void)
   #endif
@@ -144,16 +149,23 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #endif
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This class will be deprecated and removed soon. Most of the functions will be transferred at the CaptureHelper level.")
+public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
+  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
   open func startDiscoveryWithTimeout(_ timeout: ObjectiveC.NSInteger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
   open func setFavoriteDevices(_ favorites: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
   open func getFavoriteDevicesWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ favorites: Swift.String?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, renamed: "getDeviceUniqueIdentifierFromDeviceGuid(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
   open func getDeviceUniqueIdentifierFromDeviceGuid(_ deviceGuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceUniqueIdentifier: Swift.String?) -> Swift.Void)
   #endif
+  @available(*, deprecated, renamed: "connectToDiscoveredDevice(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
   open func connectToDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  @available(*, deprecated, renamed: "disconnectFromDiscoveredDevice(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
   open func disconnectFromDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   @objc deinit
 }
@@ -166,22 +178,12 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
     get
   }
   #endif
-  public enum SktBluetoothDiscoveryMode : Swift.Int8 {
-    case bluetoothLowEnergy
-    case bluetoothClassic
-    #if compiler(>=5.3) && $NonescapableTypes
-    public init?(rawValue: Swift.Int8)
-    #endif
-    public typealias RawValue = Swift.Int8
-    public var rawValue: Swift.Int8 {
-      get
-    }
-  }
   @discardableResult
   open func pushDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
   @discardableResult
   open func popDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
   open func getDevices() -> Swift.Array<CaptureSDK.CaptureHelperDevice>
+  @available(*, deprecated)
   open func getDeviceManagers() -> Swift.Array<CaptureSDK.CaptureHelperDeviceManager>
   open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func closeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
@@ -206,8 +208,13 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #if compiler(>=5.3) && $NonescapableTypes
   open func getSinglePartnershipStamp(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ stamp: Swift.String?) -> Swift.Void)
   #endif
-  open func addBluetoothDevice(_ bluetoothDiscoveryMode: CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func addBluetoothDevice(_ bluetoothDiscoveryMode: CaptureSDK.SKTCaptureBluetoothDiscoveryMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func removeBluetoothDevice(_ deviceUuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  open func getDeviceUniqueIdentifierFromDeviceGuid(_ deviceGuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceUniqueIdentifier: Swift.String?) -> Swift.Void)
+  #endif
+  open func connectToDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func disconnectFromDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   #endif
@@ -232,6 +239,7 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #if compiler(>=5.3) && $NonescapableTypes
   @objc open func addLastSymbology(with symbology: Swift.String, with ids: [Swift.String : Swift.String], completion: @escaping (Swift.Bool, Foundation.Date?) -> Swift.Void)
   #endif
+  @objc open func removeLastSymbology()
   @objc open func addDataSourceCount(enabled: Swift.Bool)
   @objc open func setAppBundleIdentifier(appId: Swift.String)
   @objc open func refreshUI()
@@ -253,12 +261,8 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #endif
   @objc open func retrieveDataSourceId(from type: Swift.String) -> Swift.Int
 }
-extension CaptureSDK.SocketCamControllerSwift {
-  public func didRead(_ barcode: Swift.String, ofType type: Swift.String)
-  public func didNotRead()
-  public func didClose()
-}
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
+  @objc deinit
   #if compiler(>=5.3) && $NonescapableTypes
   @objc open func retrieveServiceUuidFromApi(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   #endif
@@ -274,8 +278,8 @@ extension CaptureSDK.SocketCamControllerSwift {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc open func createStamp() -> Swift.String?
   #endif
+  @objc open func cancelAllSessions()
   @objc override dynamic public init()
-  @objc deinit
 }
 extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   public init(stringLiteral value: Swift.StaticString)
@@ -300,9 +304,6 @@ public enum SinglePartnershipPage : Swift.String {
     get
   }
 }
-extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.Equatable {}
-extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.Hashable {}
-extension CaptureSDK.CaptureHelper.SktBluetoothDiscoveryMode : Swift.RawRepresentable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Equatable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Hashable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.RawRepresentable {}

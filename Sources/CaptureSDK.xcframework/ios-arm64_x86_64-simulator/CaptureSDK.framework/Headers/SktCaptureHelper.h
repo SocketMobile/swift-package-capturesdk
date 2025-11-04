@@ -317,17 +317,6 @@
 -(void)setDeviceFactoryResetWithCompletionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
-#pragma mark - SocketCam (scanner using Camera)
-/**
- * DEPRECATED - From CaptureSDK 1.8 - Use the setTrigger method on a SocketCam device and it returns the viewcontroller that you can display full screen or as a subview
- * set the device overlay view
- *
- * @param overlay overlay settings
- * @param block receiving the result of setting the overlay view
- */
--(void)setOverlayView:(NSDictionary * _Nonnull)overlay completionHandler:(void(^ _Nullable)(SKTResult result))block __deprecated;
-
-
 #pragma mark - Data Format (D600 Reading data from card)
 /**
  * Set a data format to the device
@@ -385,6 +374,11 @@
  * make the DeviceManager try to connect to it automatically.
  *
  */
+/**
+ * THIS CLASS WILL BE DEPRECATED SOON. MOST OF THE FUNCTIONS ARE TRANSFERRED AT THE CAPTURE HELPER LEVEL.
+ * PLEASE DO CHANGE YOUR CODE ACCORDINGLY
+ */
+__attribute__((deprecated("This class will be deprecated and removed soon. Most of the functions will be transferred at the CaptureHelper level.")))
 @interface SKTCaptureHelperDeviceManager : SKTCaptureHelperDevice
 
 /**
@@ -397,7 +391,11 @@
  * @param timeInSeconds contains the number of seconds the discovery should last
  * @param block receiving the result of starting the discovery
  */
--(void)startDiscoveryWithTimeout:(NSInteger)timeInSeconds completionHandler:(void(^ _Nullable)(SKTResult result))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * USE func addBluetoothDevice(_ bluetoothDiscoveryMode: SktBluetoothDiscoveryMode, withCompletionHandler completion: @escaping(_ result: SKTResult) -> Void) AT THE CAPTURE HELPER LEVEL
+ */
+-(void)startDiscoveryWithTimeout:(NSInteger)timeInSeconds completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 /**
  * set the favorites for the auto connection. If favorites are set, the DeviceManager
@@ -408,7 +406,11 @@
  * in case there are more than one device to connect to
  * @param block called when the favorites has been set with the result as argument
  */
--(void)setFavoriteDevices:(NSString * _Nonnull)favorites completionHandler:(void(^ _Nullable)(SKTResult result))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * Favorites are not necessary anymore with CaptureSDK 2.0
+ */
+-(void)setFavoriteDevices:(NSString * _Nonnull)favorites completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 /**
  * retrieve the list of favorites devices.
@@ -417,7 +419,11 @@
  * @param block called when getting the favorites has completed with the result and the
  * actual favorites string as argument.
  */
--(void)getFavoriteDevicesWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable favorites))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * Favorites are not necessary anymore with CaptureSDK 2.0
+ */
+-(void)getFavoriteDevicesWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable favorites))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 /**
  * retrieve the device unique identifier from the device GUID. The unique identifier can
@@ -427,7 +433,11 @@
  * @param block called when getting the device unique identifier has completed with the result and the
  * unique identifier as argument.
  */
--(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * Use method getDeviceUniqueIdentifierFromDeviceGuid:(NSString *)deviceGuid completionHandler:(void(^ )(SKTResult result, NSString * deviceUniqueIdentifier))block  AT THE CAPTURE HELPER LEVEL
+ */
+-(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
 
 /**
  * connect to a discovered device with a device discovery (startDiscoveryWithTimeout)
@@ -437,7 +447,11 @@
  * @param device contains the result of the discovery
  * @param block called when connecting the device has completed with the result as argument.
  */
--(void)connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * Use method connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo *)device completionHandler:(void(^)(SKTResult result))block  AT THE CAPTURE HELPER LEVEL
+ */
+-(void)connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
 
 /**
  * disconnect from a discovered device
@@ -447,7 +461,11 @@
  * @param device contains the result of the discovery
  * @param block called when disconnecting the device has completed with the result as argument.
  */
--(void)disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * Use method disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo *)device completionHandler:(void(^)(SKTResult result))block  AT THE CAPTURE HELPER LEVEL
+ */
+-(void)disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
 
 @end
 
@@ -548,7 +566,10 @@
  * @param deviceManager identifies the device manager that is just available
  * @param result contains an error if something went wrong during the device connection
  */
--(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ */
+-(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 /**
  * called when a device manager is unavailable to the host
@@ -556,7 +577,10 @@
  * @param deviceManager identifies the device manage that is just unavailable
  * @param result contains an error if something went wrong during the device disconnection
  */
--(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ */
+-(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 /**
  * called when a device has been discovered by the DeviceManager
@@ -566,7 +590,11 @@
  * @param device contains the device discovered indentification
  * @param deviceManager from which the device discovery has started
  */
--(void)didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON. Replaced with didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo *)device.
+ */
+-(void)didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager __attribute__((deprecated("This method will be deprecated and removed soon.")));
+
 
 /**
  * called with a device discovery has ended.
@@ -576,7 +604,25 @@
  * @param result contains the result of the discovery
  * @param deviceManager from which the device discovery has started
  */
--(void)didDiscoveryEndWithResult:(SKTResult)result fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager;
+/**
+ * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON. Replaced with didDiscoveryEndWithResult:(SKTResult)result.
+ */
+-(void)didDiscoveryEndWithResult:(SKTResult)result fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager __attribute__((deprecated("This method will be deprecated and removed soon.")));
+
+
+/**
+ * called when a device has been discovered by CaptureSDK
+ *
+ * @param device contains the device discovered indentification
+ */
+-(void)didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device;
+
+/**
+ * called with a device discovery has ended.
+ *
+ * @param result contains the result of the discovery
+ */
+-(void)didDiscoveryEndWithResult:(SKTResult)result;
 
 @end
 
@@ -696,7 +742,7 @@
  * the host.
  * @returns the list of device managers
  */
--(NSArray * _Nonnull)getDeviceManagersList;
+-(NSArray * _Nonnull)getDeviceManagersList __attribute__((deprecated("This method will be deprecated and removed soon.")));
 
 #pragma  mark - Capture information
 
@@ -777,6 +823,38 @@
  */
 -(void)getSinglePartnershipStampWithCompletionHandler:(void (^ _Nullable)(SKTResult result, NSString * _Nullable stamp))block;
 
+
+#pragma mark - Methods from old Device Manager
+
+/**
+ * retrieve the device unique identifier from the device GUID. The unique identifier can
+ * be use to add it into the favorites list.
+ *
+ * @param deviceGuid contains the device GUID to identify the device to get the unique identifier from
+ * @param block called when getting the device unique identifier has completed with the result and the
+ * unique identifier as argument.
+ */
+-(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block;
+
+/**
+ * connect to a discovered device with a device discovery (startDiscoveryWithTimeout)
+ *
+ * This feature works only when used with a BLE DeviceManager
+ *
+ * @param device contains the result of the discovery
+ * @param block called when connecting the device has completed with the result as argument.
+ */
+-(void)connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
+
+/**
+ * disconnect from a discovered device
+ *
+ * This feature works only when used with a BLE DeviceManager
+ *
+ * @param device contains the result of the discovery
+ * @param block called when disconnecting the device has completed with the result as argument.
+ */
+-(void)disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 #pragma mark - Generic get and set property
 
