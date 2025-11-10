@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.31
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have improved the Bluetooth LE discovery
+
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 2.0.29
 
 ### New
