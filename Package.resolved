@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "e45a26384239e028ec87fbcc788f513b67e10d8f",
+        "version" : "1.9.0"
+      }
+    },
+    {
+      "identity" : "swift-package-swiftdecodersdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SocketMobile/swift-package-swiftdecodersdk.git",
+      "state" : {
+        "revision" : "5ee7a7d7ab207352e2fd8288f9ba44bc1ef5dab2",
+        "version" : "6.2.3"
+      }
+    }
+  ],
+  "version" : 2
+}

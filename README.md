@@ -1,4 +1,4 @@
-# CaptureSDK Version 1.9.166 - Swift Package Manager
+# CaptureSDK Version 1.9.170 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -14,15 +14,13 @@ The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to t
 
 More documentation can be found [here](https://docs.socketmobile.com/capture/ios/en/latest/ "CaptureSDK Documentation").
 
-## From 31st of July 2025 - Noticeable change from version 1.9.166
+## From 31st of July 2025 - Noticeable change from version 1.9.170
 
-**From version 1.9.166:**
-
-**- We have changed the way CaptureSDK on iOS is connecting to our Bluetooth Low Energy devices (S320, S370, S550, M963). It requires the **Background Modes** with **Uses Bluetooth LE accessories** to be added into the **Info.plist** or in the **Capabilities** of the target.**
+**From version 1.9.170:**
 
 **- Users who want to use our Bluetooth LE readers, will have to install the [Socket Mobile Companion app](https://apps.apple.com/app/socket-mobile-companion/id1175638950) which takes care of the discovery and the selection of the reader to connect to.**
 
-**- If you still want to use the notion of favorites with our BLE Device Manager, you can use the version 1.9.166. A future version of CaptureSDK will be available to support both worlds (favorites and Companion app).**
+**- If you still want to use the notion of favorites with our BLE Device Manager, you can use the version 1.9.170. A future version of CaptureSDK will be available to support both worlds (favorites and Companion app).**
 
 [See our Getting Started section in our documentation](https://docs.socketmobile.dev/capture/ios/en/latest/gettingStarted.html)
 

@@ -49,11 +49,16 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventDataType) {
 	SKTCaptureEventDataTypeDeviceInfo = 6,
 
 	/**
+	The event has an object structure (array, map, dictionary) as value (read only).
+	*/
+	SKTCaptureEventDataTypeObject = 7,
+
+	/**
 	The event type should not be equal or higher that kLastID otherwise
 	it means the SDK is not in sync with the actual version of Socket
 	Mobile Companion running on the host.
 	*/
-	SKTCaptureEventDataTypeLastID = 7,
+	SKTCaptureEventDataTypeLastID = 8,
 
 };
 
@@ -226,7 +231,8 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 @property SKTCaptureEventID ID;
 
 /** @brief get or set the Capture event data */
-@property (nullable, nonatomic, strong) SKTCaptureEventData* Data;
+@property (nullable, nonatomic, strong) SKTCaptureEventData *Data;
+
 @end
 
 
@@ -241,13 +247,13 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 @property SKTCaptureDataSourceID DataSourceID;
 
 /** @brief get the data source name */
-@property (nullable, nonatomic, strong) NSString* DataSourceName;
+@property (nullable, nonatomic, strong) NSString *DataSourceName;
 
 /** @brief get the decoded data*/
-@property (nullable, nonatomic, strong) NSData* DecodedData;
+@property (nullable, nonatomic, strong) NSData *DecodedData;
 
 /** @brief get the NFC Tag ID data*/
-@property (nullable, nonatomic, strong) NSData* TagIdData;
+@property (nullable, nonatomic, strong) NSData *TagIdData;
 
 /**
  @brief get the decoded data as string UTF8 encoded
@@ -286,12 +292,12 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 /**
  @brief Name of the device
  */
-@property (retain, nonatomic) NSString* _Nullable Name;
+@property (nullable, retain, nonatomic) NSString *Name;
 
 /**
  @brief GUID of the device
  */
-@property (retain, nonatomic) NSString* _Nullable Guid;
+@property (nullable, retain, nonatomic) NSString *Guid;
 
 /**
  @brief Handle of the device
@@ -302,6 +308,31 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
  @brief Device Type: (D750, S800 etc..)
  */
 @property SKTCaptureDeviceType DeviceType;
+
+@end
+
+/**
+ @class SKTCaptureDiscoveredDeviceInfo
+
+ @brief contains the information about the discovered device from a manual discovery process
+ */
+@interface SKTCaptureDiscoveredDeviceInfo : NSObject
+
+/**
+ @brief Name of the device
+ */
+@property (nullable, retain, nonatomic) NSString *Name;
+
+/**
+ @brief IdentifierUuid of the device
+ */
+@property (nullable, retain, nonatomic) NSString *IdentifierUuid;
+
+/**
+ @brief ServiceUuid of the device
+ */
+@property (nullable, retain, nonatomic) NSString *ServiceUuid;
+
 @end
 
 /**
@@ -327,22 +358,28 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 /**
  @brief String value, only relevant if the Type is <b>SKTCaptureEventDataTypeString</b>
  */
-@property (nullable, nonatomic, strong) NSString* StringValue;
+@property (nullable, nonatomic, strong) NSString *StringValue;
 
 /**
  @brief Array value, only relevant if the Type is <b>SKTCaptureEventDataTypeArray</b>
  */
-@property (nullable, nonatomic, strong) NSData* ArrayValue;
+@property (nullable, nonatomic, strong) NSData *ArrayValue;
 
 /**
  @brief Decoded data value, only relevant if the Type is <b>SKTCaptureEventDataTypeDecodedData</b>
  */
-@property (nullable, nonatomic, strong) SKTCaptureDecodedData* DecodedData;
+@property (nullable, nonatomic, strong) SKTCaptureDecodedData *DecodedData;
 
 /**
  @brief Device info value, only relevant if the Type is <b>SKTCaptureEventDataTypeDeviceInfo</b>
  */
-@property (nullable, nonatomic, strong) SKTCaptureDeviceInfo* DeviceInfo;
+@property (nullable, nonatomic, strong) SKTCaptureDeviceInfo *DeviceInfo;
+
+/**
+ @brief Device info value, only relevant if the Type is <b>SKTCaptureEventDataTypeObject</b>
+ */
+@property (nullable, nonatomic, strong) SKTCaptureDiscoveredDeviceInfo *DiscoveredDeviceInfo;
+
 @end
 
 #endif /* SktCaptureEvent_h */

@@ -376,11 +376,11 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeDeviceD765 = 196900,
 
 	/**
-	Model D750 - NFC Reader/Writer
+	Model D751 - NFC Reader/Writer
 
 	value: 329253 (0x50625)
 	*/
-	SKTCaptureDeviceTypeDeviceD750 = 329253,
+	SKTCaptureDeviceTypeDeviceD751 = 329253,
 
 	/**
 	Model M942
@@ -404,11 +404,25 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	SKTCaptureDeviceTypeDeviceXS663 = 327976,
 
 	/**
+	Model S721
+
+	value: 327977 (0x50129)
+	*/
+	SKTCaptureDeviceTypeDeviceS721 = 327977,
+
+	/**
+	Model S741
+
+	value: 327978 (0x5012A)
+	*/
+	SKTCaptureDeviceTypeDeviceS741 = 327978,
+
+	/**
 	Bluetooth device type unknown by this version of Capture
 
-	value: 196649 (0x30029)
+	value: 196651 (0x3002B)
 	*/
-	SKTCaptureDeviceTypeBtUnknown = 196649,
+	SKTCaptureDeviceTypeBtUnknown = 196651,
 
 	/**
 	device manager for controlling BLE
@@ -420,9 +434,9 @@ typedef NS_ENUM(NSInteger, SKTCaptureDeviceType){
 	/**
 	Ble device type unknown by this version of Capture
 
-	value: 329769 (0x50829)
+	value: 329771 (0x5082B)
 	*/
-	SKTCaptureDeviceTypeBleUnknown = 329769,
+	SKTCaptureDeviceTypeBleUnknown = 329771,
 
 };
 

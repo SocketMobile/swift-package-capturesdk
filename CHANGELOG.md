@@ -1,6 +1,25 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 1.9.170
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * Update minimum target to iOS 15
+
+
+
+### Bug fixes
+
+  * Fix TLV parser for payload with 1 character
+
+
+
 ## Version 1.9.166
 
 ### New
