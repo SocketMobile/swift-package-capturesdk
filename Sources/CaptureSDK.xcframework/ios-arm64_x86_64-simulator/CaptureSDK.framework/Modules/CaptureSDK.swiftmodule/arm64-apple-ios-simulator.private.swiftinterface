@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -199,6 +199,7 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
   #endif
   open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setSocketCamSymbologySelectorDisabled(_ isDisabled: Swift.Bool, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
   #endif
@@ -225,6 +226,7 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
 }
 @objc @_inheritsConvenienceInitializers open class SocketCamControllerSwift : ObjectiveC.NSObject {
   @objc public var isCloseButtonHidden: Swift.Bool
+  @objc public var isSymbologySelectorMenuDisabled: Swift.Bool
   @objc public var isBeepFilePresent: Swift.Bool {
     @objc get
   }
@@ -247,19 +249,16 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   @objc open func turnFlash(with turnOn: Swift.Bool)
   @objc open func setBeep(with beepOn: Swift.Bool)
   @objc open func setVibrate(with vibrateOn: Swift.Bool)
-  @objc open func updateDataSourceStatus(with status: ObjectiveC.NSInteger, with dataSourceIndex: Swift.Int)
-  @objc open func getDataSourcesCount() -> Swift.Int
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc open func getDataSourceType(from index: Swift.Int) -> Foundation.NSString?
-  #endif
-  @objc open func getDataSourceIndex(from index: Swift.Int) -> Swift.Int
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc open func getDataSourceName(from index: Swift.Int) -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc open func getDataSourceDescription(from index: Swift.Int) -> Swift.String?
-  #endif
-  @objc open func retrieveDataSourceId(from type: Swift.String) -> Swift.Int
+}
+extension CaptureSDK.SocketCamControllerSwift {
+  @objc dynamic open func getAllDataSourcesStatuses() -> [Foundation.NSDictionary]
+  @objc dynamic open func getDataSourcesStatuses(for symbologyCategory: Swift.String) -> [Foundation.NSDictionary]
+  @objc dynamic open func getAllDataSourcesCategoriesStatuses() -> [Foundation.NSDictionary]
+  @objc dynamic open func updateDataSourcesStatuses(_ dataSources: [Foundation.NSDictionary])
+  @objc dynamic open func updateDataSourcesCategoriesStatuses(_ dataSourcesCategories: [Foundation.NSDictionary])
+  @objc dynamic open func getDataSourceIndex(from index: Swift.Int) -> Swift.Int
+  @objc dynamic open func getDataSourceName(from index: Swift.Int) -> Swift.String
+  @objc dynamic open func getDataSourceDescription(from index: Swift.Int) -> Swift.String
 }
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
   @objc deinit

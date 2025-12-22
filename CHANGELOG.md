@@ -1,6 +1,28 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.57
+
+### New
+
+  * We have added a Symbology Selector in SocketCam so end users can chose which symbologies to read
+
+
+
+### Improvements
+
+  * We have update SwiftDecoder to version 6.4.0
+
+
+
+### Bug fixes
+
+  * We have fixed a crash when a Bluetooth LE discovery is in progress and the CaptureSDK is closing at the same time
+
+  * We have fixed the scanning of barcodes that have only one character payload on our Bluetooth LE devices such as S320
+
+
+
 ## Version 2.0.31
 
 ### New

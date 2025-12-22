@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		s9Gc6sr1Spd/I6bpyXA1VSSJJ3s=
+		3uCKxtDE+7M22FE4XLZRclRPOfo=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/SktCaptureDataSource.h</key>
 		<data>
-		yUx2rrJWDOSQl5pl0O7n6iHDu7s=
+		tBB807f8zn76Rg8tHc84xi4gcMs=
 		</data>
 		<key>Headers/SktCaptureDeviceTypes.h</key>
 		<data>
@@ -46,47 +46,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3S9jS4bF/svvFtrDbTgs2ukGG8U=
+		dddPEUV8qhsExKuFu9keK33qmyE=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		OZ4YoPVLWLNa0bsbtpDNLEPEpac=
+		FKqHi/A2regLjIwXR7A/a5rOIBo=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		RrjhSmKcqlH9e6ezY1r9tUvkLsY=
+		f45pelQQz4jfGEn7DoPYWHWsfew=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MVE3s37YiImZ7xOE/D4QPglrv4A=
+		lhZFjL/4Dsg+guc9mnK1efpPT88=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RrjhSmKcqlH9e6ezY1r9tUvkLsY=
+		f45pelQQz4jfGEn7DoPYWHWsfew=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rb2rIQ7uj7qZcykIU5FdhqXSXkE=
+		o6MNMDPr5lrtZZAmBQT5Y7qhOWs=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		OZ4YoPVLWLNa0bsbtpDNLEPEpac=
+		FKqHi/A2regLjIwXR7A/a5rOIBo=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		1mKnGgTWfdAlfxSoopN4Xv6xKQc=
+		ibK43PSia09z7mNEtxMyLt+XREw=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		RVSo+R5Q4VzrqUSlwlrWHd6kqqo=
+		MhY/C1foOqIVrcNbb9nJdpxtbNA=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		1mKnGgTWfdAlfxSoopN4Xv6xKQc=
+		ibK43PSia09z7mNEtxMyLt+XREw=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YQeCk3DoUJUeRuliTkHFcSHbbGY=
+		aK5DZwDAK//QxojbHAgyvKNXPY4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -95,6 +95,78 @@
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
 		F6mYXr6EQZyLKcQNM0vmTGcGMns=
+		</data>
+		<key>SocketCamMenus.storyboardc/8s0-c3-7a8-view-reS-xF-Jqp.nib</key>
+		<data>
+		H0ZcZfFRBh595zCkpD6LZomccrY=
+		</data>
+		<key>SocketCamMenus.storyboardc/Cgq-zV-VGo-view-2IE-eD-cjM.nib</key>
+		<data>
+		wKnH4efCOk5z3auEIU8posXYCyI=
+		</data>
+		<key>SocketCamMenus.storyboardc/Info.plist</key>
+		<data>
+		O52AU0QIO6z1VpQo2bIwWN8Woek=
+		</data>
+		<key>SocketCamMenus.storyboardc/SocketCamMainMenuViewController.nib</key>
+		<data>
+		exYJUpf1TANDMNvjEccivGi+cns=
+		</data>
+		<key>SocketCamMenus.storyboardc/SocketCamSettingsMenuViewController.nib</key>
+		<data>
+		fKQYvX5XuuU1rGRI5WHr4h5fCCY=
+		</data>
+		<key>SocketCamMenus.storyboardc/SocketCamSymbologiesMenuViewController.nib</key>
+		<data>
+		BAZte9khvmkpMCRw0tfOqmztYrM=
+		</data>
+		<key>SocketCamMenus.storyboardc/SocketCamSymbologyCategoriesMenuViewController.nib</key>
+		<data>
+		U0KAcL7pbZ0BMTvk/AzXVi4a0Aw=
+		</data>
+		<key>SocketCamMenus.storyboardc/aWl-Xn-rmr-view-hvR-vz-FJ0.nib</key>
+		<data>
+		JRMKnley6+598Vx7J0osDqLSE4A=
+		</data>
+		<key>SocketCamMenus.storyboardc/rcC-Y6-hpW-view-1an-AC-8XE.nib</key>
+		<data>
+		rwJFkDPm2kj6uDU7OxjXSQJfBRY=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/DzZ-SH-8LH-view-ToS-ml-2DM.nib</key>
+		<data>
+		wImbr/FyaA8AZHmTsVfg/iM8jAY=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Hrp-ku-e1s-view-s82-vd-Egw.nib</key>
+		<data>
+		tVh8Bdu0uBPaj2SVDDYwfiuSAzY=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Info.plist</key>
+		<data>
+		O52AU0QIO6z1VpQo2bIwWN8Woek=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Rux-YG-VMf-view-3TK-g4-1x2.nib</key>
+		<data>
+		rwJFkDPm2kj6uDU7OxjXSQJfBRY=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/S9L-v7-PII-view-qCJ-xh-A1b.nib</key>
+		<data>
+		H0ZcZfFRBh595zCkpD6LZomccrY=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamMainMenuViewController.nib</key>
+		<data>
+		2WgmRgDUWTfDEQVBvyr0n6ZgglA=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSettingsMenuViewController.nib</key>
+		<data>
+		vkz6IbEP4Ec64z0JOh3kkkk5ThM=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSymbologiesMenuViewController.nib</key>
+		<data>
+		5pEQwOVS8hAY6VsNaFTC+6nO4pk=
+		</data>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSymbologyCategoriesMenuViewController.nib</key>
+		<data>
+		nBhXpSejDolbGWA6D6wu/Pobc1c=
 		</data>
 		<key>SocketCamSwiftDecoderViewController.storyboardc/Info.plist</key>
 		<data>
@@ -106,7 +178,7 @@
 		</data>
 		<key>SocketCamSwiftDecoderViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		eJLjEiWeVbXNHMQC7k2QklTxNxk=
+		QeX0E172ZFteXMPZCIhvp0BfnW4=
 		</data>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Info.plist</key>
 		<data>
@@ -118,7 +190,7 @@
 		</data>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		eJLjEiWeVbXNHMQC7k2QklTxNxk=
+		USdpC7ZY2vDGCg4iTYrtFjqxWiU=
 		</data>
 		<key>SocketCamViewController.storyboardc/Info.plist</key>
 		<data>
@@ -130,7 +202,7 @@
 		</data>
 		<key>SocketCamViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		+d8HcFooN9927T7sJE4QfcdaMzE=
+		EbTtYd/scMzcWAFX2mFtej9nPt4=
 		</data>
 		<key>SocketCamViewController_CaptureSwift.storyboardc/Info.plist</key>
 		<data>
@@ -142,7 +214,7 @@
 		</data>
 		<key>SocketCamViewController_CaptureSwift.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		ryeabpiooux9S205hIF59JH+dMc=
+		maRxy5EIqMjUO8RRFDH3jiHkLLY=
 		</data>
 		<key>camera.png</key>
 		<data>
@@ -172,7 +244,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WVR7qplLjcTnSnDJ2b8kov1jQRI=
+			BPwoGGaTizsV6zKTlF0Yl3qrIBI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -181,7 +253,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y73AP4w2sSFcQ0Xl0iEwg9+djOs=
+			BxXn0fZS7bquYEBQGb7KHMPI+3Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -190,7 +262,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WVR7qplLjcTnSnDJ2b8kov1jQRI=
+			BPwoGGaTizsV6zKTlF0Yl3qrIBI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -211,7 +283,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ByixQwxwj3jfISOHiMQcJjrCgwo=
+			9NHi//wYqR5tPtxohr6hNppf5nc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -220,7 +292,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nWf4yeCTOZ4yxo8oMGEoud2Qh+s=
+			xvJ5w6t2BGhA/SZ1M/czeXLTr9I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -229,7 +301,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bRz+fGIXPc1pICZDOxESZG3T/Mw=
+			GcGQJJ0iRUZLSU10DqdtmKPfN0A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -266,7 +338,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XA4dR9C4UnEjxecIqWfI6G4cWAQ=
+			y8WAjLgF6CA95USsY69B6lhZnVA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -275,7 +347,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Moa/ZitFlZiOwcByeyJ/ud318A=
+			M42s6jPi5qMwRyr7LMxMVIDOAIk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -294,7 +366,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FfbAP9XX6UWTzStg8rz5c+5v7mS2xpjL4GelXa2Owp8=
+			hHPnT/o7aU+aTVqWN5H1ellreJpGLuGLnJyRY3o2yY8=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -308,7 +380,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UsUhsyXoxVd4D6M2YN5v2zVjZRScoGSw83/EnOfLRiQ=
+			vOe428AysOK1Z1Hw77Gsg9ww5jv3bs4W8t6kn6VzDII=
 			</data>
 		</dict>
 		<key>Headers/SktCaptureDeviceTypes.h</key>
@@ -357,70 +429,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wBzZ43bPWCJs8j4udHmf99AOWm0+WQBUCwMnbZE6uSk=
+			l5aWsHmQf2ch4aF3Ugo/PT7F+E2FFDlWDUPnIyxiNow=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bdP96PdMl+WyATIJh3qdr2Jib0BHudZ682+cK8RDooY=
+			rZ4q5gqPNolRkMtSFvKsQVn4kZ1qavXo5nyMDjADRT0=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			awKtaXdTpVBQLZ98qthaevzKo9P7obw/KZg3HXpQPP8=
+			rcPdfKpy8UFOhBF3zaYl9JXK6i7gM8Sf/IarpkRhdLk=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bdP96PdMl+WyATIJh3qdr2Jib0BHudZ682+cK8RDooY=
+			rZ4q5gqPNolRkMtSFvKsQVn4kZ1qavXo5nyMDjADRT0=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FWxVSW+zZvmrB3glb0hgqiWAstJZyFHcVAqtiUSqxhY=
+			bbylpYhWkapRX861Op0BmLWkq0W2Z2HgWsdmeW1pS2o=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wBzZ43bPWCJs8j4udHmf99AOWm0+WQBUCwMnbZE6uSk=
+			l5aWsHmQf2ch4aF3Ugo/PT7F+E2FFDlWDUPnIyxiNow=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AinPKcvov+dA9EIrGOPVi+UUKNPjX/82eOnBPrrQsPY=
+			VESfqsOnnuUq2QzbyFNyNSbkfrywyyR/PgO+lq+eEQg=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lrBagpFrK/CQAdBuVe+vJ2Ic5H8vuc4r6AOLIhbW0EU=
+			oGXtoMY55fzuF1g7Ua8yM7BroYtrb1wVhjW7etftYqY=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AinPKcvov+dA9EIrGOPVi+UUKNPjX/82eOnBPrrQsPY=
+			VESfqsOnnuUq2QzbyFNyNSbkfrywyyR/PgO+lq+eEQg=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uatFfwxY59uRi5Uk4H35TxG5VaFOBe5G5+r5pfY4qWY=
+			fnx9P/JBd83ZrL2Wa/An4e2XiN2XgLxnx+T2zvEFddU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -435,6 +507,132 @@
 			<key>hash2</key>
 			<data>
 			oHQY5f4SjiJM03lkvCHFA7eqL1dee0knRoR4rYcyFP4=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/8s0-c3-7a8-view-reS-xF-Jqp.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l6mthVLycfMjx9OaiExCBSHRCbNr3yB6HKeiS4XAME8=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/Cgq-zV-VGo-view-2IE-eD-cjM.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XFcCXbqJrjZf7V6W4vKOC/TqkkwIm5wehawxsTYPUVM=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			htdHd2XMk3yY3L6ZaHBMf3nNMXcjPlT+N9W2TIrboyU=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/SocketCamMainMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OEoEtGGbLiO4v7nQmY9jcgo/ARSz98rR0PmgmkzCdfU=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/SocketCamSettingsMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KxSrWCUcExxrB1ZKqwNgWW594Y+KNQKy20sj+iflTXQ=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/SocketCamSymbologiesMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NLCfoH3nRR/7LKlnxv3upg5c1uG3yjPzEOyxcu7AHAo=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/SocketCamSymbologyCategoriesMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z0ivXnv5B3G3NSYDUz1vumyOZY8cikrfuqUSIbNY1tw=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/aWl-Xn-rmr-view-hvR-vz-FJ0.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i+ffqWZ5ZRLlSY5Uy0fHoZrSA58kZqAQpWcEca6VoK4=
+			</data>
+		</dict>
+		<key>SocketCamMenus.storyboardc/rcC-Y6-hpW-view-1an-AC-8XE.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qRqtETmKyrkLhFbcn/DADv+IvU4ICcQv2l/AqC2G2+I=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/DzZ-SH-8LH-view-ToS-ml-2DM.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pU2jspYSdrgTc5JHJ5WPkV51YMrmoqPqin7zVcp6ox0=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Hrp-ku-e1s-view-s82-vd-Egw.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BoP6tk47voc0CRvQwOUPvzX3vq4XVf4VhI+hySlViBU=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			htdHd2XMk3yY3L6ZaHBMf3nNMXcjPlT+N9W2TIrboyU=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/Rux-YG-VMf-view-3TK-g4-1x2.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qRqtETmKyrkLhFbcn/DADv+IvU4ICcQv2l/AqC2G2+I=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/S9L-v7-PII-view-qCJ-xh-A1b.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			l6mthVLycfMjx9OaiExCBSHRCbNr3yB6HKeiS4XAME8=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamMainMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			V+VGznOdXN6tpvkRMAo0Xee9LcuO8H2ZZ9/6ZOQwxic=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSettingsMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TvgXll+iHwFyH5PVq+lLu+wB58RqvYgBoFgwZAQySOA=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSymbologiesMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9/GUqq2BPvYTTbGWz25oybTripuCWTNBBxFzJQVraIU=
+			</data>
+		</dict>
+		<key>SocketCamMenus_CaptureSwift.storyboardc/SocketCamSymbologyCategoriesMenuViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tqbmfZV1TIfalfFcX/xR6Wq9VPXRa9X2ShdvEQc7MoM=
 			</data>
 		</dict>
 		<key>SocketCamSwiftDecoderViewController.storyboardc/Info.plist</key>
@@ -455,7 +653,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Btz8eP9nkxhWGoHAJ3atoeUlZ66XE8Zfy0jOlGw3Vac=
+			PRfOdq5Mtd6YvHXg4BjIWVC6FPUreSZLYi1AwdSuQK4=
 			</data>
 		</dict>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Info.plist</key>
@@ -476,7 +674,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Btz8eP9nkxhWGoHAJ3atoeUlZ66XE8Zfy0jOlGw3Vac=
+			Axuy8ld1mxnT6o5b3I4oSOm8tTUHWdP0F9xI6aLIAJI=
 			</data>
 		</dict>
 		<key>SocketCamViewController.storyboardc/Info.plist</key>
@@ -497,7 +695,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Msb3yY47f8dA/sFPGKI6soXloH1vnuE3tGT9oy4JKNM=
+			4HvsZLO7WSi8FxpkRHC0iW4nnFlF9jkcbMBgleWi/Lo=
 			</data>
 		</dict>
 		<key>SocketCamViewController_CaptureSwift.storyboardc/Info.plist</key>
@@ -518,7 +716,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nl+dPpz88mwQjhhv6xFtmXWfV1HXQi4HqMmtVqnZArU=
+			j+Idd/DZZQONgiriUI2j1UuPz9lSH3by14/qEHf1SfU=
 			</data>
 		</dict>
 		<key>camera.png</key>
@@ -567,7 +765,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fspj5xpQDpc4SWWvOoXqtLqNOuOp5ttziZoC525hQ5c=
+			TcRPdyaVWidalJ58i6HmnFB6lxuFsuXioCHViJFSKcA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -576,7 +774,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g+OG6FTheJoh+Fk3rJU6XSCAi2OQLQxikSPB8awae/U=
+			wb91V8NkLpPquD3UpTnecXxPX5M00HSsjGyqSAy+6xo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -585,7 +783,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fspj5xpQDpc4SWWvOoXqtLqNOuOp5ttziZoC525hQ5c=
+			TcRPdyaVWidalJ58i6HmnFB6lxuFsuXioCHViJFSKcA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -615,7 +813,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JXezEdPDbHWUlEEMBOqiNExxL3lfHLO7wsbTaX9n6YM=
+			V/EMCYLqAUYv20RLO0Rl3LNB1jK9tT/pGHs0Rjq9sZs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -624,7 +822,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gZNzOVdHf5inaBnw8A6cbvM4lWY07P16HDVNRVURPrU=
+			SOlrx/UflTy8wCBumTV5MvO+fuUWZQcX6JmkYyvbNGM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -633,7 +831,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fNS48oQecFk9qnIc9Kx8qpTUt1QKDWzeSWMEFYLz18Q=
+			J5MDp/M3Pg8JdWTdi6PaeTZzNUp5pY2rzJYJwZuEeRw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -691,7 +889,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kHlDT7rJVaLPO8LNu/tfa5vpWcXQcGGwpmjyndv935k=
+			7jYbVgk64L7GvMIqOPV05XuE+auivZ4WeaH2tibvGNs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -700,7 +898,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J3l7drE1oDlxIKNr+SKwb12mnrU7FdvF7TMfptWZwWE=
+			BSo9GQZFuv5O95JhllSPayt2/78kzBeV5aA3Zn70XYI=
 			</data>
 			<key>optional</key>
 			<true/>
