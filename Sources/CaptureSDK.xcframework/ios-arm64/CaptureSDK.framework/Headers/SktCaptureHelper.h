@@ -624,6 +624,13 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
  */
 -(void)didDiscoveryEndWithResult:(SKTResult)result;
 
+/**
+ * delegate called when CaptureSDK sends logs to the subscriber
+ *
+ * @param logTrace contains the log trace for production apps
+ */
+-(void)didReceiveLogTrace:(NSString * _Nonnull)logTrace;
+
 @end
 
 
@@ -785,7 +792,7 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
  * @param block called upon completion of getting the SocketCam status with
  * result and SocketCam status as argument.
  */
--(void)getSocketCamStatusWithConfirmationHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureSocketCam status))block;
+-(void)getSocketCamStatusWithConfirmationHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureSocketCam status))block __attribute__((deprecated("SocketCam is enabled by default. This method will be removed soon.")));
 
 /**
  * set the SocketCam (Scanning using the host camera) status. The status could
@@ -795,7 +802,7 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
  * @param block called upon completion of setting the SocketCam status with the
  * result as argument.
  */
--(void)setSocketCamStatus:(SKTCaptureSocketCam)status completionHandler:(void(^ _Nullable)(SKTResult result))block;
+-(void)setSocketCamStatus:(SKTCaptureSocketCam)status completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("SocketCam is enabled by default. This method will be removed soon.")));
 
 
 #pragma mark - Single Partnership

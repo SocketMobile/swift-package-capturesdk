@@ -211,11 +211,18 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 	SKTCaptureEventIDPcscDeviceControlResponse = 20,
 
 	/**
+	Event when a CaptureSDK log trace is generated.
+
+	Type: kString
+	*/
+	SKTCaptureEventIDLogTrace = 21,
+
+	/**
 	The Last Event should always be the last ID in the list of possible events.
 
 	Type: kNone
 	*/
-	SKTCaptureEventIDLastID = 21,
+	SKTCaptureEventIDLastID = 22,
 
 };
 

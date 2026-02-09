@@ -1,6 +1,28 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.63
+
+### New
+
+  * We have added a logger for production. You can get them for debugging and analysis.
+
+
+
+### Improvements
+
+  * We have updated SwiftDecoder to 6.0.5
+
+  * We have deprecated the SocketCam status property as it is enabled by default
+
+
+
+### Bug fixes
+
+  * We have fixed the [incorrect firmware version year](https://github.com/SocketMobile/swift-package-capturesdk/issues/36)
+
+
+
 ## Version 2.0.57
 
 ### New

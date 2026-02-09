@@ -3,7 +3,6 @@
     @brief Main entry point for the Capture API
 
     @copyright Copyright © 2017 Socket Mobile, Inc.
-
 */
 
 #ifndef SktCapture_h
@@ -30,20 +29,22 @@ typedef void* SKTHandle;
  */
 @interface SKTAppInfo : NSObject
 /** @brief should be set to the platform prefix followed by a colon and the app Bundle ID: example: "ios: com.mycompany.myapp"
-*/
-@property (strong) NSString* _Nonnull AppID;
+ */
+@property (strong) NSString * _Nonnull AppID;
 
 /** @brief should be set to the Socket Mobile Developer ID: 07ef56c4-7acc-323b-7821-5c0ab2122243*/
-@property (strong) NSString* _Nonnull DeveloperID;
+@property (strong) NSString * _Nonnull DeveloperID;
 
 /** @brief should be set to the application AppKey: MCwCFBsP4MDTmN+fBzsWLxYBsBmGalwTAhR56dMFyCEdzlxKd1zNWfdACsXjuA== */
-@property (strong) NSString* _Nonnull AppKey;
+@property (strong) NSString * _Nonnull AppKey;
 
 /** @brief should be set to the application's primary bundle. */
-@property (strong) NSBundle* _Nullable mainBundle;
+@property (strong) NSBundle * _Nullable mainBundle;
 
--(bool) verifyWithBundleId:(NSString* _Nonnull) bundleId;
+-(bool) verifyWithBundleId:(NSString * _Nonnull)bundleId;
+
 @end
+
 
 @class SKTCapture;
 
@@ -61,7 +62,7 @@ typedef void* SKTHandle;
  @param capture contains a reference to the Capture object for which the event
  @param result contains the result of receiving this event
  */
--(void) didReceiveEvent:(SKTCaptureEvent* _Nonnull) event forCapture:(SKTCapture* _Nonnull) capture withResult:(SKTResult) result;
+-(void)didReceiveEvent:(SKTCaptureEvent * _Nonnull)event forCapture:(SKTCapture * _Nonnull)capture withResult:(SKTResult)result;
 
 @end
 
@@ -99,10 +100,11 @@ typedef void* SKTHandle;
 
 
  */
+
 @interface SKTCapture : NSObject
 
 
-@property (nonatomic, strong, readonly) NSString* _Nullable  guid;// guid of the device, this SKTCapture object is created upon device arrival
+@property (nonatomic, strong, readonly) NSString * _Nullable guid; // guid of the device, this SKTCapture object is created upon device arrival
 
 /**
  @brief initialize Capture object without delegate.
@@ -115,22 +117,28 @@ typedef void* SKTHandle;
  @return the capture instance.
  @remark this is the recommended method to initialize capture.
  */
--(nonnull instancetype)initWithDelegate:(id<SKTCaptureDelegate> _Nullable) delegate;
+-(nonnull instancetype)initWithDelegate:(id<SKTCaptureDelegate> _Nullable)delegate;
 
 /**
  @brief change the capture delegate.
  @param delegate set a new delegate or nil as delegate for receiving Capture event
-
+ 
  @remark it is safe to specify nil as delegate to ignore all capture events
  */
--(void)setDelegate:(id<SKTCaptureDelegate> _Nullable) delegate;
+-(void)setDelegate:(id<SKTCaptureDelegate> _Nullable)delegate;
+
+/**
+ @brief enable/disable internal CaptureSDK for useful production logs
+ @param enable allows to start logging
+ */
+-(void)setLogger:(BOOL)enable;
 
 /**
  @brief open the first instance of capture
  @param appInfo contains the application information to open capture
  @param block receives the result of opening capture
  */
--(void) openWithAppInfo:(SKTAppInfo* _Nonnull) appInfo completionHandler:(void(^_Nullable)(SKTResult result)) block;
+-(void)openWithAppInfo:(SKTAppInfo * _Nonnull)appInfo completionHandler:(void(^_Nullable)(SKTResult result))block;
 
 /**
  @brief open the device identified by the GUID
@@ -138,7 +146,7 @@ typedef void* SKTHandle;
  @param block receives the result of opening the device and a new capture instance reprensenting
  the device
  */
--(void) openDeviceWithGuid:(NSString* _Nonnull) guid completionHandler:(void(^_Nullable)(SKTResult result, SKTCapture* _Nullable deviceCapture)) block;
+-(void)openDeviceWithGuid:(NSString * _Nonnull)guid completionHandler:(void(^_Nullable)(SKTResult result, SKTCapture * _Nullable deviceCapture))block;
 
 /**
  @brief close a capture instance. It could be the main capture object or a capture
@@ -146,7 +154,7 @@ typedef void* SKTHandle;
  the device from the iOS device.
  @param block contains the result of closing the capture instance.
  */
--(void) closeWithCompletionHandler:(void(^_Nullable)(SKTResult result)) block;
+-(void)closeWithCompletionHandler:(void(^_Nullable)(SKTResult result))block;
 
 /**
  @brief set a property and depending of the capture instance used it could be setting
@@ -154,13 +162,13 @@ typedef void* SKTHandle;
  @param property contains the property to set.
  @param block receives the result of setting the property.
  */
--(void) setProperty:(SKTCaptureProperty*_Nonnull) property completionHandler:(void(^_Nullable)(SKTResult result, SKTCaptureProperty* _Nullable complete)) block;
+-(void)setProperty:(SKTCaptureProperty *_Nonnull)property completionHandler:(void(^_Nullable)(SKTResult result, SKTCaptureProperty * _Nullable complete))block;
 
 /**
  @brief get a property and depending of the capture instalce used it could be getting
-        a property of a device or of the main capture object.
+ a property of a device or of the main capture object.
  */
--(void) getProperty:(SKTCaptureProperty*_Nonnull) property completionHandler:(void(^_Nullable)(SKTResult result, SKTCaptureProperty* _Nullable complete)) block;
+-(void)getProperty:(SKTCaptureProperty *_Nonnull)property completionHandler:(void(^_Nullable)(SKTResult result, SKTCaptureProperty * _Nullable complete))block;
 
 /**
  @brief delegate for all the event received from capture low level interface.
@@ -171,9 +179,10 @@ typedef void* SKTHandle;
 
 
 /**
-  @brief Verifies if the the application's Bundle Info.plist contains "com.socketmobile.chs" in its "UISupportedExternalAccessoryProtocols" array.
+ @brief Verifies if the the application's Bundle Info.plist contains "com.socketmobile.chs" in its "UISupportedExternalAccessoryProtocols" array.
  */
-+(bool)canConnectToBarcodeScannersWithBundle:(NSBundle * _Nonnull) bundle;
++(bool)canConnectToBarcodeScannersWithBundle:(NSBundle * _Nonnull)bundle;
+
 @end
 
 #pragma mark - Helper
@@ -215,7 +224,7 @@ typedef void* SKTHandle;
  * @param propId  property ID
  * @return only the ID of the property without the other bitwise value
  */
-+(NSInteger) retrieveIdFromPropertId:(NSInteger) propId;
++(NSInteger)retrieveIdFromPropertId:(NSInteger)propId;
 
 /**
  * retrieves the Set parameter type of a property
@@ -223,7 +232,7 @@ typedef void* SKTHandle;
  * @param propId property ID
  * @return type of the parameter to set the property with
  */
-+(NSInteger) retrieveSetTypeFromPropertyId:(NSInteger) propId;
++(NSInteger)retrieveSetTypeFromPropertyId:(NSInteger)propId;
 
 /**
  * retrieves the Get parameter type of a property
@@ -231,7 +240,7 @@ typedef void* SKTHandle;
  * @param propId property ID
  * @return type of the parameter to get the property (usually 'none')
  */
-+(NSInteger) retrieveGetTypeFromPropertyId:(NSInteger) propId;
++(NSInteger)retrieveGetTypeFromPropertyId:(NSInteger)propId;
 
 /**
  * retrieves the group ID of a property
@@ -239,7 +248,7 @@ typedef void* SKTHandle;
  * @param propId property ID
  * @return the group ID to which the property belongs
  */
-+(NSInteger) retrieveGroupIdFromPropertyId:(NSInteger) propId;
++(NSInteger)retrieveGroupIdFromPropertyId:(NSInteger)propId;
 
 /**
  * checks if the property is a main capture object property or
@@ -248,7 +257,7 @@ typedef void* SKTHandle;
  * @param propId property ID
  * @return  true is the property is a main capture object, false otherwise
  */
-+(NSInteger) isCaptureFromPropertyId:(NSInteger) propId;
++(NSInteger)isCaptureFromPropertyId:(NSInteger)propId;
 
 /**
  * creates the bitwise value for Data Confirmation
@@ -259,7 +268,7 @@ typedef void* SKTHandle;
  * @param led 1 for green LED, 2 for red LED, 0 for no LED
  * @return the data confirmation bitwise value
  */
-+(NSInteger) getDataComfirmationWithReserve:(NSInteger) reserved withRumble:(NSInteger) rumble withBeep:(NSInteger) beep withLed:(NSInteger) led;
++(NSInteger)getDataComfirmationWithReserve:(NSInteger)reserved withRumble:(NSInteger)rumble withBeep:(NSInteger)beep withLed:(NSInteger)led;
 
 /**
  * retrieves the data confirmation LED setting
@@ -267,7 +276,7 @@ typedef void* SKTHandle;
  * @param dataConfirmation data confirmation long value
  * @return 1 for green LED, 2 for red LED, 0 for no LED
  */
-+(NSInteger) retrieveLedFromDataConfirmation:(NSInteger) dataConfirmation;
++(NSInteger)retrieveLedFromDataConfirmation:(NSInteger)dataConfirmation;
 
 /**
  * retrieves the data confirmation beep setting
@@ -275,7 +284,7 @@ typedef void* SKTHandle;
  * @param dataConfirmation data confirmation long value
  * @return 1 for good beep, 2 for bad beep, 0 for no beep
  */
-+(NSInteger) retrieveBeepFromDataConfirmation:(NSInteger) dataConfirmation;
++(NSInteger)retrieveBeepFromDataConfirmation:(NSInteger)dataConfirmation;
 
 /**
  * retrieves the data confirmation vibrate setting
@@ -283,7 +292,7 @@ typedef void* SKTHandle;
  * @param dataConfirmation data confirmation long value
  * @return 1 for good vibrate, 2 for bad vibrate, 0 for no vibrate
  */
-+(NSInteger) retrieveRumbleFromDataConfirmation:(NSInteger) dataConfirmation;
++(NSInteger)retrieveRumbleFromDataConfirmation:(NSInteger)dataConfirmation;
 
 /**
  * checks if the Left Button is pressed. For device that has
@@ -293,7 +302,7 @@ typedef void* SKTHandle;
  * @param buttonsStatus value received in the button property or event
  * @return true if the left button is pressed, false otherwise
  */
-+(NSInteger) isLeftPressedFromButtonsStatus:(NSInteger) buttonsStatus;
++(NSInteger)isLeftPressedFromButtonsStatus:(NSInteger)buttonsStatus;
 
 /**
  * checks if the Right Button is pressed. For device that has
@@ -303,7 +312,7 @@ typedef void* SKTHandle;
  * @param buttonsStatus value received in the button property or event
  * @return true if the right button is pressed, false otherwise
  */
-+(NSInteger) isRightPressedFromButtonsStatus:(NSInteger) buttonsStatus;
++(NSInteger)isRightPressedFromButtonsStatus:(NSInteger)buttonsStatus;
 
 /**
  * checks if the Middle Button is pressed. For device that has
@@ -313,7 +322,7 @@ typedef void* SKTHandle;
  * @param buttonsStatus value received in the button property or event
  * @return true if the middle button is pressed, false otherwise
  */
-+(NSInteger) isMiddlePressedFromButtonsStatus:(NSInteger) buttonsStatus;
++(NSInteger)isMiddlePressedFromButtonsStatus:(NSInteger)buttonsStatus;
 
 /**
  * checks if the Power Button is pressed.
@@ -321,7 +330,7 @@ typedef void* SKTHandle;
  * @param buttonsStatus value received in the button property or event
  * @return true if the power button is pressed, false otherwise
  */
-+(NSInteger) isPowerPressedFromButtonsStatus:(NSInteger) buttonsStatus;
++(NSInteger)isPowerPressedFromButtonsStatus:(NSInteger)buttonsStatus;
 
 /**
  * checks if the Ring Detached is asserted. This is used only for the Ring Scanner
@@ -330,7 +339,7 @@ typedef void* SKTHandle;
  * @param buttonsStatus value received in the button property or event
  * @return true if the Ring Detached is asserted, false otherwise
  */
-+(NSInteger) IsRingDetachedFromButtonsStatus:(NSInteger) buttonsStatus;
++(NSInteger)IsRingDetachedFromButtonsStatus:(NSInteger)buttonsStatus;
 
 /**
  * fills the bitwise value then the Left button is pressed or not
@@ -338,7 +347,7 @@ typedef void* SKTHandle;
  * @param pressed 1 for pressed, 0 for released
  * @return return the value with the left button filled accordingly
  */
-+(NSInteger) pressLeftButton:(NSInteger) pressed;
++(NSInteger)pressLeftButton:(NSInteger)pressed;
 
 /**
  * fills the bitwise value then the Right button is pressed or not
@@ -346,7 +355,7 @@ typedef void* SKTHandle;
  * @param pressed 1 for pressed, 0 for released
  * @return return the value with the right button filled accordingly
  */
-+(NSInteger) pressRightButton:(NSInteger) pressed;
++(NSInteger)pressRightButton:(NSInteger)pressed;
 
 /**
  * fills the bitwise value then the Middle button is pressed or not
@@ -354,7 +363,7 @@ typedef void* SKTHandle;
  * @param pressed 1 for pressed, 0 for released
  * @return return the value with the middle button filled accordingly
  */
-+(NSInteger) pressMiddleButton:(NSInteger) pressed;
++(NSInteger)pressMiddleButton:(NSInteger)pressed;
 
 /**
  * fills the bitwise value then the Power button is pressed or not
@@ -362,7 +371,7 @@ typedef void* SKTHandle;
  * @param pressed 1 for pressed, 0 for released
  * @return return the value with the power button filled accordingly
  */
-+(NSInteger) pressPowerButton:(NSInteger) pressed;
++(NSInteger)pressPowerButton:(NSInteger)pressed;
 
 /**
  * fills the bitwise value then the Ring is detached or not
@@ -370,7 +379,7 @@ typedef void* SKTHandle;
  * @param detached 1 for pressed, 0 for released
  * @return return the value with the rign detached filled accordingly
  */
-+(NSInteger) detachRing:(NSInteger) detached;
++(NSInteger)detachRing:(NSInteger)detached;
 
 /**
  * retrieves the power state
@@ -382,7 +391,7 @@ typedef void* SKTHandle;
  * @param powerStatus value returned by the power state property or event
  * @return the power state
  */
-+(NSInteger) getPowerStateFromPower:(NSInteger) powerStatus;
++(NSInteger)getPowerStateFromPower:(NSInteger)powerStatus;
 
 /**
  * retrieves the minimum level of the battery status range
@@ -390,7 +399,7 @@ typedef void* SKTHandle;
  * @param batteryLevel value from property or event
  * @return the minimum in the battery status range, usually 0
  */
-+(NSInteger) getMinimumLevelFromBatteryLevel:(NSInteger) batteryLevel;
++(NSInteger)getMinimumLevelFromBatteryLevel:(NSInteger)batteryLevel;
 
 /**
  * retrieves the maximum level of the battery status range
@@ -398,7 +407,7 @@ typedef void* SKTHandle;
  * @param batteryLevel value from battery level property or event
  * @return the maximum in the battery status range, usually 100
  */
-+(NSInteger) getMaximumLevelFromBatteryLevel:(NSInteger) batteryLevel;
++(NSInteger)getMaximumLevelFromBatteryLevel:(NSInteger)batteryLevel;
 
 /**
  * retrieves the current level of the battery between
@@ -407,7 +416,7 @@ typedef void* SKTHandle;
  * @param batteryLevel value from battery level property or event
  * @return current battery level in the range defined with a minimum and maximum value
  */
-+(NSInteger) getCurrentLevelFromBatteryLevel:(NSInteger) batteryLevel;
++(NSInteger)getCurrentLevelFromBatteryLevel:(NSInteger)batteryLevel;
 
 /**
  * adds the power state in the final value that is received
@@ -416,7 +425,7 @@ typedef void* SKTHandle;
  * @param powerState the power state
  * @return the power status with the power state
  */
-+(NSInteger) setPowerState:(NSInteger) powerState;
++(NSInteger)setPowerState:(NSInteger)powerState;
 
 /**
  * sets the minimum level of the battery level range that is
@@ -425,7 +434,7 @@ typedef void* SKTHandle;
  * @param minLevel min level of the battery level range
  * @return battery level with the minimum level set
  */
-+(NSInteger) setMinLevelForBatteryLevel:(NSInteger) minLevel;
++(NSInteger)setMinLevelForBatteryLevel:(NSInteger)minLevel;
 
 /**
  * set the maximum level of the battery level range that is
@@ -434,7 +443,7 @@ typedef void* SKTHandle;
  * @param maxLevel maximum level of the battery level range
  * @return battery level with the maximum level set
  */
-+(NSInteger) setMaxLevelForBatteryLevel:(NSInteger) maxLevel;
++(NSInteger)setMaxLevelForBatteryLevel:(NSInteger)maxLevel;
 
 /**
  * set the current level of the battery level range that is
@@ -443,7 +452,7 @@ typedef void* SKTHandle;
  * @param curLevel current battery level in the battery level range
  * @return battery level with the current battery level set
  */
-+(NSInteger) setCurLevelForBatteryLevel:(NSInteger) curLevel;
++(NSInteger)setCurLevelForBatteryLevel:(NSInteger)curLevel;
 
 @end
 

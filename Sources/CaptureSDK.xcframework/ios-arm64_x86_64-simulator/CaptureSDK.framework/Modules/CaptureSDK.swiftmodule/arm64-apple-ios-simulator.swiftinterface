@@ -52,7 +52,10 @@ public protocol CaptureHelperDevicePowerDelegate : CaptureSDK.CaptureHelperDeleg
 public protocol CaptureHelperDeviceButtonsDelegate : CaptureSDK.CaptureHelperDelegate {
   func didChangeButtonsState(_ buttonsState: CaptureSDK.SKTCaptureButtonsState, forDevice device: CaptureSDK.CaptureHelperDevice)
 }
-public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperDiscoveryDelegate, CaptureSDK.CaptureHelperErrorDelegate {
+public protocol CaptureHelperLoggerDelegate : CaptureSDK.CaptureHelperDelegate {
+  func didReceiveLogTrace(_ logTrace: Swift.String)
+}
+public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperDiscoveryDelegate, CaptureSDK.CaptureHelperErrorDelegate, CaptureSDK.CaptureHelperLoggerDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDevice : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
@@ -185,6 +188,7 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   open func getDevices() -> Swift.Array<CaptureSDK.CaptureHelperDevice>
   @available(*, deprecated)
   open func getDeviceManagers() -> Swift.Array<CaptureSDK.CaptureHelperDeviceManager>
+  open func setLogger(enable: Swift.Bool)
   open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func closeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   public func didReceive(_ event: CaptureSDK.SKTCaptureEvent, for capture: CaptureSDK.SKTCapture, withResult result: CaptureSDK.SKTResult)
@@ -196,8 +200,10 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   #endif
   open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
+  @available(*, deprecated, message: "SocketCam is enabled by default. This method will be removed soon")
   open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
   #endif
+  @available(*, deprecated, message: "SocketCam is enabled by default. This method will be removed soon")
   open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setSocketCamSymbologySelectorDisabled(_ isDisabled: Swift.Bool, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -222,6 +228,13 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   #if compiler(>=5.3) && $NonescapableTypes
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   #endif
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class SktLogger : ObjectiveC.NSObject {
+  @objc public static func sharedInstance() -> CaptureSDK.SktLogger
+  @objc public static func destroy()
+  @objc override dynamic public init()
+  @objc open func startLogging()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers open class SocketCamControllerSwift : ObjectiveC.NSObject {

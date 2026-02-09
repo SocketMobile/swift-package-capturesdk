@@ -339,6 +339,16 @@ SWIFT_CLASS("_TtC10CaptureSDK32SinglePartnershipControllerSwift")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+SWIFT_CLASS("_TtC10CaptureSDK9SktLogger")
+@interface SktLogger : NSObject
+/// Creates or returns the shared instance
++ (SktLogger * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Destroys the shared instance, triggering deinitialization
++ (void)destroy;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)startLogging;
+@end
+
 @class NSDate;
 @class UIViewController;
 SWIFT_CLASS("_TtC10CaptureSDK24SocketCamControllerSwift")
