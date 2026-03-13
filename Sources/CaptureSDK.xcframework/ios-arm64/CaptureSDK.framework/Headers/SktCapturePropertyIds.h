@@ -504,6 +504,13 @@ typedef NS_ENUM(NSInteger, SKTCapturePropertyID) {
 	*/
 	SKTCapturePropertyIDRemoveDevice = -2146107372,
 
+	/**
+	property to power cycle a Bluetooth LE device when on a power source (e.g. charging). Otherwise it will just power off the device
+
+	Device: True	Get Type: NotApplicable 	Set Type: None
+	*/
+	SKTCapturePropertyIDResetDevice = 1048832,
+
 
 };
 
@@ -1087,6 +1094,17 @@ typedef NS_OPTIONS(UInt8, SKTCaptureBluetoothDiscoveryMode)
 	SKTCaptureBluetoothDiscoveryModeBluetoothLowEnergy=0x01,
 	/** Discovery for Bluetooth Classic devices. */
 	SKTCaptureBluetoothDiscoveryModeBluetoothClassic=0x02,
+};
+
+/**
+ @brief Mask for the Decode Local Action selection property. It applies the decode local action selection on the given device(s) set with the mask 
+*/
+typedef NS_OPTIONS(UInt8, SKTCaptureDecodeLocalActionSelectionMask) 
+{
+	/** Mask applied on the Good local decode action result */
+	SKTCaptureDecodeLocalActionSelectionMaskGood=0x01,
+	/** Mask applied on the Bad local decode action result */
+	SKTCaptureDecodeLocalActionSelectionMaskBad=0x02,
 };
 
 

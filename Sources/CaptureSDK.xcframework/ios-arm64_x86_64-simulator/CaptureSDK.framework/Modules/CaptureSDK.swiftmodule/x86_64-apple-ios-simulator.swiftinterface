@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -96,7 +96,9 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #if compiler(>=5.3) && $NonescapableTypes
   open func getDecodeActionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction?) -> Swift.Void)
   #endif
+  open func getDecodeLocalActionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ goodReadBeep: CaptureSDK.SKTCaptureDataConfirmationBeep, _ goodReadLed: CaptureSDK.SKTCaptureDataConfirmationLed, _ goodReadRumble: CaptureSDK.SKTCaptureDataConfirmationRumble, _ badReadBeep: CaptureSDK.SKTCaptureDataConfirmationBeep, _ badReadLed: CaptureSDK.SKTCaptureDataConfirmationLed, _ badReadRumble: CaptureSDK.SKTCaptureDataConfirmationRumble) -> Swift.Void)
   open func setDecodeAction(_ decodeAction: CaptureSDK.SKTCaptureLocalDecodeAction, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setDecodeLocalAction(_ decodeLocalActionMask: CaptureSDK.SKTCaptureDecodeLocalActionSelectionMask, led: CaptureSDK.SKTCaptureDataConfirmationLed, beep: CaptureSDK.SKTCaptureDataConfirmationBeep, rumble: CaptureSDK.SKTCaptureDataConfirmationRumble, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   open func getDataAcknowledgmentWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ dataAcknownledgement: CaptureSDK.SKTCaptureDeviceDataAcknowledgment?) -> Swift.Void)
   #endif
@@ -144,6 +146,8 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   #if compiler(>=5.3) && $NonescapableTypes
   open func getTimers(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ timer: CaptureSDK.SKTCaptureTimer?, _ connectedPowerOffTimer: Swift.UInt16, _ disconnectedPowerOffTimer: Swift.UInt16, _ triggerLockTimer: Swift.UInt16) -> Swift.Void)
   #endif
+  open func setReset(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setPowerOff(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   #if compiler(>=5.3) && $NonescapableTypes
   open func getProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   #endif

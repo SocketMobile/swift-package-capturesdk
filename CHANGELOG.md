@@ -1,6 +1,25 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.65
+
+### New
+
+  * We have added properties for our new Bluetooth LE scanner S721
+
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * We have fixed the D600 device arrival that may not be triggered in rare cases
+
+
+
 ## Version 2.0.63
 
 ### New
