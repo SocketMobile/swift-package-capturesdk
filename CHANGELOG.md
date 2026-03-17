@@ -1,6 +1,24 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.67
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * We have fixed the configuration of the S721 when its device arrival is triggered
+
+
+
 ## Version 2.0.65
 
 ### New
