@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		aXDJXH+ket6Z06QITO1rOPwf/Q8=
+		1KG/P1ZAjY9QxSGpT8pERGopNX0=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SktCaptureHelper.h</key>
 		<data>
-		pbv1woYGFUhJu7VpBXGQQHi/Vdo=
+		gEZyWsBrvqdNj6zmVyAiLuNyX1g=
 		</data>
 		<key>Headers/SktCapturePropertyIds.h</key>
 		<data>
@@ -46,31 +46,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KteJOcMVVCbxUeupCH197WyGTcg=
+		k+7DIlr5i6nyJX6aLM+AO/uW1RI=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		xraTQEtCQRFNRXlgP0e2Qtn+3GQ=
+		PXpOyMlXqCHYsAy3amOUTMM5kTY=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		GLcmjzfCOMrDPsCRhyzRKBWufKU=
+		V4bb1EuZFPMbhHPSyJboDTCT1bQ=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		URBhKLkiovHFAOUYCnPmf97qE5g=
+		d1RafXn3jAP5KwPsvaIT3S5nZ/s=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		GLcmjzfCOMrDPsCRhyzRKBWufKU=
+		V4bb1EuZFPMbhHPSyJboDTCT1bQ=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4j64Ztp7quU8W40DURP5Jind56M=
+		OAJhEm6uX1BY1afN/q+Qy4xGhKg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		GVhNu0fPVamDsjPxKoWJmjGxUJs=
+		iMuPA8nGuNTldlhbjATPJSc4t3o=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -158,7 +158,7 @@
 		</data>
 		<key>SocketCamSwiftDecoderViewController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		QeX0E172ZFteXMPZCIhvp0BfnW4=
+		EmmowJgljf3gaoi+W6Y5bFv9nuI=
 		</data>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Info.plist</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		USdpC7ZY2vDGCg4iTYrtFjqxWiU=
+		SvII73cVfG02RmQYcmCNImfflzQ=
 		</data>
 		<key>SocketCamViewController.storyboardc/Info.plist</key>
 		<data>
@@ -346,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2EZUcPeX28oJqXlF7bNZgmvXrS4kUR+KEcoLWIiWnIo=
+			Eo0OSbJ0NpiF7w8pr33ezWbAA4mDC5Qh1827grrwcXo=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -388,7 +388,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ByM5W4CeDVmA7DWpLSF4TAH0d3iQmP5XSNNGgwy1kNI=
+			bBTtqgKKctQFeisNTJib4zqHKkYIWv56tG7+IxzMY/0=
 			</data>
 		</dict>
 		<key>Headers/SktCapturePropertyIds.h</key>
@@ -409,42 +409,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bUkkV5yfXLBij5EnIWDGOlurSBPJiTnLRMaE0WkvXj8=
+			upf/8nur4M9x3ccbWdthf07SPnjJqsJDVSvwuFyj6e4=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BzxlyETxuOMaQzcUp8PhXJ3rORCk81SFPj5UDkGZYYI=
+			dLhbII+cJO3K/cL0TLB93SwMgiZoba5KwlduUUTr0n4=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7RRmA00qyqpuw9PetjZaWUoY8Gpn7S7AyUCBOBrnACA=
+			o9ab+qdRxeiwg6KxG06p9TDs5pmTIcnrWL/lhBoRxqc=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BzxlyETxuOMaQzcUp8PhXJ3rORCk81SFPj5UDkGZYYI=
+			dLhbII+cJO3K/cL0TLB93SwMgiZoba5KwlduUUTr0n4=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1Am8H6f5sn6xsDQLBYvzr7DUOVZlCL56DkMJ7XgsxI=
+			YKP+r3k9JlRte6z36nBvBjSqVhCb2msumAz1ebHapds=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hCp1yg1V0FZIiY2DzwNGM/i8VMKq5hBCZnPCGR233Xw=
+			Yu1A/YpDcQwgpGDWo0SGsYtLoqpZNcmZMDAskTr0NUE=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
@@ -598,7 +598,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PRfOdq5Mtd6YvHXg4BjIWVC6FPUreSZLYi1AwdSuQK4=
+			Mc4FWgbp7EbQd8i5J3IBjANRgM92xfplMjbCcOy/j8Y=
 			</data>
 		</dict>
 		<key>SocketCamSwiftDecoderViewController_CaptureSwift.storyboardc/Info.plist</key>
@@ -619,7 +619,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Axuy8ld1mxnT6o5b3I4oSOm8tTUHWdP0F9xI6aLIAJI=
+			oBpmnEJC9LUmDky/4tuj3G3HdXatH7jdlIqMHKR+aQA=
 			</data>
 		</dict>
 		<key>SocketCamViewController.storyboardc/Info.plist</key>

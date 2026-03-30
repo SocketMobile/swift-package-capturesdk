@@ -6,5 +6,4 @@ framework module CaptureSDK {
 
 module CaptureSDK.Swift {
   header "Capture-Swift.h"
-  requires objc
 }

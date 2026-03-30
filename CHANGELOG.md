@@ -1,6 +1,28 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.0.73
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * We have fixed the [orientation of the SocketCam video stream](https://github.com/SocketMobile/capturesdk_flutter/issues/18)
+
+  * We have fixed a crash that may happen at a device removal (low frequency)
+
+  * We have fixed our CaptureHelper concurrency issues raised in [issue #35](https://github.com/SocketMobile/swift-package-capturesdk/issues/35)
+
+
+
 ## Version 2.0.67
 
 ### New

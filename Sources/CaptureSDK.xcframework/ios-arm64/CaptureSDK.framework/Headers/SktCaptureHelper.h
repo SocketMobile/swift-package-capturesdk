@@ -731,6 +731,31 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
 -(void)closeWithCompletionHandler:(void(^ _Nullable)(SKTResult result))block;
 
 
+#pragma mark - SKTCaptureHelper Logger
+
+/**
+ * Enable logging for CaptureSDK
+ *
+ * This method should be called before opening Capture to enable logging from the start.
+ * If called after Capture is already open, it will only affect subsequent operations.
+ *
+ * @param enable YES to enable logging, NO to disable - Default value is NO
+ *
+ * - Note: Logging must be enabled before calling `openWithAppInfo` to capture all SDK activity
+ *
+ * Example usage:
+ * ```Objective-C
+ * [[SKTCaptureHelper sharedInstance] setLogger:YES];
+ * [[SKTCaptureHelper sharedInstance] openWithAppInfo:appInfo...
+ *
+ * // Then use implement the protocol CaptureHelperLoggerDelegate with function
+ * -(void)didReceiveLogTrace:(NSString *)logTrace; {
+ *    // Handle the log the way you want
+ * }
+ * ```
+ */
+-(void)setLogger:(BOOL)enable;
+
 #pragma mark - Capture Devices list
 
 /**
