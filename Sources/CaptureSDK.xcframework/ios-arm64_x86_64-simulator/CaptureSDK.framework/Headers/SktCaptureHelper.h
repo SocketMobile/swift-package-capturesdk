@@ -369,104 +369,14 @@
 
 /**
  * DeviceManager manages the BLE devices, and provides an API
- * to start the discovery of BLE devices (only looking for Socket Mobile D600).
- * It also handles the favorites. Setting a particular D600 as favorite will
- * make the DeviceManager try to connect to it automatically.
+ * to start the discovery and connection to BLE devices.
  *
  */
+@interface SKTCaptureHelperDeviceManager : SKTCaptureHelperDevice
 /**
- * THIS CLASS WILL BE DEPRECATED SOON. MOST OF THE FUNCTIONS ARE TRANSFERRED AT THE CAPTURE HELPER LEVEL.
+ * THIS CLASS IS PRIVATE. MOST OF THE FUNCTIONS ARE TRANSFERRED AT THE CAPTURE HELPER LEVEL.
  * PLEASE DO CHANGE YOUR CODE ACCORDINGLY
  */
-__attribute__((deprecated("This class will be deprecated and removed soon. Most of the functions will be transferred at the CaptureHelper level.")))
-@interface SKTCaptureHelperDeviceManager : SKTCaptureHelperDevice
-
-/**
- * start a discovery of devices manages by this manager (BLE)
- *
- * The discovery starts immediately and this method returns also immediately
- * with the result in the block function.
- *
- * If there are some devices around a
- * @param timeInSeconds contains the number of seconds the discovery should last
- * @param block receiving the result of starting the discovery
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * USE func addBluetoothDevice(_ bluetoothDiscoveryMode: SktBluetoothDiscoveryMode, withCompletionHandler completion: @escaping(_ result: SKTResult) -> Void) AT THE CAPTURE HELPER LEVEL
- */
--(void)startDiscoveryWithTimeout:(NSInteger)timeInSeconds completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
-/**
- * set the favorites for the auto connection. If favorites are set, the DeviceManager
- * tries to discover BLE device (only looking for Socket D600 device) and try to connect
- * to the one matching to the favorite information
- *
- * @param favorites contains the D600 peripheral identifier (UUID) semi-colon separated
- * in case there are more than one device to connect to
- * @param block called when the favorites has been set with the result as argument
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * Favorites are not necessary anymore with CaptureSDK 2.0
- */
--(void)setFavoriteDevices:(NSString * _Nonnull)favorites completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
-/**
- * retrieve the list of favorites devices.
- * the favorites is a string of semi-colon separated peripheral UUID identifier.
- *
- * @param block called when getting the favorites has completed with the result and the
- * actual favorites string as argument.
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * Favorites are not necessary anymore with CaptureSDK 2.0
- */
--(void)getFavoriteDevicesWithCompletionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable favorites))block __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
-/**
- * retrieve the device unique identifier from the device GUID. The unique identifier can
- * be use to add it into the favorites list.
- *
- * @param deviceGuid contains the device GUID to identify the device to get the unique identifier from
- * @param block called when getting the device unique identifier has completed with the result and the
- * unique identifier as argument.
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * Use method getDeviceUniqueIdentifierFromDeviceGuid:(NSString *)deviceGuid completionHandler:(void(^ )(SKTResult result, NSString * deviceUniqueIdentifier))block  AT THE CAPTURE HELPER LEVEL
- */
--(void)getDeviceUniqueIdentifierFromDeviceGuid:(NSString * _Nonnull)deviceGuid completionHandler:(void(^ _Nullable)(SKTResult result, NSString * _Nullable deviceUniqueIdentifier))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
-
-/**
- * connect to a discovered device with a device discovery (startDiscoveryWithTimeout)
- *
- * This feature works only when used with a BLE DeviceManager
- *
- * @param device contains the result of the discovery
- * @param block called when connecting the device has completed with the result as argument.
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * Use method connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo *)device completionHandler:(void(^)(SKTResult result))block  AT THE CAPTURE HELPER LEVEL
- */
--(void)connectToDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
-
-/**
- * disconnect from a discovered device
- *
- * This feature works only when used with a BLE DeviceManager
- *
- * @param device contains the result of the discovery
- * @param block called when disconnecting the device has completed with the result as argument.
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
- * Use method disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo *)device completionHandler:(void(^)(SKTResult result))block  AT THE CAPTURE HELPER LEVEL
- */
--(void)disconnectFromDiscoveredDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device completionHandler:(void(^ _Nullable)(SKTResult result))block __attribute__((deprecated("This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")));
-
 @end
 
 
@@ -567,9 +477,9 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
  * @param result contains an error if something went wrong during the device connection
  */
 /**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * THIS METHOD IS PRIVATE.
  */
--(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result __attribute__((deprecated("This method will be deprecated and removed soon.")));
+-(void)didNotifyArrivalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
 
 /**
  * called when a device manager is unavailable to the host
@@ -578,37 +488,9 @@ __attribute__((deprecated("This class will be deprecated and removed soon. Most 
  * @param result contains an error if something went wrong during the device disconnection
  */
 /**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON.
+ * THIS METHOD IS PRIVATE.
  */
--(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
-/**
- * called when a device has been discovered by the DeviceManager
- *
- * This feature works only for BLE devices such as Socket D600
- *
- * @param device contains the device discovered indentification
- * @param deviceManager from which the device discovery has started
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON. Replaced with didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo *)device.
- */
--(void)didDiscoverDevice:(SKTCaptureDiscoveredDeviceInfo * _Nonnull)device fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
-
-/**
- * called with a device discovery has ended.
- *
- * This feature works only when used with a BLE DeviceManager
- *
- * @param result contains the result of the discovery
- * @param deviceManager from which the device discovery has started
- */
-/**
- * THIS METHOD WILL BE DEPRECATED AND REMOVED SOON. Replaced with didDiscoveryEndWithResult:(SKTResult)result.
- */
--(void)didDiscoveryEndWithResult:(SKTResult)result fromDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager __attribute__((deprecated("This method will be deprecated and removed soon.")));
-
+-(void)didNotifyRemovalForDeviceManager:(SKTCaptureHelperDeviceManager * _Nonnull)deviceManager withResult:(SKTResult)result;
 
 /**
  * called when a device has been discovered by CaptureSDK

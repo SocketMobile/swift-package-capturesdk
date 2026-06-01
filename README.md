@@ -1,4 +1,4 @@
-# CaptureSDK Version 2.0.73 - Swift Package Manager
+# CaptureSDK Version 2.1.15 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -22,19 +22,22 @@ More documentation can be found [here in our CaptureSDK Documentation](https://d
 
 **- Write some code to fit the Bluetooth discovery flow to your application's design by creating an UI that starts and shows discovered devices and select them to be paired to your application.**
 
+We also have removed the deprecated CaptureHelper methods to avoid confusion and got rid of the `Device Manager` as a public object.
+
 [See our Getting Started section in our documentation](https://docs.socketmobile.dev/capture/ios/en/latest/gettingStarted.html)
 
 ## Devices compatibility and CaptureSDK versions
 
-|       Devices                                          |          < 2.0         |          2.0           |
-| :----------------------------------------------------: | :--------------------: | :--------------------: |
-|   **SocketCam C820, C860**                             |          ✅            |           ✅           |
-|   **S720/D720/S820**                                   |          ✅            |           ✅           |
-|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |
-|   **S370**                                             |          ✅            |           ✅           |
-|   **M930**                                             |          ✅            |           ✅           |
-|   **S320**                                             |          ✅            |           ✅           |
-|   **S721** (new Bluetooth LE barcode scanner)          |          ❌            |           ✅           |
+|       Devices                                          |          < 2.0         |          2.0           |          2.1           |
+| :----------------------------------------------------: | :--------------------: | :--------------------: | :--------------------: |
+|   **SocketCam C820, C860**                             |          ✅            |           ✅           |           ✅           |
+|   **S720/D720/S820**                                   |          ✅            |           ✅           |           ✅           |
+|   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |
+|   **S370**                                             |          ✅            |           ✅           |           ✅           |
+|   **M930**                                             |          ✅            |           ✅           |           ✅           |
+|   **S320**                                             |          ✅            |           ✅           |           ✅           |
+|   **S721** (new Bluetooth LE barcode scanner)          |          ❌            |           ✅           |           ✅           |
+|   **SM Link and Smart Dock**                           |          ❌            |           ❌           |           ✅           |
 
 ## Table of Contents
 

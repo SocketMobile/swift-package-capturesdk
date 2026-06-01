@@ -1,6 +1,36 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.1.15
+
+### New
+
+  * We have added a new way of connecting to our Bluetooth LE scanners with SM Link
+
+
+
+### Improvements
+
+  * We have updated [SwiftDecoder to 6.6.0](https://github.com/SocketMobile/swift-package-swiftdecodersdk/releases/tag/6.6.0)
+
+  * We have removed the deprecated methods into our CaptureHelper. Please update your code accordingly.
+
+  * We set [SocketCam status as not supported instead of deprecated](https://github.com/SocketMobile/swift-package-capturesdk/issues/40)
+
+
+
+### Bug fixes
+
+  * We have [fixed a crash when receiving CaptureSDK events](https://github.com/SocketMobile/swift-package-capturesdk/issues/41)
+
+  * We have fixed a timing issue when closing the CaptureSDK in some conditions
+
+  * We have fixed the [lock on NSURLSession](https://github.com/SocketMobile/swift-package-capturesdk/issues/39)
+
+  * We handle [SocketCam oritentation differently for faceup and default](https://github.com/SocketMobile/capturesdk_flutter/issues/18)
+
+
+
 ## Version 2.0.73
 
 ### New

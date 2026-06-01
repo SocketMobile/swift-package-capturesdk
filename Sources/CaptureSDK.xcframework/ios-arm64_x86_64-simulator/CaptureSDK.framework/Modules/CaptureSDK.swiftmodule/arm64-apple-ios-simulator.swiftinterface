@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import AVFAudio
 import AVFoundation
 import AudioToolbox
 @_exported import CaptureSDK
+import CoreMIDI
 import Foundation
 import Swift
 import UIKit
@@ -13,6 +14,43 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@objc public protocol MiddleControllerDelegate {
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDetectDeviceWithName name: Swift.String, deviceType: Swift.Int32, bleDeviceInfoType: Swift.Int, dongleUuid: Foundation.Data)
+  @objc func middleControllerDidLoseDevice(_ controller: CaptureSDK.MiddleControllerSwift)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didReceiveDecodedData data: Foundation.Data)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didUpdateBatteryLevel level: Swift.UInt8)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didUpdatePowerState state: Swift.UInt8)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverOsdCommandHandle handle: Swift.UInt16)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverOsdEventHandle handle: Swift.UInt16)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverBatteryLevelHandle handle: Swift.UInt16)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverFirmwareHandle handle: Swift.UInt16)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverBluetoothAddressHandle handle: Swift.UInt16)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didReceiveOsdResponse data: Foundation.Data)
+  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didCompleteOsdCommandWriteWith success: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor open class MiddleControllerSwift : ObjectiveC.NSObject {
+  @objc @_Concurrency.MainActor weak open var delegate: (any CaptureSDK.MiddleControllerDelegate)?
+  @objc override nonisolated dynamic public init()
+  @objc nonisolated open func start()
+  @objc nonisolated open func stop()
+  @objc nonisolated open func writeOsdCommand(_ data: Foundation.Data, handle: Swift.UInt16)
+  @objc nonisolated open func readGattCharacteristic(handle: Swift.UInt16, completion: @escaping (Swift.Bool, Foundation.Data?) -> Swift.Void)
+  @objc deinit
+}
+extension CaptureSDK.MiddleControllerSwift : CaptureSDK.SktMidiManagerDelegate {
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, dongleStateDidChange state: CaptureSDK.SktMidiProtocol.DongleState)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, bleStateDidChange state: CaptureSDK.SktMidiProtocol.BleState)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveIndication handle: Swift.UInt16, data: Foundation.Data)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveNotification handle: Swift.UInt16, data: Foundation.Data)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didCompleteWrite command: Swift.UInt8, success: Swift.Bool)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveReadResponse data: Foundation.Data)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didDiscoverService uuid: Foundation.Data, startHandle: Swift.UInt16, endHandle: Swift.UInt16)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didDiscoverCharacteristic uuid: Foundation.Data, handle: Swift.UInt16, cccdHandle: Swift.UInt16, properties: Swift.UInt8)
+  nonisolated public func midiManagerDidCompleteDiscovery(_ manager: CaptureSDK.SktMidiManager)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveVersion version: Swift.String)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveScanUuid uuid: Foundation.Data)
+  nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveError errorCode: Swift.UInt16, moduleId: Swift.UInt16)
+}
 public protocol CaptureHelperDelegate {
 }
 public protocol CaptureHelperErrorDelegate : CaptureSDK.CaptureHelperDelegate {
@@ -21,20 +59,6 @@ public protocol CaptureHelperErrorDelegate : CaptureSDK.CaptureHelperDelegate {
 public protocol CaptureHelperDevicePresenceDelegate : CaptureSDK.CaptureHelperDelegate {
   func didNotifyArrivalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
   func didNotifyRemovalForDevice(_ device: CaptureSDK.CaptureHelperDevice, withResult result: CaptureSDK.SKTResult)
-}
-@available(*, deprecated, message: "This protocol will be deprecated and removed soon")
-public protocol CaptureHelperDeviceManagerPresenceDelegate : CaptureSDK.CaptureHelperDelegate {
-  @available(*, deprecated, message: "This function will be deprecated and removed soon. You can delete it and you don't need to retain the Device Manager anymore")
-  func didNotifyArrivalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
-  @available(*, deprecated, message: "This function will be deprecated and removed soon. You can delete it and you don't need to retain the Device Manager anymore")
-  func didNotifyRemovalForDeviceManager(_ device: CaptureSDK.CaptureHelperDeviceManager, withResult result: CaptureSDK.SKTResult)
-}
-@available(*, deprecated, renamed: "CaptureHelperDiscoveryDelegate", message: "This protocol will be deprecated and removed soon")
-public protocol CaptureHelperDeviceManagerDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
-  @available(*, deprecated, renamed: "didDiscoverDevice(_:)", message: "This method will be deprecated and removed soon")
-  func didDiscoverDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
-  @available(*, deprecated, renamed: "didEndDiscoveryWithResult(_:)", message: "This method will be deprecated and removed soon")
-  func didEndDiscoveryWithResult(_ result: CaptureSDK.SKTResult, fromDeviceManager deviceManager: CaptureSDK.CaptureHelperDeviceManager)
 }
 public protocol CaptureHelperDiscoveryDelegate : CaptureSDK.CaptureHelperDelegate {
   func didDiscoverDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo)
@@ -53,7 +77,7 @@ public protocol CaptureHelperDeviceButtonsDelegate : CaptureSDK.CaptureHelperDel
 public protocol CaptureHelperLoggerDelegate : CaptureSDK.CaptureHelperDelegate {
   func didReceiveLogTrace(_ logTrace: Swift.String)
 }
-public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDeviceManagerDiscoveryDelegate, CaptureSDK.CaptureHelperDeviceManagerPresenceDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperDiscoveryDelegate, CaptureSDK.CaptureHelperErrorDelegate, CaptureSDK.CaptureHelperLoggerDelegate {
+public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtonsDelegate, CaptureSDK.CaptureHelperDeviceDecodedDataDelegate, CaptureSDK.CaptureHelperDevicePowerDelegate, CaptureSDK.CaptureHelperDevicePresenceDelegate, CaptureSDK.CaptureHelperDiscoveryDelegate, CaptureSDK.CaptureHelperErrorDelegate, CaptureSDK.CaptureHelperLoggerDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelperDevice : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
@@ -110,22 +134,6 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setProperty(_ property: CaptureSDK.SKTCaptureProperty, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ complete: CaptureSDK.SKTCaptureProperty?) -> Swift.Void)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, deprecated, message: "This class will be deprecated and removed soon. Most of the functions will be transferred at the CaptureHelper level.")
-public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
-  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
-  open func startDiscoveryWithTimeout(_ timeout: ObjectiveC.NSInteger, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
-  open func setFavoriteDevices(_ favorites: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  @available(*, deprecated, message: "This function will be deprecated and removed soon.")
-  open func getFavoriteDevicesWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ favorites: Swift.String?) -> Swift.Void)
-  @available(*, deprecated, renamed: "getDeviceUniqueIdentifierFromDeviceGuid(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
-  open func getDeviceUniqueIdentifierFromDeviceGuid(_ deviceGuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ deviceUniqueIdentifier: Swift.String?) -> Swift.Void)
-  @available(*, deprecated, renamed: "connectToDiscoveredDevice(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
-  open func connectToDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  @available(*, deprecated, renamed: "disconnectFromDiscoveredDevice(_:withCompletionHandler:)", message: "This function will be deprecated and removed soon. It is transferred at the CaptureHelper level.")
-  open func disconnectFromDiscoveredDevice(_ device: CaptureSDK.SKTCaptureDiscoveredDeviceInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CaptureHelper : ObjectiveC.NSObject {
   public var extensionProperties: Swift.Dictionary<Swift.String, Any>
   public var dispatchQueue: Dispatch.DispatchQueue?
@@ -138,8 +146,6 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   @discardableResult
   open func popDelegate(_ delegate: any CaptureSDK.CaptureHelperDelegate) -> Swift.Bool
   open func getDevices() -> Swift.Array<CaptureSDK.CaptureHelperDevice>
-  @available(*, deprecated)
-  open func getDeviceManagers() -> Swift.Array<CaptureSDK.CaptureHelperDeviceManager>
   open func setLogger(enable: Swift.Bool)
   open func openWithAppInfo(_ appInfo: CaptureSDK.SKTAppInfo, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func closeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
@@ -147,10 +153,6 @@ public class CaptureHelperDeviceManager : CaptureSDK.CaptureHelperDevice {
   open func getVersionWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ version: CaptureSDK.SKTCaptureVersion?) -> Swift.Void)
   open func getConfirmationModeWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode?) -> Swift.Void)
   open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
-  @available(*, deprecated, message: "SocketCam is enabled by default. This method will be removed soon")
-  open func getSocketCamStatusWithCompletionHandler(_ completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSocketCam?) -> Swift.Void)
-  @available(*, deprecated, message: "SocketCam is enabled by default. This method will be removed soon")
-  open func setSocketCamStatus(_ status: CaptureSDK.SKTCaptureSocketCam, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setSocketCamSymbologySelectorDisabled(_ isDisabled: Swift.Bool, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
   open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, deviceId: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
@@ -213,6 +215,71 @@ extension CaptureSDK.SocketCamControllerSwift {
   @objc open func cancelAllSessions()
   @objc override dynamic public init()
 }
+public protocol SktMidiManagerDelegate : AnyObject {
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, dongleStateDidChange state: CaptureSDK.SktMidiProtocol.DongleState)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, bleStateDidChange state: CaptureSDK.SktMidiProtocol.BleState)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveIndication handle: Swift.UInt16, data: Foundation.Data)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveNotification handle: Swift.UInt16, data: Foundation.Data)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didCompleteWrite command: Swift.UInt8, success: Swift.Bool)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveReadResponse data: Foundation.Data)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didDiscoverService uuid: Foundation.Data, startHandle: Swift.UInt16, endHandle: Swift.UInt16)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didDiscoverCharacteristic uuid: Foundation.Data, handle: Swift.UInt16, cccdHandle: Swift.UInt16, properties: Swift.UInt8)
+  func midiManagerDidCompleteDiscovery(_ manager: CaptureSDK.SktMidiManager)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveVersion version: Swift.String)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveScanUuid uuid: Foundation.Data)
+  func midiManager(_ manager: CaptureSDK.SktMidiManager, didReceiveError errorCode: Swift.UInt16, moduleId: Swift.UInt16)
+}
+@_hasMissingDesignatedInitializers public class SktMidiManager {
+  public var dongleInfo: CaptureSDK.SktMidiProtocol.DongleInfo? {
+    get
+  }
+  @objc deinit
+}
+public enum SktMidiProtocol {
+  public enum DongleState {
+    case disconnected
+    case detected
+    case connecting
+    case ready
+    public static func == (a: CaptureSDK.SktMidiProtocol.DongleState, b: CaptureSDK.SktMidiProtocol.DongleState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum BleState : Swift.RawRepresentable {
+    public typealias RawValue = Swift.UInt8
+    case disconnected
+    case discovering
+    case connecting
+    case connected
+    case error
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+  }
+  public struct DongleInfo {
+    public let name: Swift.String
+    public let manufacturer: Swift.String
+    public let model: Swift.String
+    public let serialNumber: Swift.String?
+    public let vendorID: Swift.UInt16
+    public let productID: Swift.UInt16
+    public let locationID: Swift.UInt32
+    public let driverOwner: Swift.String?
+    public let umpEnabled: Swift.Bool
+  }
+  public enum SubscribeMode : Swift.RawRepresentable {
+    public typealias RawValue = Swift.UInt8
+    case notifications
+    case indications
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+  }
+}
 extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   public init(stringLiteral value: Swift.StaticString)
   @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
@@ -221,6 +288,28 @@ extension Foundation.URL : @retroactive Swift.ExpressibleByStringLiteral {
   public typealias StringLiteralType = Swift.StaticString
   @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
   public typealias UnicodeScalarLiteralType = Swift.StaticString
+}
+public enum MiddleBleDeviceInfoType : Swift.Int {
+  case none
+  case d600SmartReader
+  case echoCoupler
+  case echoMonoFunction
+  case echoMultiFunction
+  case echoUnknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct MiddleScannerIdentity : Swift.Equatable {
+  public let deviceType: Swift.Int
+  public let infoType: CaptureSDK.MiddleBleDeviceInfoType
+  public let modelName: Swift.String
+  public static func == (a: CaptureSDK.MiddleScannerIdentity, b: CaptureSDK.MiddleScannerIdentity) -> Swift.Bool
+}
+public enum MiddleScanner {
+  public static func identity(fromPnpData pnpData: Foundation.Data) -> CaptureSDK.MiddleScannerIdentity
 }
 public enum CaptureEnvironment {
 }
@@ -234,6 +323,16 @@ public enum SinglePartnershipPage : Swift.String {
     get
   }
 }
+extension CaptureSDK.MiddleControllerSwift : Swift.Sendable {}
+extension CaptureSDK.SktMidiProtocol.DongleState : Swift.Equatable {}
+extension CaptureSDK.SktMidiProtocol.DongleState : Swift.Hashable {}
+extension CaptureSDK.SktMidiProtocol.BleState : Swift.Equatable {}
+extension CaptureSDK.SktMidiProtocol.BleState : Swift.Hashable {}
+extension CaptureSDK.SktMidiProtocol.SubscribeMode : Swift.Equatable {}
+extension CaptureSDK.SktMidiProtocol.SubscribeMode : Swift.Hashable {}
+extension CaptureSDK.MiddleBleDeviceInfoType : Swift.Equatable {}
+extension CaptureSDK.MiddleBleDeviceInfoType : Swift.Hashable {}
+extension CaptureSDK.MiddleBleDeviceInfoType : Swift.RawRepresentable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Equatable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.Hashable {}
 extension CaptureSDK.SinglePartnershipPage : Swift.RawRepresentable {}
