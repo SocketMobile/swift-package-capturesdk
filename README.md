@@ -1,4 +1,4 @@
-# CaptureSDK Version 2.1.15 - Swift Package Manager
+# CaptureSDK Version 2.1.22 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -37,7 +37,7 @@ We also have removed the deprecated CaptureHelper methods to avoid confusion and
 |   **M930**                                             |          ✅            |           ✅           |           ✅           |
 |   **S320**                                             |          ✅            |           ✅           |           ✅           |
 |   **S721** (new Bluetooth LE barcode scanner)          |          ❌            |           ✅           |           ✅           |
-|   **SM Link and Smart Dock**                           |          ❌            |           ❌           |           ✅           |
+|   **SM Link and Magic Dock**                           |          ❌            |           ❌           |           ✅           |
 
 ## Table of Contents
 

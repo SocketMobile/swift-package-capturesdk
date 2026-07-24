@@ -18,19 +18,13 @@
         "children": [
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDetectDeviceWithName:deviceType:bleDeviceInfoType:dongleUuid:)",
+            "name": "middleControllerDidDetectDevice",
+            "printedName": "middleControllerDidDetectDevice(with:deviceType:bleDeviceInfoType:dongleUuid:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -58,8 +52,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDetectDeviceWithName:deviceType:bleDeviceInfoType:dongleUuid:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_23didDetectDeviceWithName10deviceType03blei4InfoM010dongleUuidyAA0cD5SwiftC_SSs5Int32VSi10Foundation4DataVtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDetectDeviceWith:deviceType:bleDeviceInfoType:dongleUuid:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD15DidDetectDevice4with10deviceType03blei4InfoL010dongleUuidySS_s5Int32VSi10Foundation4DataVtF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -73,23 +67,17 @@
           {
             "kind": "Function",
             "name": "middleControllerDidLoseDevice",
-            "printedName": "middleControllerDidLoseDevice(_:)",
+            "printedName": "middleControllerDidLoseDevice()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidLoseDevice:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD13DidLoseDeviceyyAA0cD5SwiftCF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidLoseDevice",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD13DidLoseDeviceyyF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -102,19 +90,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didReceiveDecodedData:)",
+            "name": "middleControllerDidReceiveDecodedData",
+            "printedName": "middleControllerDidReceiveDecodedData(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -124,8 +106,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didReceiveDecodedData:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_21didReceiveDecodedDatayAA0cD5SwiftC_10Foundation0J0VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidReceiveDecodedData:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD21DidReceiveDecodedDatayy10Foundation0J0VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -138,19 +120,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didUpdateBatteryLevel:)",
+            "name": "middleControllerDidUpdateBatteryLevel",
+            "printedName": "middleControllerDidUpdateBatteryLevel(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -160,8 +136,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didUpdateBatteryLevel:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_21didUpdateBatteryLevelyAA0cD5SwiftC_s5UInt8VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidUpdateBatteryLevel:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD21DidUpdateBatteryLevelyys5UInt8VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -174,19 +150,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didUpdatePowerState:)",
+            "name": "middleControllerDidUpdatePowerState",
+            "printedName": "middleControllerDidUpdatePowerState(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -196,8 +166,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didUpdatePowerState:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_19didUpdatePowerStateyAA0cD5SwiftC_s5UInt8VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidUpdatePowerState:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD19DidUpdatePowerStateyys5UInt8VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -210,19 +180,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDiscoverOsdCommandHandle:)",
+            "name": "middleControllerDidDiscoverOsdCommandHandle",
+            "printedName": "middleControllerDidDiscoverOsdCommandHandle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -232,8 +196,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDiscoverOsdCommandHandle:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_27didDiscoverOsdCommandHandleyAA0cD5SwiftC_s6UInt16VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDiscoverOsdCommandHandle:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD27DidDiscoverOsdCommandHandleyys6UInt16VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -247,19 +211,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDiscoverOsdEventHandle:)",
+            "name": "middleControllerDidDiscoverOsdEventHandle",
+            "printedName": "middleControllerDidDiscoverOsdEventHandle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -269,8 +227,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDiscoverOsdEventHandle:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_25didDiscoverOsdEventHandleyAA0cD5SwiftC_s6UInt16VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDiscoverOsdEventHandle:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD25DidDiscoverOsdEventHandleyys6UInt16VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -284,19 +242,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDiscoverBatteryLevelHandle:)",
+            "name": "middleControllerDidDiscoverBatteryLevelHandle",
+            "printedName": "middleControllerDidDiscoverBatteryLevelHandle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -306,8 +258,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDiscoverBatteryLevelHandle:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_29didDiscoverBatteryLevelHandleyAA0cD5SwiftC_s6UInt16VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDiscoverBatteryLevelHandle:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD29DidDiscoverBatteryLevelHandleyys6UInt16VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -321,19 +273,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDiscoverFirmwareHandle:)",
+            "name": "middleControllerDidDiscoverFirmwareHandle",
+            "printedName": "middleControllerDidDiscoverFirmwareHandle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -343,8 +289,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDiscoverFirmwareHandle:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_25didDiscoverFirmwareHandleyAA0cD5SwiftC_s6UInt16VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDiscoverFirmwareHandle:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD25DidDiscoverFirmwareHandleyys6UInt16VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -358,19 +304,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didDiscoverBluetoothAddressHandle:)",
+            "name": "middleControllerDidDiscoverBluetoothAddressHandle",
+            "printedName": "middleControllerDidDiscoverBluetoothAddressHandle(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -380,8 +320,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didDiscoverBluetoothAddressHandle:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_33didDiscoverBluetoothAddressHandleyAA0cD5SwiftC_s6UInt16VtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidDiscoverBluetoothAddressHandle:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD33DidDiscoverBluetoothAddressHandleyys6UInt16VF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -395,19 +335,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didReceiveOsdResponse:)",
+            "name": "middleControllerDidReceiveOsdResponse",
+            "printedName": "middleControllerDidReceiveOsdResponse(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -417,8 +351,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didReceiveOsdResponse:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_21didReceiveOsdResponseyAA0cD5SwiftC_10Foundation4DataVtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidReceiveOsdResponse:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD21DidReceiveOsdResponseyy10Foundation4DataVF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -432,19 +366,13 @@
           },
           {
             "kind": "Function",
-            "name": "middleController",
-            "printedName": "middleController(_:didCompleteOsdCommandWriteWith:)",
+            "name": "middleControllerDidCompleteOsdCommandWriteWith",
+            "printedName": "middleControllerDidCompleteOsdCommandWriteWith(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "MiddleControllerSwift",
-                "printedName": "CaptureSDK.MiddleControllerSwift",
-                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift"
               },
               {
                 "kind": "TypeNominal",
@@ -454,8 +382,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleController:didCompleteOsdCommandWriteWith:",
-            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD0_30didCompleteOsdCommandWriteWithyAA0cD5SwiftC_SbtF",
+            "usr": "c:@M@CaptureSDK@objc(pl)MiddleControllerDelegate(im)middleControllerDidCompleteOsdCommandWriteWith:",
+            "mangledName": "$s10CaptureSDK24MiddleControllerDelegateP06middleD30DidCompleteOsdCommandWriteWithyySbF",
             "moduleName": "CaptureSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : CaptureSDK.MiddleControllerDelegate>",
             "sugared_genericSig": "<Self where Self : CaptureSDK.MiddleControllerDelegate>",
@@ -493,6 +421,482 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConnectedDongleInfo",
+        "printedName": "ConnectedDongleInfo",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "uuid",
+            "printedName": "uuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(py)uuid",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC4uuidSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)uuid",
+                "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC4uuidSSSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(py)version",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC7versionSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)version",
+                "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC7versionSSSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "productId",
+            "printedName": "productId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(py)productId",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC9productIdSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)productId",
+                "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC9productIdSSSgvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isConnected",
+            "printedName": "isConnected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(py)isConnected",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC02isC0Sbvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)isConnected",
+                "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC02isC0Sbvg",
+                "moduleName": "CaptureSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(uuid:version:productId:isConnected:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectedDongleInfo",
+                "printedName": "CaptureSDK.ConnectedDongleInfo",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)initWithUuid:version:productId:isConnected:",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC4uuid7version9productId02isC0ACSSSg_A2HSbtcfc",
+            "moduleName": "CaptureSDK",
+            "objc_name": "initWithUuid:version:productId:isConnected:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "deviceName",
+            "printedName": "deviceName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(py)deviceName",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC10deviceNameSSvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)deviceName",
+                "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC10deviceNameSSvg",
+                "moduleName": "CaptureSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectedDongleInfo",
+                "printedName": "CaptureSDK.ConnectedDongleInfo",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo(im)init",
+            "mangledName": "$s10CaptureSDK19ConnectedDongleInfoCACycfc",
+            "moduleName": "CaptureSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo",
+        "mangledName": "$s10CaptureSDK19ConnectedDongleInfoC",
+        "moduleName": "CaptureSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -794,6 +1198,192 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "connectedDongleUuid",
+            "printedName": "connectedDongleUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(py)connectedDongleUuid",
+            "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC19connectedDongleUuidSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(im)connectedDongleUuid",
+                "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC19connectedDongleUuidSSSgvg",
+                "moduleName": "CaptureSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connectedDongleVersion",
+            "printedName": "connectedDongleVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(py)connectedDongleVersion",
+            "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC22connectedDongleVersionSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(im)connectedDongleVersion",
+                "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC22connectedDongleVersionSSSgvg",
+                "moduleName": "CaptureSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connectedDongleProductId",
+            "printedName": "connectedDongleProductId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(py)connectedDongleProductId",
+            "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC24connectedDongleProductIdSSSgvp",
+            "moduleName": "CaptureSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CaptureSDK@objc(cs)MiddleControllerSwift(im)connectedDongleProductId",
+                "mangledName": "$s10CaptureSDK21MiddleControllerSwiftC24connectedDongleProductIdSSSgvg",
+                "moduleName": "CaptureSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Function",
@@ -5939,6 +6529,68 @@
             "usr": "s:10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString8deviceId17completionHandlerySo010SKTCaptureeF0V_SSSgAJySo0M6ErrorsVctF",
             "mangledName": "$s10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString8deviceId17completionHandlerySo010SKTCaptureeF0V_SSSgAJySo0M6ErrorsVctF",
             "moduleName": "CaptureSDK",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSinglePartnership",
+            "printedName": "setSinglePartnership(_:uuidString:completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SKTCaptureSinglePartnership",
+                "printedName": "CaptureSDK.SKTCaptureSinglePartnership",
+                "usr": "c:@E@SKTCaptureSinglePartnership"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CaptureSDK.SKTCaptureErrors) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SKTCaptureErrors",
+                    "printedName": "CaptureSDK.SKTCaptureErrors",
+                    "usr": "c:@E@SKTCaptureErrors"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString17completionHandlerySo010SKTCaptureeF0V_SSSgySo0K6ErrorsVctF",
+            "mangledName": "$s10CaptureSDK0A6HelperC20setSinglePartnership_10uuidString17completionHandlerySo010SKTCaptureeF0V_SSSgySo0K6ErrorsVctF",
+            "moduleName": "CaptureSDK",
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
@@ -5999,8 +6651,10 @@
             "usr": "s:10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
             "mangledName": "$s10CaptureSDK0A6HelperC25getSinglePartnershipStamp21withCompletionHandleryySo16SKTCaptureErrorsV_SSSgtc_tF",
             "moduleName": "CaptureSDK",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
+              "Available",
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -8313,75 +8967,6 @@
         "children": [
           {
             "kind": "Function",
-            "name": "retrieveServiceUuidFromApi",
-            "printedName": "retrieveServiceUuidFromApi(with:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?, Swift.Int) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Tuple",
-                    "printedName": "(Swift.String?, Swift.Int)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromApiWith:completion:",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC26retrieveServiceUuidFromApi4with10completionySS_ySSSg_SitctF",
-            "moduleName": "CaptureSDK",
-            "isOpen": true,
-            "objc_name": "retrieveServiceUuidFromApiWith:completion:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "retrieveServiceUuidFromWebUI",
             "printedName": "retrieveServiceUuidFromWebUI(with:completion:)",
             "children": [
@@ -8444,31 +9029,20 @@
             "objc_name": "retrieveServiceUuidFromWebUIWith:completion:",
             "declAttributes": [
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "retrieveServiceUuidFromDeviceId",
-            "printedName": "retrieveServiceUuidFromDeviceId(with:deviceId:completion:)",
+            "name": "showServiceUuidFromWebUI",
+            "printedName": "showServiceUuidFromWebUI(with:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeFunc",
@@ -8511,11 +9085,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)retrieveServiceUuidFromDeviceIdWith:deviceId:completion:",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC31retrieveServiceUuidFromDeviceId4with06deviceL010completionySS_SSySSSg_SitctF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)showServiceUuidFromWebUIWith:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC24showServiceUuidFromWebUI4withyySSSg_Sitc_tF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
-            "objc_name": "retrieveServiceUuidFromDeviceIdWith:deviceId:completion:",
+            "objc_name": "showServiceUuidFromWebUIWith:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -8592,51 +9166,66 @@
           },
           {
             "kind": "Function",
-            "name": "createStamp",
-            "printedName": "createStamp()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)createStamp",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC11createStampSSSgyF",
-            "moduleName": "CaptureSDK",
-            "isOpen": true,
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "cancelAllSessions",
-            "printedName": "cancelAllSessions()",
+            "name": "showServiceUuid",
+            "printedName": "showServiceUuid(from:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConnectedDongleInfo",
+                "printedName": "CaptureSDK.ConnectedDongleInfo",
+                "usr": "c:@M@CaptureSDK@objc(cs)ConnectedDongleInfo"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?, Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String?, Swift.Int)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)cancelAllSessions",
-            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC17cancelAllSessionsyyF",
+            "usr": "c:@M@CaptureSDK@objc(cs)SinglePartnershipControllerSwift(im)showServiceUuidFrom:completion:",
+            "mangledName": "$s10CaptureSDK32SinglePartnershipControllerSwiftC15showServiceUuid4from10completionyAA19ConnectedDongleInfoC_ySSSg_SitctF",
             "moduleName": "CaptureSDK",
             "isOpen": true,
+            "objc_name": "showServiceUuidFrom:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -8748,16 +9337,6 @@
             "usr": "s:SH",
             "mangledName": "$sSH"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CaptureSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -9646,6 +10225,20 @@
                 "printedName": "Hashable",
                 "usr": "s:SH",
                 "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
               }
             ]
           },
@@ -9973,6 +10566,20 @@
                 ],
                 "usr": "s:SY",
                 "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
               }
             ]
           },
@@ -11507,8 +12114,8 @@
           },
           {
             "kind": "Var",
-            "name": "product",
-            "printedName": "product",
+            "name": "getRandomQrcode",
+            "printedName": "getRandomQrcode",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -11538,8 +12145,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:10CaptureSDK21SinglePartnershipPageO7productyA2CmF",
-            "mangledName": "$s10CaptureSDK21SinglePartnershipPageO7productyA2CmF",
+            "usr": "s:10CaptureSDK21SinglePartnershipPageO15getRandomQrcodeyA2CmF",
+            "mangledName": "$s10CaptureSDK21SinglePartnershipPageO15getRandomQrcodeyA2CmF",
             "moduleName": "CaptureSDK"
           },
           {
@@ -12002,35 +12609,98 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
       "kind": "StringLiteral",
-      "offset": 3371,
+      "offset": 3766,
+      "length": 22,
+      "value": "\"SM Link \/ Magic Dock\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 3846,
+      "length": 6,
+      "value": "\"%04X\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 3889,
+      "length": 9,
+      "value": "\"SM Link\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 3927,
+      "length": 6,
+      "value": "\"%04X\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 3973,
+      "length": 12,
+      "value": "\"Magic Dock\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 4010,
+      "length": 22,
+      "value": "\"SM Link \/ Magic Dock\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 4427,
       "length": 19,
       "value": "\"Middle Controller\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6561,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
       "kind": "Array",
-      "offset": 3707,
+      "offset": 6749,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
       "kind": "Array",
-      "offset": 3825,
+      "offset": 6867,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
       "kind": "Dictionary",
-      "offset": 3875,
+      "offset": 6917,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 16562,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
+      "kind": "StringLiteral",
+      "offset": 16614,
+      "length": 6,
+      "value": "\"%04X\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/MiddleController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32380,
+      "offset": 39148,
       "length": 4,
       "value": "true"
     },
@@ -12506,14 +13176,14 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 45135,
+      "offset": 45133,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureHelper\/CaptureHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 46171,
+      "offset": 46204,
       "length": 5,
       "value": "false"
     },
@@ -12876,87 +13546,66 @@
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
-      "kind": "StringLiteral",
-      "offset": 324,
-      "length": 28,
-      "value": "\"https:\/\/setpartnership.com\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 384,
+      "offset": 232,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 411,
+      "offset": 259,
       "length": 3,
       "value": "-17"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 452,
+      "offset": 300,
       "length": 3,
       "value": "-24"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 485,
+      "offset": 333,
       "length": 3,
       "value": "-32"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 518,
+      "offset": 366,
       "length": 3,
       "value": "-41"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 402,
       "length": 3,
       "value": "-42"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 588,
+      "offset": 436,
       "length": 3,
       "value": "-85"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "IntegerLiteral",
-      "offset": 610,
+      "offset": 458,
       "length": 3,
       "value": "-91"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipController.swift",
       "kind": "StringLiteral",
-      "offset": 786,
+      "offset": 548,
       "length": 19,
       "value": "\"SinglePartnership\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipServer.swift",
-      "kind": "StringLiteral",
-      "offset": 451,
-      "length": 19,
-      "value": "\"SinglePartnership\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipServer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 892,
-      "length": 1,
-      "value": "1"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMiddleConstants.swift",
@@ -13752,7 +14401,7 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiProtocol.swift",
       "kind": "IntegerLiteral",
-      "offset": 7607,
+      "offset": 7627,
       "length": 1,
       "value": "0"
     },
@@ -13835,43 +14484,50 @@
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
+      "kind": "Array",
+      "offset": 1764,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 8703,
+      "offset": 13699,
       "length": 9,
       "value": "\"SM Link\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 8738,
+      "offset": 13734,
       "length": 12,
       "value": "\"Smart Dock\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 29148,
+      "offset": 34334,
       "length": 10,
       "value": "\"Complete\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 29194,
+      "offset": 34380,
       "length": 7,
       "value": "\"Start\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 29240,
+      "offset": 34426,
       "length": 10,
       "value": "\"Continue\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/Middle\/SktMidiTransport.swift",
       "kind": "StringLiteral",
-      "offset": 29284,
+      "offset": 34470,
       "length": 5,
       "value": "\"End\""
     },
@@ -14144,35 +14800,77 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
-      "offset": 738,
+      "offset": 407,
+      "length": 14,
+      "value": "\"NAME_UUID_V5\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 473,
+      "length": 30,
+      "value": "\"SOCKETMOBILE_COM_DOMAIN_NAME\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 872,
       "length": 26,
       "value": "\"com.socketmobile.Capture\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
-      "offset": 877,
+      "offset": 1011,
       "length": 47,
       "value": "\"CaptureSDK Info.plist not found - Not package\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "Dictionary",
-      "offset": 945,
+      "offset": 1079,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
-      "offset": 1223,
+      "offset": 1357,
       "length": 37,
       "value": "\"CaptureSDK Info.plist key not found\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
       "kind": "StringLiteral",
-      "offset": 1281,
+      "offset": 1415,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 1666,
+      "length": 37,
+      "value": "\"CaptureSDK Info.plist key not found\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 1724,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 2023,
+      "length": 37,
+      "value": "\"CaptureSDK Info.plist key not found\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/CaptureEnvironment.swift",
+      "kind": "StringLiteral",
+      "offset": 2081,
       "length": 2,
       "value": "\"\""
     },
@@ -14193,44 +14891,58 @@
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 267,
-      "length": 9,
-      "value": "\"product\""
+      "offset": 275,
+      "length": 17,
+      "value": "\"getRandomQrcode\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 355,
-      "length": 16,
-      "value": "\"contentChanged\""
+      "offset": 370,
+      "length": 15,
+      "value": "\"uuidGenerated\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 393,
+      "offset": 407,
       "length": 11,
       "value": "\"resetHost\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 726,
+      "offset": 485,
+      "length": 4,
+      "value": "\"qr\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 508,
+      "length": 8,
+      "value": "\"serial\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 1587,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 853,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 884,
+      "offset": 1678,
       "length": 26,
       "value": "\"SinglePartnershipWebview\""
+    },
+    {
+      "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SinglePartnership\/SinglePartnershipWebViewController.swift",
+      "kind": "Array",
+      "offset": 8247,
+      "length": 265,
+      "value": "[\"title\", \"pairInstruction\", \"resetHostButton\", \"resetPartnershipButton\", \"back\", \"serialPrompt\", \"serialPlaceholder\", \"generateQr\", \"errorInvalidHost\", \"firmwareVersion\", \"resetHostInstruction\", \"resetPartnershipInstruction\"]"
     },
     {
       "filePath": "\/Users\/build\/builds\/glrt-JYD\/0\/capture\/ios\/capturesdk\/Sources\/CaptureSwift\/SocketCam\/SktDataSources.swift",

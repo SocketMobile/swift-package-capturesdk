@@ -1,6 +1,29 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.1.22
+
+### New
+
+  * N/A
+
+
+### Improvements
+
+  * We have improved our Single Partnership feature that requires no server
+
+  * We have updated [SwiftDecoder to 6.7.2](https://github.com/SocketMobile/swift-package-swiftdecodersdk/releases/tag/6.7.2)
+
+
+
+### Bug fixes
+
+  * We have fixed the [issue on CoreBluetooth state change](https://github.com/SocketMobile/swift-package-capturesdk/issues/44)
+
+  * We have fixed the [configuration crash issue](https://github.com/SocketMobile/swift-package-capturesdk/issues/43)
+
+
+
 ## Version 2.1.15
 
 ### New

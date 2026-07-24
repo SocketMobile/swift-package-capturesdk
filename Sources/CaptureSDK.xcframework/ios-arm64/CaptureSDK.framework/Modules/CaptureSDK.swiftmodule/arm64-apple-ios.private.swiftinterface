@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CaptureSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import AVFAudio
 import AVFoundation
 import AudioToolbox
@@ -15,27 +15,47 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @objc public protocol MiddleControllerDelegate {
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDetectDeviceWithName name: Swift.String, deviceType: Swift.Int32, bleDeviceInfoType: Swift.Int, dongleUuid: Foundation.Data)
-  @objc func middleControllerDidLoseDevice(_ controller: CaptureSDK.MiddleControllerSwift)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didReceiveDecodedData data: Foundation.Data)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didUpdateBatteryLevel level: Swift.UInt8)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didUpdatePowerState state: Swift.UInt8)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverOsdCommandHandle handle: Swift.UInt16)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverOsdEventHandle handle: Swift.UInt16)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverBatteryLevelHandle handle: Swift.UInt16)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverFirmwareHandle handle: Swift.UInt16)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didDiscoverBluetoothAddressHandle handle: Swift.UInt16)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didReceiveOsdResponse data: Foundation.Data)
-  @objc func middleController(_ controller: CaptureSDK.MiddleControllerSwift, didCompleteOsdCommandWriteWith success: Swift.Bool)
+  @objc func middleControllerDidDetectDevice(with name: Swift.String, deviceType: Swift.Int32, bleDeviceInfoType: Swift.Int, dongleUuid: Foundation.Data)
+  @objc func middleControllerDidLoseDevice()
+  @objc func middleControllerDidReceiveDecodedData(_ decodedData: Foundation.Data)
+  @objc func middleControllerDidUpdateBatteryLevel(_ level: Swift.UInt8)
+  @objc func middleControllerDidUpdatePowerState(_ powerState: Swift.UInt8)
+  @objc func middleControllerDidDiscoverOsdCommandHandle(_ handle: Swift.UInt16)
+  @objc func middleControllerDidDiscoverOsdEventHandle(_ handle: Swift.UInt16)
+  @objc func middleControllerDidDiscoverBatteryLevelHandle(_ handle: Swift.UInt16)
+  @objc func middleControllerDidDiscoverFirmwareHandle(_ handle: Swift.UInt16)
+  @objc func middleControllerDidDiscoverBluetoothAddressHandle(_ handle: Swift.UInt16)
+  @objc func middleControllerDidReceiveOsdResponse(_ data: Foundation.Data)
+  @objc func middleControllerDidCompleteOsdCommandWriteWith(_ success: Swift.Bool)
+}
+@objc public class ConnectedDongleInfo : ObjectiveC.NSObject {
+  @objc final public let uuid: Swift.String?
+  @objc final public let version: Swift.String?
+  @objc final public let productId: Swift.String?
+  @objc final public let isConnected: Swift.Bool
+  @objc public init(uuid: Swift.String?, version: Swift.String?, productId: Swift.String?, isConnected: Swift.Bool)
+  @objc public var deviceName: Swift.String {
+    @objc get
+  }
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor open class MiddleControllerSwift : ObjectiveC.NSObject {
   @objc @_Concurrency.MainActor weak open var delegate: (any CaptureSDK.MiddleControllerDelegate)?
   @objc override nonisolated dynamic public init()
   @objc nonisolated open func start()
+  @objc deinit
   @objc nonisolated open func stop()
   @objc nonisolated open func writeOsdCommand(_ data: Foundation.Data, handle: Swift.UInt16)
   @objc nonisolated open func readGattCharacteristic(handle: Swift.UInt16, completion: @escaping (Swift.Bool, Foundation.Data?) -> Swift.Void)
-  @objc deinit
+  @objc @_Concurrency.MainActor public var connectedDongleUuid: Swift.String? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor public var connectedDongleVersion: Swift.String? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor public var connectedDongleProductId: Swift.String? {
+    @objc get
+  }
 }
 extension CaptureSDK.MiddleControllerSwift : CaptureSDK.SktMidiManagerDelegate {
   nonisolated public func midiManager(_ manager: CaptureSDK.SktMidiManager, dongleStateDidChange state: CaptureSDK.SktMidiProtocol.DongleState)
@@ -155,7 +175,10 @@ public protocol CaptureHelperAllDelegate : CaptureSDK.CaptureHelperDeviceButtons
   open func setConfirmationMode(_ confirmationMode: CaptureSDK.SKTCaptureDataConfirmationMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func setSocketCamSymbologySelectorDisabled(_ isDisabled: Swift.Bool, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func getSinglePartnershipStatus(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ status: CaptureSDK.SKTCaptureSinglePartnership?) -> Swift.Void)
+  @available(*, deprecated, message: "This function will be deprecated and removed soon. It is replaced by setSinglePartnership(status: uuidString: completion: - the deviceId is not needed anymore.")
   open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, deviceId: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  open func setSinglePartnership(_ status: CaptureSDK.SKTCaptureSinglePartnership, uuidString: Swift.String? = nil, completionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
+  @available(*, deprecated, message: "This function will be deprecated and removed soon and not needed anymore.")
   open func getSinglePartnershipStamp(withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult, _ stamp: Swift.String?) -> Swift.Void)
   open func addBluetoothDevice(_ bluetoothDiscoveryMode: CaptureSDK.SKTCaptureBluetoothDiscoveryMode, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
   open func removeBluetoothDevice(_ deviceUuid: Swift.String, withCompletionHandler completion: @escaping (_ result: CaptureSDK.SKTResult) -> Swift.Void)
@@ -207,12 +230,10 @@ extension CaptureSDK.SocketCamControllerSwift {
 }
 @objc @_inheritsConvenienceInitializers open class SinglePartnershipControllerSwift : ObjectiveC.NSObject {
   @objc deinit
-  @objc open func retrieveServiceUuidFromApi(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func retrieveServiceUuidFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
-  @objc open func retrieveServiceUuidFromDeviceId(with uuidString: Swift.String, deviceId: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
+  @objc open func showServiceUuidFromWebUI(with completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc open func promptDeviceInfoFromWebUI(with uuidString: Swift.String, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
-  @objc open func createStamp() -> Swift.String?
-  @objc open func cancelAllSessions()
+  @objc open func showServiceUuid(from dongleInfo: CaptureSDK.ConnectedDongleInfo, completion: @escaping (Swift.String?, Swift.Int) -> Swift.Void)
   @objc override dynamic public init()
 }
 public protocol SktMidiManagerDelegate : AnyObject {
@@ -236,7 +257,7 @@ public protocol SktMidiManagerDelegate : AnyObject {
   @objc deinit
 }
 public enum SktMidiProtocol {
-  public enum DongleState {
+  public enum DongleState : Swift.Sendable {
     case disconnected
     case detected
     case connecting
@@ -247,7 +268,7 @@ public enum SktMidiProtocol {
       get
     }
   }
-  public enum BleState : Swift.RawRepresentable {
+  public enum BleState : Swift.RawRepresentable, Swift.Sendable {
     public typealias RawValue = Swift.UInt8
     case disconnected
     case discovering
@@ -316,7 +337,7 @@ public enum CaptureEnvironment {
 public enum SinglePartnershipPage : Swift.String {
   case getQrCode
   case promptDeviceInfo
-  case product
+  case getRandomQrcode
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {

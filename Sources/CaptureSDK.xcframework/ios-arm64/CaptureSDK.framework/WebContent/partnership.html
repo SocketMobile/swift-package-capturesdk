@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="__LANG__">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Partnership</title>
+<style>
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    font-size: 16px;
+    color: #1a1a1a;
+    background: #ffffff;
+    margin: 0;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  p {
+    margin: 0 0 24px;
+    line-height: 1.4;
+  }
+  .state {
+    display: none;
+  }
+  #qrcode {
+    width: 70vw;
+    max-width: 320px;
+    margin: 0 auto 32px;
+  }
+  #qrcode svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #c6c6c8;
+    border-radius: 8px;
+  }
+  button {
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    margin: 12px 4px;
+    border: none;
+    border-radius: 8px;
+    background: #007aff;
+    color: #ffffff;
+  }
+  button.secondary {
+    background: #ffffff;
+    color: #d70015;
+    border: 1px solid #c6c6c8;
+  }
+  .error {
+    color: #d70015;
+  }
+  #dongle-version {
+    display: none;
+    margin-top: 32px;
+    font-size: 13px;
+    color: #8e8e93;
+  }
+</style>
+</head>
+<body>
+
+<div id="qr-state" class="state">
+  <p id="qr-instruction">Scan this QR code with your scanner to pair it with this device.</p>
+  <div id="qrcode"></div>
+  <div>
+      <button id="reset-host" class="secondary" type="button">Disconnect scanner and remains in Single Partnership mode</button>
+  </div>
+  <div>
+      <button id="reset-partnership" class="secondary" type="button">Reset scanner to default mode</button>
+  </div>
+  <button id="back" type="button" style="display: none;">Back</button>
+</div>
+
+<div id="serial-state" class="state">
+  <p id="serial-prompt">Enter the serial number of the device to pair with the scanner.</p>
+  <form id="serial-form">
+    <input id="serial-input" type="text" autocapitalize="characters" autocorrect="off" autocomplete="off" placeholder="Serial number">
+    <button id="serial-submit" type="submit">Generate QR code</button>
+  </form>
+</div>
+
+<div id="error-state" class="state">
+  <p id="error-message" class="error">The QR code cannot be generated: invalid host identifier.</p>
+</div>
+
+<div id="dongle-version"></div>
+
+<script>__UUID_V5_JS__</script>
+<script>__QRCODE_JS__</script>
+<script>
+  // `uuidv5` is a global provided by uuid-v5.js above, same behavior as
+  // `import { v5 as uuidv5 } from 'uuid'` in the server implementation
+  var SOCKETMOBILE_COM_DOMAIN_NAME = '__SOCKETMOBILE_COM_DOMAIN_NAME__';
+
+  function generateUUID(deviceUuid) {
+    return { uuid: uuidv5(deviceUuid, SOCKETMOBILE_COM_DOMAIN_NAME) };
+  }
+</script>
+<script>
+(function () {
+  var MODE = '__MODE__';
+  var INPUT = '__INPUT__';
+  var EXISTING_UUID = '__UUID__';
+  var DONGLE_VERSION = '__DONGLE_VERSION__';
+  var DONGLE_DEVICE_NAME = '__DONGLE_DEVICE_NAME__';
+  // Localized strings injected by Swift (singlePartnership.* from Localizable.strings)
+  var I18N = __I18N_JSON__;
+
+  function t(key) {
+    return (I18N && I18N[key]) || '';
+  }
+
+  // Localize the static markup (labels, placeholder, error, title). Dynamic
+  // instruction text is set from I18N in renderQrCode via showXxxQr below.
+  function applyI18n() {
+    document.title = t('title');
+    document.getElementById('reset-host').textContent = t('resetHostButton');
+    document.getElementById('reset-partnership').textContent = t('resetPartnershipButton');
+    document.getElementById('back').textContent = t('back');
+    document.getElementById('serial-prompt').textContent = t('serialPrompt');
+    document.getElementById('serial-input').placeholder = t('serialPlaceholder');
+    document.getElementById('serial-submit').textContent = t('generateQr');
+    document.getElementById('error-message').textContent = t('errorInvalidHost');
+  }
+  applyI18n();
+
+  if (DONGLE_VERSION) {
+    var dongleVersionEl = document.getElementById('dongle-version');
+    dongleVersionEl.textContent = t('firmwareVersion')
+      .replace('{device}', DONGLE_DEVICE_NAME)
+      .replace('{version}', DONGLE_VERSION);
+    dongleVersionEl.style.display = 'block';
+  }
+
+  function post(handler, message) {
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers[handler]) {
+      window.webkit.messageHandlers[handler].postMessage(message);
+    }
+  }
+
+  function show(id) {
+    ['qr-state', 'serial-state', 'error-state'].forEach(function (stateId) {
+      document.getElementById(stateId).style.display = stateId === id ? 'block' : 'none';
+    });
+  }
+
+  var currentUuid = '';
+  // Reset UUID is derived from a fixed name injected by Swift, using the same
+  // socketmobile.com UUIDv5 namespace as the partnership UUID
+  var resetUuid = generateUUID('__RESET_UUID_NAME__').uuid;
+
+  function renderQrCode(payload, instruction) {
+    var qr = qrcode(0, 'M');
+    qr.addData(payload);
+    qr.make();
+    document.getElementById('qrcode').innerHTML = qr.createSvgTag({ cellSize: 4, margin: 4, scalable: true });
+    document.getElementById('qr-instruction').textContent = instruction;
+    show('qr-state');
+  }
+
+  function setQrButtons(showResets) {
+    document.getElementById('reset-host').style.display = showResets ? 'inline-block' : 'none';
+    // A dongle stays locked to its own UUID, so the full partnership reset is not offered
+    document.getElementById('reset-partnership').style.display = (showResets && !DONGLE_VERSION) ? 'inline-block' : 'none';
+    document.getElementById('back').style.display = showResets ? 'none' : 'inline-block';
+  }
+
+  function showPartnershipQr(uuid) {
+    renderQrCode('#PP' + uuid + '#', t('pairInstruction'));
+    setQrButtons(true);
+  }
+
+  // Repartners the scanner to a fixed reset UUID: it disconnects from this
+  // host but remains locked, not discoverable by other hosts around
+  function showResetQr(uuid) {
+    renderQrCode('#PP' + uuid + '#', t('resetHostInstruction'));
+    setQrButtons(false);
+  }
+
+  // Full partnership reset: the scanner becomes discoverable again
+  function showResetPartnershipQr() {
+    renderQrCode('#RESETPP#', t('resetPartnershipInstruction'));
+    setQrButtons(false);
+  }
+
+  function generateAndShow(input) {
+    // An existing partnership UUID is reused as-is, never regenerated
+    var uuid = EXISTING_UUID.length === 36 ? EXISTING_UUID : generateUUID(input).uuid;
+    post('uuidGenerated', uuid || '');
+    if (uuid) {
+      currentUuid = uuid;
+      showPartnershipQr(uuid);
+    } else {
+      show('error-state');
+    }
+  }
+
+  document.getElementById('reset-host').addEventListener('click', function () {
+    post('resetHost', 'Reset host');
+    showResetQr(resetUuid);
+  });
+
+  document.getElementById('reset-partnership').addEventListener('click', function () {
+    post('resetHost', 'Reset partnership');
+    showResetPartnershipQr();
+  });
+
+  document.getElementById('back').addEventListener('click', function () {
+    showPartnershipQr(currentUuid);
+  });
+
+  if (MODE === 'serial') {
+    show('serial-state');
+    document.getElementById('serial-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var serial = document.getElementById('serial-input').value.trim();
+      if (serial.length > 0) {
+        generateAndShow(serial);
+      }
+    });
+  } else {
+    generateAndShow(INPUT);
+  }
+})();
+</script>
+
+</body>
+</html>

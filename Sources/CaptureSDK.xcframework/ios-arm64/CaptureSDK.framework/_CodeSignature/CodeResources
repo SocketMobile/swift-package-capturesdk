@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Capture-Swift.h</key>
 		<data>
-		5irImzxPvMI4Gfgv8AtN5fuwBVc=
+		KWyncKjr6UuZSnfAOGpgnUWwHyo=
 		</data>
 		<key>Headers/CaptureSDK.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/SktCaptureHelper.h</key>
 		<data>
-		2pXtyQMNhJbTBGsyYl78N5mr5D0=
+		MoYfpxGVdu3ljh9Fy2b+i7kGKE4=
 		</data>
 		<key>Headers/SktCapturePropertyIds.h</key>
 		<data>
@@ -46,27 +46,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		knnZTzeKedj8SITK1PXyKyXWKmY=
+		cPP0pqnhSMvrb8X7e1uzWvEvXu4=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		v7dfLrBTw6CqJJrK7r13bhVxnNo=
+		8JiKswIUJEdQPFccPiwx4S1od+c=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Jko6/mSly5/8HQJzGY8yg84eiwc=
+		qMEGS1MHuRJu3IjlnB+0EKK/5RM=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		tyHq4ToDApLpItzvNTyzYJMYqlw=
+		xtJEmKaEUPyxz/TVzNZWip9Zg6E=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Jko6/mSly5/8HQJzGY8yg84eiwc=
+		qMEGS1MHuRJu3IjlnB+0EKK/5RM=
 		</data>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		9wNxdi0Tjzq7/mJ7FHTz5zO+hEA=
+		Mw2B5OoUSCADjRE0wZbXz0OU79g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -196,6 +196,18 @@
 		<data>
 		maRxy5EIqMjUO8RRFDH3jiHkLLY=
 		</data>
+		<key>WebContent/partnership.html</key>
+		<data>
+		GkXMSEFCWcm5GlXdDo5RDu/dZWY=
+		</data>
+		<key>WebContent/qrcode.js</key>
+		<data>
+		THm+FnlgPvlpG5ipBheqHlNOk+8=
+		</data>
+		<key>WebContent/uuid-v5.js</key>
+		<data>
+		X/q7OQ7AHoZXdeKo7COaZfRwUE8=
+		</data>
 		<key>camera.png</key>
 		<data>
 		T7wJgEUp7o8ISg3e1lYlYll4hKo=
@@ -224,7 +236,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BPwoGGaTizsV6zKTlF0Yl3qrIBI=
+			QApjiNtd+qMVbLeQuAr0NfYIwlM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -233,7 +245,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BxXn0fZS7bquYEBQGb7KHMPI+3Q=
+			RZcQB7wuw9MgBeeI7VjWR+OI+cY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -242,7 +254,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BPwoGGaTizsV6zKTlF0Yl3qrIBI=
+			wdZL1x4RUo8NLUMetZ2RMdOwRiE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -263,7 +275,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9NHi//wYqR5tPtxohr6hNppf5nc=
+			nkSw6JAMJcFUMUzZJLS8Wtxfhmc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -272,7 +284,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xvJ5w6t2BGhA/SZ1M/czeXLTr9I=
+			bD8ogFBdNQM3XDvyXP+/eKnc5gk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -281,7 +293,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GcGQJJ0iRUZLSU10DqdtmKPfN0A=
+			gGT8RTL/5aEGpTlg5hkW1O5Y9TY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -318,7 +330,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y8WAjLgF6CA95USsY69B6lhZnVA=
+			rJtleAHM46GEBaDzRzGzWtU+02U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -327,7 +339,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M42s6jPi5qMwRyr7LMxMVIDOAIk=
+			F2AJDUFsUgbWoB4zVNbpNOE6nmw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -346,7 +358,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RuJVf/yn+dQrULvnfxPFTxKRkir0NRJwxFRHXFFskjc=
+			1RcR+DFJbsEPAiRhrPtE2lnyszI7LFjRr+4uB2gXt0w=
 			</data>
 		</dict>
 		<key>Headers/CaptureSDK.h</key>
@@ -388,7 +400,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fKTLm6EZLcIEFizrETLVR4hJIiI/Xl6zISseDJpMV8Y=
+			QO8FTlKNZIHEX7RH9v9P5TZlNPrHKyhnV28msPQO+TU=
 			</data>
 		</dict>
 		<key>Headers/SktCapturePropertyIds.h</key>
@@ -409,35 +421,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rJOf7sf5N94ffkteQ4YCcCLFLFpes4ZsxL+gYYwsQvk=
+			KhlDJLxPc6L7sowssLR/+Tr+ZmuG1bHTSF5/5xV++/Y=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YoZeGTg2xraP+rAV3tx6v7nR2jVXID3IPz7tsev3FJ0=
+			JniFdajf3kzIoTaJoBexUnfooL3o9yJNNlAkPnAbkFA=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7tADZmKW3x9Tv01Px2BSkSw8BPPLKl257ESHu/IQjqo=
+			Maw2yYVUHKi7VXM+cj7HIvxbO1PbZRSArwdHSdXWHTI=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YoZeGTg2xraP+rAV3tx6v7nR2jVXID3IPz7tsev3FJ0=
+			JniFdajf3kzIoTaJoBexUnfooL3o9yJNNlAkPnAbkFA=
 			</data>
 		</dict>
 		<key>Modules/CaptureSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u4HNGiFqgpl3mFNcJLbRQaxSdMkQgL+5oDAVL/aQrSo=
+			IFtWOh+XYjnvUkXOqeAw2iDHocJZZPL6K4mIik95etI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -664,6 +676,27 @@
 			j+Idd/DZZQONgiriUI2j1UuPz9lSH3by14/qEHf1SfU=
 			</data>
 		</dict>
+		<key>WebContent/partnership.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6CuQ4dyFX447Vbv3TCOt8xfCcjjiteUNGTkdZtXBbKo=
+			</data>
+		</dict>
+		<key>WebContent/qrcode.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GK45n4EYK8nekW6cd7GV3yDMWNby1VpisIWimfG/F4A=
+			</data>
+		</dict>
+		<key>WebContent/uuid-v5.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VtbWhu1dlsqFVkH6G580APM/CJQNKPB40xWpZbofj8s=
+			</data>
+		</dict>
 		<key>camera.png</key>
 		<dict>
 			<key>hash2</key>
@@ -710,7 +743,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TcRPdyaVWidalJ58i6HmnFB6lxuFsuXioCHViJFSKcA=
+			2ap1rL79wvfuNYxa571SPpGG7YnQkgaCjaG+3282+q0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -719,7 +752,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wb91V8NkLpPquD3UpTnecXxPX5M00HSsjGyqSAy+6xo=
+			goHRxmvFWfKTRR8Ne/s0kpWuGiFKW3hY4iPNiqwvT4g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -728,7 +761,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TcRPdyaVWidalJ58i6HmnFB6lxuFsuXioCHViJFSKcA=
+			MYByn1fukJUmn8TB1JAH5V9TWn3IFBSCKOLf7d/yp2Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -758,7 +791,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V/EMCYLqAUYv20RLO0Rl3LNB1jK9tT/pGHs0Rjq9sZs=
+			dNzE4hd6b8KI/ql4NRFKdnQNdUfa2yQMLPwXqWU8TvE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -767,7 +800,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SOlrx/UflTy8wCBumTV5MvO+fuUWZQcX6JmkYyvbNGM=
+			v29URE3Rw23OuK/pkJu6GvVWzlNHYlHPeat3o3uhEEM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -776,7 +809,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J5MDp/M3Pg8JdWTdi6PaeTZzNUp5pY2rzJYJwZuEeRw=
+			ohtCif2NwxqokIji+m88EYd2+JZMg8qVoiWUEJ5YgGE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -834,7 +867,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7jYbVgk64L7GvMIqOPV05XuE+auivZ4WeaH2tibvGNs=
+			VKBEIRHwr1KN2SsFLoVVcxFPhGKONLESXfqSL2sL4WU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -843,7 +876,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BSo9GQZFuv5O95JhllSPayt2/78kzBeV5aA3Zn70XYI=
+			ArOtWcpoY6p9mHr6o0WHCtjofXA9mY5izLDEp6XBhRk=
 			</data>
 			<key>optional</key>
 			<true/>
