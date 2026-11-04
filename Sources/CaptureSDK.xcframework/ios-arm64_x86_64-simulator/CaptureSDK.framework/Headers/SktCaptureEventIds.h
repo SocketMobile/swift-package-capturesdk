@@ -222,7 +222,7 @@ typedef NS_ENUM(NSInteger, SKTCaptureEventID) {
 
 	Type: kNone
 	*/
-	SKTCaptureEventIDLastID = 22,
+	SKTCaptureEventIDLastID = 24,
 
 };
 

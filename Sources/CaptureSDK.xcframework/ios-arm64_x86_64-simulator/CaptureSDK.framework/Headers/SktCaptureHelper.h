@@ -416,6 +416,41 @@
 -(void)didNotifyRemovalForDevice:(SKTCaptureHelperDevice * _Nonnull)device withResult:(SKTResult)result;
 
 /**
+ * called when a PC/SC coupler has connected to the host. It is reported apart from the
+ * other devices because a coupler can have the same device type as a barcode scanner.
+ *
+ * @param coupler identifies the coupler that has just connected
+ * @param result contains an error if something went wrong during the coupler connection
+ */
+-(void)didNotifyArrivalForCoupler:(SKTCaptureHelperDevice * _Nonnull)coupler withResult:(SKTResult)result;
+
+/**
+ * called when a PC/SC coupler has disconnected from the host
+ *
+ * @param coupler identifies the coupler that has just disconnected
+ * @param result contains an error if something went wrong during the coupler disconnection
+ */
+-(void)didNotifyRemovalForCoupler:(SKTCaptureHelperDevice * _Nonnull)coupler withResult:(SKTResult)result;
+
+/**
+ * called when a tag has been presented to a PC/SC coupler
+ * The tag UID has already been delivered as decoded data from the coupler,
+ * this is only needed to exchange APDUs with the tag.
+ *
+ * @param tag identifies the tag that is now present
+ * @param result contains an error if something went wrong while connecting to the tag
+ */
+-(void)didNotifyArrivalForTag:(SKTCaptureHelperDevice * _Nonnull)tag withResult:(SKTResult)result;
+
+/**
+ * called when a tag has been removed from a PC/SC coupler
+ *
+ * @param tag identifies the tag that is gone
+ * @param result contains an error if something went wrong while disconnecting from the tag
+ */
+-(void)didNotifyRemovalForTag:(SKTCaptureHelperDevice * _Nonnull)tag withResult:(SKTResult)result;
+
+/**
  * called when decoded data are received from a device
  *
  * @param decodedData contains the decoded data
@@ -719,7 +754,7 @@
  *
  * @param block called upon completion of setting the Single Partnership status with result and status as arguments
  */
--(void)getSinglePartnershipStatusWithCompletionHandler:(void (^ _Nullable)(SKTResult result, SKTCaptureSinglePartnership status))block;
+-(void)getSinglePartnershipStatusWithCompletionHandler:(void(^ _Nullable)(SKTResult result, SKTCaptureSinglePartnership status))block;
 
 /**
  * Sets a Single Partnership connection for a Bluetooth Low Energy device like S320, S370, S550,,,

@@ -1,6 +1,26 @@
 # Change Log
 This file tracks released versions with the changes made to this project.
 
+## Version 2.1.36
+
+### New
+
+  * We introduce our new Personal Computer/Smart Card (PC/SC) feature to write into NFC tags with our NFC readers/couplers
+
+  * We have added the possibility for our Bluetooth LE scanners to be connected at the device level so they are available in any apps having our CaptureSDK
+
+
+
+### Improvements
+
+  * N/A
+
+
+### Bug fixes
+
+  * N/A
+
+
 ## Version 2.1.22
 
 ### New

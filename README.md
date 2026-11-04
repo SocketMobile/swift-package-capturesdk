@@ -1,4 +1,4 @@
-# CaptureSDK Version 2.1.22 - Swift Package Manager
+# CaptureSDK Version 2.1.36 - Swift Package Manager
 
 Socket Mobile is a leading innovator of data capture and delivery solutions for enhanced productivity.
 
@@ -12,19 +12,20 @@ Within 10 minutes the barcode scanning or RFID/NFC reading capability can be int
 
 The CaptureSDK offers a built-in barcode scanner called SocketCam, allowing to test and integrate the SDK even before getting a Socket Mobile scanner, using the exact same API, which makes the transition from using SocketCam to a Socket scanner totally frictionless.
 
-More documentation can be found [here in our CaptureSDK Documentation](https://docs.socketmobile.dev/capture/ios/en/latest/).
+More documentation can be found in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/).
 
-## From 8th of October 2025 - Noticeable change from version 2.0
+## PLEASE UPDATE YOUR CAPTURESDK TO 2.1
 
-**There are 2 choices to connect and use our Bluetooth LE readers:**
+> [!WARNING]
+> Versions prior 2.1.x will be removed from our repositories as of 1st of December 2026 for all platforms.
 
-**- Install our [Socket Mobile Companion app](https://apps.apple.com/app/socket-mobile-companion/id1175638950) which takes care of the discovery and the selection of the reader to connect to.**
+> [!WARNING]
+> As we're transitioning our scanners to Bluetooth Low Energy and improving our CaptureSDKs, we recommend you to update to the latest version 2.1 to be compatible and benefit from all our latest features.
 
-**- Write some code to fit the Bluetooth discovery flow to your application's design by creating an UI that starts and shows discovered devices and select them to be paired to your application.**
+> [!WARNING]
+> Also, we don't publish new versions on Cocoapods anymore as it will be end of life and read-only in a few days. We strongly recommend our Developers to use Swift Package Manager in general into their projects.
 
-We also have removed the deprecated CaptureHelper methods to avoid confusion and got rid of the `Device Manager` as a public object.
-
-[See our Getting Started section in our documentation](https://docs.socketmobile.dev/capture/ios/en/latest/gettingStarted.html)
+Please visit [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/) to see the latest versions of our CaptureSDK.
 
 ## Devices compatibility and CaptureSDK versions
 
@@ -34,13 +35,14 @@ We also have removed the deprecated CaptureHelper methods to avoid confusion and
 |   **S720/D720/S820**                                   |          ✅            |           ✅           |           ✅           |
 |   **D600, S550, and all other barcode scanners**       |          ✅            |           ✅           |           ✅           |
 |   **S370**                                             |          ✅            |           ✅           |           ✅           |
-|   **M930**                                             |          ✅            |           ✅           |           ✅           |
 |   **S320**                                             |          ✅            |           ✅           |           ✅           |
-|   **S721** (new Bluetooth LE barcode scanner)          |          ❌            |           ✅           |           ✅           |
-|   **SM Link and Magic Dock**                           |          ❌            |           ❌           |           ✅           |
+|   **XTreme Scan**                                      |          ✅            |           ✅           |           ✅           |
+|   **S721/S741** (new Bluetooth LE barcode scanner)     |          ❌            |           ✅           |           ✅           |
+|   **Magic Dock and SM Link**                           |          ❌            |           ❌           |           ✅           |
 
 ## Table of Contents
 
+* [New features from 2.1.36 - 4th of November 2026](#new-features-from-2136---4th-of-november-2026)
 * [Breaking changes V2.0](#breaking-changes)
 * [Quick install notes](#quick-install-notes)
 * [CaptureSDK usage](#capturesdk-usage)
@@ -50,12 +52,17 @@ We also have removed the deprecated CaptureHelper methods to avoid confusion and
 * [Device Notifications (Battery Level)](#device-notifications-battery-level)
 * [Closing CaptureSDK](#closing-capturesdk)
 
+## New features from 2.1.36 - 4th of November 2026
+
+* Our Bluetooth Low Energy scanners are now connected to the host in a similar behavior of Bluetooth Classic if you use the iOS capability **Use Bluetooth LE accessories** in your application. Otherwise, the scanner will still be disconnected from your application when putting it into background and will reconnect when putting it into foreground.
+* We introduce the Personal Computer/Smart Card (PC/SC) feature to write into NFC tags with our NFC readers/couplers S550 and S370. The D600 is not compatible with this feature. More details in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/nfc/modes).
+
 ## Breaking changes
 
 We have made a step forward and changed a few things to stay up to date with  requirements. The SDK still works as you expect.
 
-* CaptureSDK is built with Xcode 26
-* The minimum target is now iOS 15.0
+* CaptureSDK is built with Xcode 27.2 as of 4th of November 2026
+* The minimum target is now iOS 15.0 - will be updated to iOS 17.0 soon
 * The Bluetooth discovery flow is a bit different. The transition of our products from Bluetooth Classic to Bluetooth Low Energy forces to change the Developers and Users Experience slightly. You can use our CaptureSDK to connect devices either through our [Socket Mobile Companion app](https://apps.apple.com/app/socket-mobile-companion/id1175638950) which takes care of the discovery and the selection of the reader to connect to, or, you can write your own code, using the new CaptureSDK APIs, to make a UI for the discovery that fits your design and application's flow.
 
 ## Quick install notes
@@ -95,9 +102,7 @@ Go to the `CaptureHelperDelegate` source and copy paste the delegates you want t
 
 ## CaptureSDK usage
 
-`CaptureSDK` is described in greater details in the [documentation](https://docs.socketmobile.dev/capture/ios/en/latest/ "CaptureSDK Documentation").
-
-The recommended way of using `CaptureSDK` is by using `CaptureHelper`. `CaptureHelper` is now included into the framework and not as a separate file: [CaptureHelper](https://docs.socketmobile.dev/capture/ios/en/latest/captureHelper.html)
+The recommended way of using `CaptureSDK` is by using [CaptureHelper](https://socketmobile.dev/docs/using-capturesdk/capture-helper).
 
 ### 1. Getting a `CaptureHelper` instance
 
@@ -160,7 +165,7 @@ If the `SocketCam` feature is enabled, `CaptureSDK` will send a device arrival n
 
 Once the application triggers a read, the decoded data arrives the same way with the same information than as any other Socket Mobile devices supported by `CaptureSDK`.
 
-For more information please check the [documentation](https://docs.socketmobile.dev/capture/ios/en/latest/ "CaptureSDK Documentation").
+For more information please check in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/socketcam/implementation).
 
 With the new version of CaptureSDK available, you will be able to present SocketCam as you wish in a custom view, a popover and still in full screen. Now you decide where and when triggering and removing SocketCam view controller in your application's flow. And this is your responssability to handle the presentation and the dismissal of the view controller.
 However, there's a minimal size of 250px x 250px to observe in order to display all SocketCam's UI elements.
@@ -232,29 +237,11 @@ If you add the SocketCam view controller as a subview in another view controller
 
 `CaptureSDK` is designed for using all of the Socket Mobile devices on the iOS platforms.
 
-As the application developer, `CaptureSDK` will give you full programmatic access to a connected Socket Mobile data capture device to customize the data source (barcode symbology or RFID Tag), data support and manage device feedback
-messages and functions.
-
-The API documentation for `CaptureSDK` can be found [here](https://docs.socketmobile.dev/capture/ios/en/latest/ "Capture Documentation")
-
-The Socket Mobile devices are shipped by default in **MFi mode** which is compatible with the `CaptureSDK`.
-
-The device can be configured to the **Application mode** by using the [Socket
-Mobile Companion app](https://itunes.apple.com/us/app/socket-mobile-companion/id1175638950?mt=8 "Socket Mobile Companion").
-
-You can also refer to the [documentation](https://docs.socketmobile.dev/capture/ios/en/latest/ConfigureInAppMode.html "Configure and connect scanner") for instructions without using Companion.
-
-**Bluetooth LE Devices**
-
-For our Blueetooth LE devices (D600, S550, S370, S320 and S721), use the following:
-
-**- Install our [Socket Mobile Companion app](https://apps.apple.com/app/socket-mobile-companion/id1175638950) which takes care of the discovery and the selection of the reader to connect to.**
+You can find how to connect to our Bluetooth Low Energy devices such as S721, S741, S320, S370, S550, Xtreme Scan in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/connect-bluetooth-le-devices).
 
 **- Write some code to fit the Bluetooth discovery flow to your application's design by creating an UI that starts and shows discovered devices and select them to be paired to your application.**
 
-## Themes selection
-
-The Themes Selection allows to choose LEDs sequences that are played on S550 or S370 devices. Please check the [documentation](https://docs.socketmobile.dev/capture/ios/en/latest/topicsThemesSelection.html "CaptureSDK Documentation - Themes Selection").
+For Bluetooth Classic devices such as S720, S740, you can also find it in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/connect-bluetooth-classic-devices).
 
 ## Device Notifications (Battery Level)
 
@@ -262,7 +249,6 @@ The Device Notifications can be configured in order to receive a notification ea
 
 * Battery Level change
 * Power State change
-* Buttons State change
 
 By default the device notifications are turned off. The recommended usage is to first check if a particular notification is turned off or on. Depending on this reading, then the application can set a specific notification to be received if it is not already set. That setting stays persistent in the Socket Mobile device across scanner shutdown. It is not recommended to set systematically a notification in the device without checking first if that setting is already correct.
 
@@ -270,7 +256,7 @@ For the Battery Level and Power State, it could take a long time before the stat
 
 Last, some devices don't support some of the notifications. If that's the case, an error `ESKT_NOTSUPPORTED (-15)` is returned when trying to set a notification that is not supported.
 
-For more information please check the [documentation](https://docs.socketmobile.dev/capture/ios/en/latest/ "CaptureSDK Documentation").
+For more information please check in [our brand new Developer Portal and documentation](https://socketmobile.dev/docs/using-capturesdk/power-management).
 
 ## Closing `CaptureSDK`
 
